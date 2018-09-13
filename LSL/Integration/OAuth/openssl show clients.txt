@@ -1,0 +1,1 @@
+openssl s_client -connect ebis.lankasathosa.org:8443 -showcerts
