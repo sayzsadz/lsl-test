@@ -1,0 +1,16 @@
+create table XXSOFT_INV_CATEGORIES_STAGING(
+ segment1 VARCHAR2(255)  ,
+ segment2  VARCHAR2(255)  ,
+ segment3  VARCHAR2(255)   ,
+ segment4  VARCHAR2(255)  ,
+ segment5 VARCHAR2(255)  ,
+ description VARCHAR2(255)  ,
+ structure_id number,
+ structure_code VARCHAR2(255)  ,
+summary_flag varchar2(1),
+enabled_flag  varchar2(1),
+start_date_active date,
+ processed_flag  varchar2(1));
+
+
+CREATE INDEX APPS.IN_XXSOFT_INV_CAT_STAGING ON APPS.XXSOFT_INV_CATEGORIES_STAGING (processed_flag) 

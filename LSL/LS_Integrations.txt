@@ -59,6 +59,10 @@ PKG-MAIN
 	    tables
 	    database link (pull data for exposing webservice)
 
-Locations:
-Stores
-Products
+New Notes:
+.EBS Stores
+.Exception Report email
+.APEX Dashboard
+.Item\Category Import
+.Create views
+.Refresh reports in sqldeveloper
