@@ -1,0 +1,1 @@
+exec DBMS_SCHEDULER.STOP_JOB('xxpbsaxpos_job1');

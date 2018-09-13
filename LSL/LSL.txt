@@ -1,0 +1,35 @@
+Test Data
+Test Scenarios
+
+1. 
+PRs from PBSA POS
+Validate the Supplier\Product\Store
+Interface the PR Line in APPROVED Status
+Remove Rejected Lines if any
+Auto POand initiate the approvals
+GRN and update onhand
+
+2.
+Supplier Return Request
+Validate Supplier\Product\Store
+Interface to Material Transactions
+Supplier Return Approval
+Updated on hand quantity
+
+
+3.
+Supplier Creation
+Supplier Updates
+
+4.
+Stores - Response 200
+Product - Response 200
+
+5.
+Sales and Payments
+Stock
+Tills
+General
+Sales
+
+Agenda for integrations
