@@ -13,7 +13,7 @@ END;
 -- Create Template 
 BEGIN
   ords.define_template(p_module_name => 'lslmodule.v1',
-                       p_pattern     => 'getpo/',
+                       p_pattern     => 'purchase-orders/',
                        p_comments    => 'get po ');
 
   COMMIT;
@@ -22,7 +22,7 @@ END;
 -- Create Handler 
 BEGIN
   ords.define_handler(p_module_name    => 'lslmodule.v1',
-                      p_pattern        => 'getpo/',
+                      p_pattern        => 'purchase-orders/',
                       p_method         => 'GET',
                       p_source_type    => ords.source_type_collection_feed,
                       p_source         => ' SELECT ph.PurchaseOrderId AS "PurchaseOrderId",

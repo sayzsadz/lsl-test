@@ -1,0 +1,288 @@
+ORGANIZATION_CODE,template_name,item_SEGMENT1,DESCRIPTION,PRIMARY_UOM_CODE,LIST_PRICE_PER_UNIT,AUTO_LOT_ALPHA_PREFIX,START_AUTO_LOT_NUMBER,LOT_CONTROL_CODE,LOT_DIVISIBLE_FLAG,PROCESS_FLAG
+SIO,@Product Family,172247,4ever Tikiri Baby Cologne 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172246,4ever Tikiri Baby Lotion 130ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172245,4ever Tikiri Baby Soap 80g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113401,Baby Cheramy  Oil -125ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113319,Baby Cheramy  Shampoo -200ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113203,Baby Cheramy  Talc -100g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113425,Baby Cheramy Basics Cotton Buds - Cylinder 100s,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113434,Baby Cheramy Basics Diapers - L (9s),ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113433,Baby Cheramy Basics Diapers - M (10s),ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113430,Baby Cheramy Basics Glass Feeding Bottle 120ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113429,Baby Cheramy Basics Glass Feeding Bottle 240ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115717,Baby Cheramy Basics Teats,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115718,Baby Cheramy Basics X Teats,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172045,Baby Cheramy Bedtime Claming Cologne 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172044,Baby Cheramy Bedtime Claming Cologne 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172043,Baby Cheramy Bedtime Claming Lotion 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172042,Baby Cheramy Bedtime Claming Lotion 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172041,Baby Cheramy Bedtime Moisturising Soap 75g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113256,Baby Cheramy Cologne -100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,100136,Baby Cheramy Cologne 100ml - Free Stencil,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,125242,Baby Cheramy Cologne -100ml (Baby Cheramy Soap 75g Free),ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113261,Baby Cheramy Cologne -200ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113255,Baby Cheramy Cologne -50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172046,Baby Cheramy Cologne faresh floral 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115720,Baby Cheramy Cologne Fun Time Angel Fair 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115719,Baby Cheramy Cologne Fun Time Kitty Katty - 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115721,Baby Cheramy Cologne Fun Time Lucky Ducky - 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,124623,Baby Cheramy Cologne Fun Time Lucky Ducky - 100ml Free Stencil,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,190150,Baby Cheramy Cologne Funtime 100ml - Free Stencil,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171742,Baby Cheramy Cologne Funtime Ciddly Bunny 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171464,Baby Cheramy Cologne Herbal 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113258,Baby Cheramy Cologne-Floral 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113257,Baby Cheramy Cologne-Floral 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,125144,Baby Cheramy Cologne-Floral100ml(Baby Cheramy Soap 75g Free),ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113276,Baby Cheramy Cologne-Flowers 200ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113357,Baby Cheramy Cream - Herbal 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113354,Baby Cheramy Cream - Regular 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113355,Baby Cheramy Cream - Regular 200ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113353,Baby Cheramy Cream - Regular 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113388,Baby Cheramy Cream -400ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171740,Baby Cheramy Cream -Floral 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171741,Baby Cheramy Cream -Floral 200ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171739,Baby Cheramy Cream -Floral 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115700,Baby Cheramy Diaper Singles - L -EA,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115701,Baby Cheramy Diaper Singles - XL -EA,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113443,Baby Cheramy Diapers - 4s - M,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113442,Baby Cheramy Diapers - 4s - S,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113445,Baby Cheramy Diapers 11s - S,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113444,Baby Cheramy Diapers 4s - L,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113446,Baby Cheramy Diapers 8s - XL,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113107,Baby Cheramy Eco Soap Pack -EA (Rs.15.00 Off),ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171744,Baby Cheramy Fintime Kitty Katty 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171743,Baby Cheramy Fintime Lucky Ducky 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113128,Baby Cheramy Floral Milk Soap - Economy Pack 5x75g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113120,Baby Cheramy Floral Milk Soap-75g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172047,Baby Cheramy Fresh Floral Cologne 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171746,Baby Cheramy Funtime Angel Fairy 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171745,Baby Cheramy Funtime Ciddly Bunny 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113441,Baby Cheramy Gift Pack -EA,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171334,Baby Cheramy Herbal Cologne 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113372,Baby Cheramy Herbal Cream - 200ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113409,Baby Cheramy Herbal Oil - 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113105,Baby Cheramy Herbal Soap - 100g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113374,Baby Cheramy Lotion - Moisturising Milk 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113373,Baby Cheramy Lotion - Moisturising Milk 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171748,Baby Cheramy Lotion Regular 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171747,Baby Cheramy Lotion Regular 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171738,Baby Cheramy Moisturising Soap 100g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113428,Baby Cheramy Nappy  Wash Powder -400g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115722,Baby Cheramy Nappy Rash Cream -100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113439,Baby Cheramy Nappy Wash Powder -1kg,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113210,Baby Cheramy Prickly Heat Talc -100g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113302,Baby Cheramy Shampoo -100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171462,Baby Cheramy Soap - Floral Moisturising 75g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171463,Baby Cheramy Soap - FloralMoisturising (Eco Pack) (75gx5) (Rs.15.00 Off),ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113106,Baby Cheramy Soap -75g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113213,Baby Cheramy Talc - Floral 100g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113212,Baby Cheramy Talc - Floral 200g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113211,Baby Cheramy Talc - Regular -400g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113204,Baby Cheramy Talc -200g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172748,Chandi Panda Herbal Soap - 90g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,114414,Clogard Chooty Tooth Brush,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172526,Cutee Baby Diapers - Medium,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172525,Cutee Baby Diapers - Small,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,114404,Denta Toothbrush - Kid -EA,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172694,Ezy Pants 18 pcs - L,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172693,Ezy Pants 18 pcs - M,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172692,Ezy Pants 18 pcs - S,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172695,Ezy Pants 18 pcs - XL,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172690,Ezy Pants 8 pcs - L,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172689,Ezy Pants 8 pcs - M,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172691,Ezy Pants 8 pcs - XL,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113431,Feather - Cotton Buds (Caned) -120ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115735,Johnson Baby Gift Pack-Medium,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115730,Johnson Baby Top to Toe -100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115785,Johnsons Baby Bath Peach Fresh 200ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115784,Johnsons Baby Bath Regular 200ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113281,Johnsons Baby Cologne - Bounce 125ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115728,Johnsons Baby Cologne - Forever Mine -125ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113270,Johnsons Baby Cologne - Heaven 125ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113269,Johnsons Baby Cologne - Heaven 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113272,Johnsons Baby Cologne - Morning Dew 125ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113271,Johnsons Baby Cologne - Morning Dew 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113274,Johnsons Baby Cologne - Powder Mist 125ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113273,Johnsons Baby Cologne - Powder Mist 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,123597,Johnsons Baby Cream 100ml (20% Off),ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113379,Johnsons Baby Cream Upgrade 100g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113358,Johnsons Baby Cream Upgrade 30g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113378,Johnsons Baby Cream Upgrade 50g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171245,Johnsons Baby Cutie Soap 25g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,119327,Johnsons Baby Essential Pack -EA,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115734,Johnsons Baby Gift Pack-Large,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115778,Johnsons Baby Hair Oil-Aloe Vera,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115779,Johnsons Baby Hair Oil-Avecado 200ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113411,Johnsons Baby Hair Oil-Avocado -100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113410,Johnsons Baby Hair Oil-Avocado -60ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115786,Johnsons Baby Lotion-Aloe Vera & Vitamin E,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115783,Johnsons Baby Milk Bath 200ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113313,Johnsons Baby Milk Bath DT 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113360,Johnsons Baby Milk Cream 100g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171244,Johnsons Baby Milk Cream 30g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113359,Johnsons Baby Milk Cream 50g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113366,Johnsons Baby Milk Lotion DT 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113369,Johnsons Baby Milk Lotion DT 200ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113121,Johnsons Baby Milk Soap 50g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113108,Johnsons Baby Milk Soap 75g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113403,Johnsons Baby Oil (Vitamin E) 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113402,Johnsons Baby Oil -Regular 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113380,Johnsons Baby Pink Lotion 200ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,123598,Johnsons Baby Pink Lotion 50ml (20% Off),ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113362,Johnsons Baby Pink Lotion DT 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113361,Johnsons Baby Pink Lotion DT 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113207,Johnsons Baby Powder 100g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113208,Johnsons Baby Powder 200g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113215,Johnsons Baby Powder -50g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,190021,Johnsons Baby Shampoo - Soft n Shiny -100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,190022,Johnsons Baby Shampoo - Soft n Shiny -200ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113305,Johnsons Baby Shampoo -Gold 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113349,Johnsons Baby Shampoo -Gold 60ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,190020,Johnsons Baby Shampoo -Soft n Shiny 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115780,Johnsons Baby Shampoo-Gold 200ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115716,Johnsons Baby Skincare Wipes -20s,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113381,Johnsons Baby Top to Toe -50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115781,Johnsons Baby Top to Toe Bath 200ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115782,Johnsons Baby Top to Toe wash 500ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,119032,Johnsons PH 5.5 Face Wash,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,119031,Johnsons PH 5.5 Face Wash 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,109002,Jones Tea -400g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,116611,Kekulu 5 in 1 Pack Save Rs 15 -350g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171842,Kekulu Baby Cologne 100ml - Aloevera,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171841,Kekulu Baby Cologne 100ml - Aruda,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171843,Kekulu Baby Cologne 100ml - Hibiscus,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,118004,Kekulu Baby Cologne -50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171839,Kekulu Baby Soap 70g - Aloevera,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171838,Kekulu Baby Soap 70g - Aruda,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171840,Kekulu Baby Soap 70g - Hibiscus,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171847,Kekulu Junior Toothbrush,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171844,Kekulu Soap 5 in 1 - Aruda,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171846,Kekulu Soap 5 in 1 - Hibiscus,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171845,Kekulu Soap 5 in 1 -Alovera,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113125,Kekulu Soap -70g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,114383,Kekulu Tooth Paste -40g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113253,Khomba Baby Cologne -100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113254,Khomba Baby Cologne -50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113124,Khomba Baby Cream - Pink -100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113116,Khomba Baby Cream -100g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113440,Khomba Baby Gift Pack -EA,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172071,Khomba Baby Pirickly Heat Powder 100g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113201,Khomba Baby Powder -100g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113114,Khomba Baby Shampoo -100g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113101,Khomba Baby Soap - Pink -70g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113102,Khomba Baby Soap - White -70g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113119,Khomba Baby Soap (Floral)- 70g 4 in 1 Pack,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113118,Khomba Baby Soap 4 in 1 (White) -EA,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113282,Kohomba Baby Cologne - Pink 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113283,Kohomba Baby Cologne - Pink 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172467,Kohomba Baby Soap - Venivel 90g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172069,Little Princess Cologne - Jade Garden100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172068,Little Princess Cologne - Rose Petal 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172070,Little Princess Cologne - Sea Spray 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,123072,Morison Baby Diaper - L (Buy 2 Get Rs.30.00 Off),ECH,,BCA,1,2,Y,N
+SIO,@Product Family,123622,Morison Baby Diaper - L (Buy 3 Get 1 Free),ECH,,BCA,1,2,Y,N
+SIO,@Product Family,123071,Morison Baby Diaper - M (Buy 2 Get Rs.30.00 Off),ECH,,BCA,1,2,Y,N
+SIO,@Product Family,123621,Morison Baby Diaper - M (Buy 3 Get 1 Free),ECH,,BCA,1,2,Y,N
+SIO,@Product Family,123620,Morison Baby Diaper - S (Buy 3 Get 1 Free),ECH,,BCA,1,2,Y,N
+SIO,@Product Family,123623,Morison Baby Diaper - XL (Buy 3 Get 1 Free),ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115757,Morisons baby Diapers-Large,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,125383,Morisons baby Diapers-Large (15% Off),ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115756,Morisons baby Diapers-Medium,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,125384,Morisons baby Diapers-Medium (15% Off),ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115755,Morisons baby Diapers-Small,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115758,Morisons baby Diapers-XL,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115702,Morrison Baby Feeding Bottle - Arc Blue -120ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115705,Morrison Baby Feeding Bottle - Arc Blue -240ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115704,Morrison Baby Feeding Bottle - Arc Pink -120ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115703,Morrison Baby Feeding Bottle - Arc Pink -240ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115706,Morrison Silicon Teat - Large -EA,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115707,Morrison Silicon Teat - Medium -EA,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115708,Morrison Silicon Teat - Small -EA,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115715,Nature Secret Panda Baby Wash 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115727,Natures Panda Baby Gift Pack -EA,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,116348,Natures Panda Baby Shampoo 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,124475,Natures Rathmal soap 04 tablets banded (Rs.20.00 off),ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113436,Pampers Large Comfort - 5s,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113435,Pampers Medium Comfort - 5s,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172119,Pampers Pants Large - 4s,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172118,Pampers Pants Medium - 4s,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172117,Pampers Pants Small - 4s,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115743,Pampers Small - Comfort -5s,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115744,Pampers X Large - Comfort 5s,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171577,Panda Baby Cologne - Fairys Touch 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171578,Panda Baby Cologne - Fairys Touch 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115754,Panda Baby Cologne - Floral -100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115753,Panda Baby Cologne - Floral -50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171579,Panda Baby Cologne - Mothers Love 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171580,Panda Baby Cologne - Mothers Love 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171582,Panda Baby Cologne - Sweet Floral 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,118005,Panda Baby Cologne 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,123953,Panda Baby Cologne 100ml - Sweet Floral (Rs.30.00 Off),ECH,,BCA,1,2,Y,N
+SIO,@Product Family,123877,Panda Baby Cologne 100ml (Buy 2 Get 1 Free),ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115726,Panda Baby Colong -50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171575,Panda Baby Cream - Rathmal Venivel 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113389,Panda Baby Cream -100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115723,Panda Baby Cream -50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172267,Panda Baby Delum Soap - 75g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,125108,Panda Baby Delum soap - 75gx4 (Rs.20/- off),ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172268,Panda Baby Delum Soap - Eco Pack (75gx5),ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115725,Panda Baby Shampoo -50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171576,Panda Baby Soap - Rathmal Venivel 45g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171581,Panda Baby Sweet Cologne - Floral -100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113214,Panda Baby Talc -100g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115724,Panda Baby Wash -60ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,116321,Pears  Baby  Herbal  Cream -100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,116192,Pears  Baby Cologne - Cool  Fresh -55ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113278,Pears  Baby Cologne - Magic Drops -100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113277,Pears  Baby Cologne - Magic Drops -50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,122703,Pears Active Floral Multi Pack 400g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171150,Pears Baby Cologne - Floral 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171149,Pears Baby Cologne - Floral 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113280,Pears Baby Cologne - Pure & Gentle - 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113279,Pears Baby Cologne - Pure & Gentle -50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171147,Pears Baby Cream - Floral 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171148,Pears Baby Cream - Floral 200ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113350,Pears Baby Cream -100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113351,Pears Baby Cream -200ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113356,Pears Baby Cream -50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113122,Pears Baby Multy Pack -375g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113400,Pears Baby Oil -120ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113200,Pears Baby Powder -100g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113301,Pears Baby Shampoo -120ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113126,Pears baby Soap - Floral -75g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113104,Pears Baby Soap - Herbal -75g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113103,Pears Baby Soap - Normal -75g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171657,Pears Baby Soap 100g - Pur & Gentle,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171731,Pears Baby Soap-Floral 100g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171730,Pears Baby Soap-Herbal 100g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113376,Pears Baby Sooting Night Time Cream - 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113377,Pears Baby Sooting Night Time Cream - 200ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172079,Pears Bed Time Soap - 100g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172590,Pears Cologne - Bedtime - 100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115791,Pears cooling Fresh Cologne - Plastic Bottle 120ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115795,Pears Cooling Fresh Cologne - Plastic Bottle 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115796,Pears Floral  Cologne - Plastic Bottle 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115792,Pears Floral Cologne - Plastic Bottle 120ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115798,Pears Magic Drops Cologne - Plastic Bottle 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115797,Pears Soothing Cologne - Plastic Bottle 50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113250,Rebecca Lee Baby Cologne -100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113259,Rebecca Lee Baby Cologne -50ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113352,Rebecca Lee Baby Cream -100ml,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113100,Rebecca Lee Baby Soap -100g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,113202,Rebecca Lee Baby Talc -90g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171982,Royal Baby Diapers 4s - Large,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171981,Royal Baby Diapers 4s - Medium,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171980,Royal Baby Diapers 4s - Small,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,115800,Twinky diapers - 4 S (Medium),ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172685,Velona Baby Diapers Jumbo - L,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172684,Velona Baby Diapers Jumbo - M,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172682,Velona Baby Diapers Jumbo - NB,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172683,Velona Baby Diapers Jumbo - S,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172680,VelonaBaby Diapers 4Pcs - L,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172679,VelonaBaby Diapers 4Pcs - M,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172677,VelonaBaby Diapers 4Pcs - Nb,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172678,VelonaBaby Diapers 4Pcs - S,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172681,VelonaBaby Diapers 4Pcs - XL,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171486,Vendol Royal Baby Soap 80g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,171487,Vendol Royal Sandalwood Soap 80g,ECH,,BCA,1,2,Y,N
+SIO,@Product Family,172688,Wet Wipes 70 pcs - WF,ECH,,BCA,1,2,Y,N

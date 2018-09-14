@@ -60,9 +60,20 @@ PKG-MAIN
 	    database link (pull data for exposing webservice)
 
 New Notes:
-.EBS Stores
+.EBS Stores, first 5 item category?
 .Exception Report email
 .APEX Dashboard
-.Item\Category Import
+.Item\Category Import\, UoM???, template for categories? *run item import.
 .Create views
 .Refresh reports in sqldeveloper
+.IP addresses list (outlets IP, HO IP after api work)
+
+/purchase-orders->send to ho
+/supplier-returns->send to ho
+/rejected-lines->send to ho
+/suppliers->send to ho
+
+/stores->send 200
+/products->send 200
+/purchase-requests->give in model format to Oracle\need to connect in to outlets
+/supplier-return-requests->give in model format to Oracle\need to connect in to outlets
