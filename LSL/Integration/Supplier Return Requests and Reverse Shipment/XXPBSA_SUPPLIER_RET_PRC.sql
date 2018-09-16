@@ -34,24 +34,25 @@ AS
     AND rsh.SHIPMENT_HEADER_ID  =rcv.SHIPMENT_HEADER_ID
     AND rsl.SHIPMENT_LINE_ID    =rcv.SHIPMENT_LINE_ID
     AND rcv.TRANSACTION_TYPE    ='DELIVER'
-    AND rsh.RECEIPT_NUM         = 14 --v_rec_no
+    AND rsh.RECEIPT_NUM         = v_rec_no
     AND poh.PO_HEADER_ID        =pol.PO_HEADER_ID
     AND poh.ORG_ID              =pol.ORG_ID
     AND poh.PO_HEADER_ID        =rcv.PO_HEADER_ID
     AND pol.PO_LINE_ID          =rcv.PO_LINE_ID
     AND item.inventory_item_id  =rsl.ITEM_ID
-    AND item.organization_id    =88
+    AND item.organization_id    = v_org_id
     AND rcv.ORGANIZATION_ID    IN
       (SELECT ORGANIZATION_ID
       FROM mtl_system_items_b
-      WHERE inventory_item_id= 33113
+      WHERE inventory_item_id= item.inventory_item_id
         /*Only for this item attached orgs*/
-      )
-  AND item.inventory_item_id=33113
-    /*Only for this item*/
-    --and     poh.org_id in ( )
-  AND to_number(rcv.ATTRIBUTE1)<>pol.QUANTITY
-  AND NVL(rsl.ATTRIBUTE15,'.') <>'On Hand Updated';
+      );
+--  AND item.inventory_item_id=33113
+--    /*Only for this item*/
+--    --and     poh.org_id in ( )
+--  AND to_number(rcv.ATTRIBUTE1)<>pol.QUANTITY
+--  AND NVL(rsl.ATTRIBUTE15,'.') <>'On Hand Updated'
+
   val NUMBER;
 BEGIN
   val := mo_global.get_current_org_id; -- fnd_profile.value('ORG_ID');
@@ -159,8 +160,8 @@ BEGIN
           VALUES
           (
             'Inventory',                   --source_code
-            1,                             --OOMCO_SRC_LINE_ID_INT_SEQ.NEXTVAL,--source_line_id
-            1,                             --xxmtl_src_hdr_id_int_seq.NEXTVAL, --source_header_id
+            XXPBSA_SUP_RET_LINE_ID_SEQ.NEXTVAL,                             --XXPBSA_SUP_RET_LINE_ID_SEQ.NEXTVAL,--source_line_id
+            XXPBSA_SUP_RET_HEADER_ID_SEQ.NEXTVAL,                             --XXPBSA_SUP_RET_HEADER_ID_SEQ.NEXTVAL, --source_header_id
             1,                             --process_flag
             3,                             --transaction_mode
             SYSDATE,                       --last_update_date
