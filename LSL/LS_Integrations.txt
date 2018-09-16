@@ -77,3 +77,12 @@ New Notes:
 /products->send 200
 /purchase-requests->give in model format to Oracle\need to connect in to outlets
 /supplier-return-requests->give in model format to Oracle\need to connect in to outlets
+
+15-16 Sep Weekend
+.ws templates/
+.table updates after sending data
+.REST API call package (token, and data from outlets:old PBSA or from ho if new PBSA)
+.db links to Interface\API staging tables (JE, PR\Rejected Lines)
+.db links from EBS base tables (PO, Reverse GRN, Supplier)
+.db links from EBS base tables (stores, products)
+.Master data upload Supplier\Item\Assign to categories

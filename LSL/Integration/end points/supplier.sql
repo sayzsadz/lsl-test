@@ -7,9 +7,9 @@ BEGIN
                                             CURSOR (select  *
                                             from ADDRESS ad
                                             where ad.SUPPLIERID = sup.SUPPLIERID) as ADDRESS
-                                            FROM SUPPLIER sup;',
+                                            FROM SUPPLIER sup',
                       p_items_per_page => 0,
-                      p_comments       => 'get supplier');
+                      p_comments       => 'check supplier');
   COMMIT;
   exception
     when others then
