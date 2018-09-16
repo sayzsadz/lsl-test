@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE create_sales_summary (p_data  IN  CLOB)
+CREATE OR REPLACE PROCEDURE create_supplier_return_summary (p_data  IN  CLOB)
 AS
 
   l_data           varchar2(20000);
@@ -7,46 +7,65 @@ AS
   l_offset         number;
 
 BEGIN
-    --l_data := p_data;
-    l_data := '[{"date":"2018-06-04T00:00:00","products":[{"saleSummaryID":1,"date":"2018-06-04T00:00:00","productId":"d06bd7ed-6fe1-4a36-9050-d49d36966b71","partNumber":"000001","title":"Product One","avgCostEx":4.5455,"avgCostTax":0.4546,"unit":"Each","totalUnits":1.000,"totalValueEx":18.1800,"totalValueTax":1.8200}]}]';
+    l_data := p_data;
+    --l_data := '[{"date":"2018-06-04T00:00:00","products":[{"saleSummaryID":1,"date":"2018-06-04T00:00:00","productId":"d06bd7ed-6fe1-4a36-9050-d49d36966b71","partNumber":"000001","title":"Product One","avgCostEx":4.5455,"avgCostTax":0.4546,"unit":"Each","totalUnits":1.000,"totalValueEx":18.1800,"totalValueTax":1.8200}]}]';
 
-   INSERT INTO sales_summary_tbl (
-                                sales_date      ,
-                                salesummaryid   ,
-                                sale_date       ,
-                                productId       ,
-                                partNumber      ,
-                                title           ,
-                                avgCostEx       ,
-                                avgCostTax      ,
-                                unit            ,
-                                totalUnits      ,
-                                totalValueEx    ,
-                                totalValueTax
+   INSERT INTO deliverysummary (
+                                DeliveryId      ,
+                                PurchaseOrderID   ,
+                                ExternalReferenceNumber       ,
+                                "Date"       ,
+                                Freight      ,
+                                FreightTax           ,
+                                SupplierId
                               )
                         SELECT *
 FROM 
      JSON_TABLE(
-     '[{"date":"2018-06-04T00:00:00","products":[{"saleSummaryID":1,"date":"2018-06-04T00:00:00","productId":"d06bd7ed-6fe1-4a36-9050-d49d36966b71","partNumber":"000001","title":"Product One","avgCostEx":4.5455,"avgCostTax":0.4546,"unit":"Each","totalUnits":1.000,"totalValueEx":18.1800,"totalValueTax":1.8200}]}]'
+     l_data
      , '$[*]' COLUMNS (
-      "sales_date" varchar2(30) PATH '$.date',
+      DeliveryId number PATH '$.DeliveryId',
+      PurchaseOrderID number PATH '$.PurchaseOrderID',
+      ExternalReferenceNumber varchar2(30) PATH '$.ExternalReferenceNumber',
+      "Date" varchar2(30) PATH '$.Date',
+      Freight number PATH '$.Freight',
+      FreightTax number PATH '$.FreightTax',
+      SupplierId number PATH '$.SupplierId'
+)) JT;
+   
+   INSERT INTO deliverysummaryline (
+                                DeliveryId      ,
+                                DeliveryDetailId   ,
+                                ProductId       ,
+                                Title       ,
+                                Quantity      ,
+                                Unit           ,
+                                PerUnitCost       ,
+                                PerUnitCostTax      ,
+                                LineTotalCost            ,
+                                LineTotalCostTax 
+                              )
+                        SELECT *
+FROM 
+     JSON_TABLE(
+     l_data
+     , '$[*]' COLUMNS (
+      DeliveryId varchar2(30) PATH '$.DeliveryId',
               NESTED PATH '$.products[*]' COLUMNS (
                            
-                           salesummaryid   number      PATH '$.saleSummaryID',
-                                          sale_date       varchar2(30)        PATH '$.date',
-                                          productId       varchar2(300)    PATH '$.productId',
-                                          partNumber      varchar2(300)    PATH '$.partNumber',
-                                          title           varchar2(300)    PATH '$.title',
-                                          avgCostEx       number      PATH '$.avgCostEx',
-                                          avgCostTax      number      PATH '$.avgCostTax',
-                                          unit            varchar(300)     PATH '$.unit',
-                                          totalUnits      number      PATH '$.totalUnits',
-                                          totalValueEx    number      PATH '$.totalValueEx',
-                                          totalValueTax   number      PATH '$.totalValueTax'
-                           
+                           DeliveryDetailId   number      PATH '$.DeliveryDetailId',
+                                          ProductId       varchar2(30)        PATH '$.ProductId',
+                                          Title       varchar2(300)    PATH '$.Title',
+                                          Quantity      varchar2(300)    PATH '$.Quantity',
+                                          Unit           varchar2(300)    PATH '$.Unit',
+                                          PerUnitCost       number      PATH '$.PerUnitCost',
+                                          PerUnitCostTax      number      PATH '$.PerUnitCostTax',
+                                          LineTotalCost            varchar(300)     PATH '$.LineTotalCost',
+                                          LineTotalCostTax      number      PATH '$.LineTotalCostTax'
 )
 
 )) JT;
+   
             
             COMMIT;
 --
