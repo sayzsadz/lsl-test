@@ -10,32 +10,32 @@ BEGIN
     l_data := p_data;
     --l_data := '[{"date":"2018-06-04T00:00:00","products":[{"saleSummaryID":1,"date":"2018-06-04T00:00:00","productId":"d06bd7ed-6fe1-4a36-9050-d49d36966b71","partNumber":"000001","title":"Product One","avgCostEx":4.5455,"avgCostTax":0.4546,"unit":"Each","totalUnits":1.000,"totalValueEx":18.1800,"totalValueTax":1.8200}]}]';
 
-   INSERT INTO deliverysummary (
-                                DeliveryId      ,
-                                PurchaseOrderID   ,
-                                ExternalReferenceNumber       ,
+   INSERT INTO supplierreturn (
+                                SupplierReturnId      ,
+                                SupplierId   ,
                                 "Date"       ,
                                 Freight      ,
                                 FreightTax           ,
-                                SupplierId
+                                Total,
+                                Tax
                               )
                         SELECT *
 FROM 
      JSON_TABLE(
      l_data
      , '$[*]' COLUMNS (
-      DeliveryId number PATH '$.DeliveryId',
-      PurchaseOrderID number PATH '$.PurchaseOrderID',
-      ExternalReferenceNumber varchar2(30) PATH '$.ExternalReferenceNumber',
+      SupplierReturnId number PATH '$.SupplierReturnId',
+      SupplierId number PATH '$.SupplierId',
       "Date" varchar2(30) PATH '$.Date',
       Freight number PATH '$.Freight',
       FreightTax number PATH '$.FreightTax',
-      SupplierId number PATH '$.SupplierId'
+      Total number PATH '$.Total',
+      Tax number PATH '$.Tax'
 )) JT;
    
-   INSERT INTO deliverysummaryline (
-                                DeliveryId      ,
-                                DeliveryDetailId   ,
+   INSERT INTO supplierreturnline (
+                                SupplierReturnId      ,
+                                SupplierReturnDetailId   ,
                                 ProductId       ,
                                 Title       ,
                                 Quantity      ,
@@ -43,25 +43,29 @@ FROM
                                 PerUnitCost       ,
                                 PerUnitCostTax      ,
                                 LineTotalCost            ,
-                                LineTotalCostTax 
+                                LineTotalCostTax ,
+                                InvoiceNumber,
+                                DeliveryID
                               )
                         SELECT *
 FROM 
      JSON_TABLE(
      l_data
      , '$[*]' COLUMNS (
-      DeliveryId varchar2(30) PATH '$.DeliveryId',
+      SupplierReturnId varchar2(30) PATH '$.SupplierReturnId',
               NESTED PATH '$.products[*]' COLUMNS (
                            
-                           DeliveryDetailId   number      PATH '$.DeliveryDetailId',
+                           SupplierReturnDetailId   number      PATH '$.DeliveryDetailId',
                                           ProductId       varchar2(30)        PATH '$.ProductId',
                                           Title       varchar2(300)    PATH '$.Title',
                                           Quantity      varchar2(300)    PATH '$.Quantity',
                                           Unit           varchar2(300)    PATH '$.Unit',
                                           PerUnitCost       number      PATH '$.PerUnitCost',
                                           PerUnitCostTax      number      PATH '$.PerUnitCostTax',
-                                          LineTotalCost            varchar(300)     PATH '$.LineTotalCost',
-                                          LineTotalCostTax      number      PATH '$.LineTotalCostTax'
+                                          LineTotalCost            number     PATH '$.LineTotalCost',
+                                          LineTotalCostTax      number      PATH '$.LineTotalCostTax',
+                                          InvoiceNumber  number      PATH '$.LineTotalCostTax',
+                                          DeliveryID       number      PATH '$.LineTotalCostTax'
 )
 
 )) JT;
