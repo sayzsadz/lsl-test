@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE create_sale (p_data  IN  CLOB)
+CREATE OR REPLACE PROCEDURE create_store (p_data  IN  CLOB)
 AS
 
   l_data           varchar2(20000);
@@ -10,36 +10,20 @@ BEGIN
     l_data := p_data;
     --l_data := '[{"date":"2018-06-04T00:00:00","products":[{"saleSummaryID":1,"date":"2018-06-04T00:00:00","productId":"d06bd7ed-6fe1-4a36-9050-d49d36966b71","partNumber":"000001","title":"Product One","avgCostEx":4.5455,"avgCostTax":0.4546,"unit":"Each","totalUnits":1.000,"totalValueEx":18.1800,"totalValueTax":1.8200}]}]';
 
-   INSERT INTO sale (
-                      SaleId
+   INSERT INTO "store" (
+                      StoreID,
+                      Title
                     )
                         SELECT *
                         FROM 
                              JSON_TABLE(
                              l_data
                              , '$[*]' COLUMNS (
-                                                SaleId varchar2(30) PATH '$.SaleId'
+                                                StoreID varchar2(30) PATH '$.StoreID'
+                                                Title   varchar2(100) PATH '$.Title'
                                               )
                            ) JT;
-   
-   
-   INSERT INTO saledetail (
-                              SaleId,
-                              SaleDetailId
-                            )
-                        SELECT *
-                        FROM 
-                             JSON_TABLE(
-                             l_data
-                             , '$[*]' COLUMNS (
-                              SaleId varchar2(30) PATH '$.SaleId',
-                                      NESTED PATH '$.Lines[*]' COLUMNS (
-                                                   
-                                                                  SaleDetailId   number      PATH '$.SaleDetailId'
-                                                   
-                                      )
-                              )
-                        ) JT;           
+            
             COMMIT;
 --
 --  l_amount := 32000;
