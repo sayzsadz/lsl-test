@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE create_sales_summary (p_data  IN  CLOB)
+CREATE OR REPLACE PROCEDURE create_product_movement (p_data  IN  CLOB)
 AS
 
   l_data           varchar2(20000);
@@ -7,43 +7,32 @@ AS
   l_offset         number;
 
 BEGIN
-    --l_data := p_data;
-    l_data := '[{"date":"2018-06-04T00:00:00","products":[{"saleSummaryID":1,"date":"2018-06-04T00:00:00","productId":"d06bd7ed-6fe1-4a36-9050-d49d36966b71","partNumber":"000001","title":"Product One","avgCostEx":4.5455,"avgCostTax":0.4546,"unit":"Each","totalUnits":1.000,"totalValueEx":18.1800,"totalValueTax":1.8200}]}]';
+    l_data := p_data;
+    --l_data := '[{"date":"2018-06-04T00:00:00","products":[{"saleSummaryID":1,"date":"2018-06-04T00:00:00","productId":"d06bd7ed-6fe1-4a36-9050-d49d36966b71","partNumber":"000001","title":"Product One","avgCostEx":4.5455,"avgCostTax":0.4546,"unit":"Each","totalUnits":1.000,"totalValueEx":18.1800,"totalValueTax":1.8200}]}]';
 
-   INSERT INTO sales_summary_tbl (
-                                sales_date      ,
-                                salesummaryid   ,
-                                sale_date       ,
-                                productId       ,
-                                partNumber      ,
-                                title           ,
-                                avgCostEx       ,
-                                avgCostTax      ,
-                                unit            ,
-                                totalUnits      ,
-                                totalValueEx    ,
-                                totalValueTax
+   INSERT INTO ProductMovementSummary (
+                                "Date"      ,
+                                ProductId   ,
+                                PartNumber       ,
+                                Title       ,
+                                Unit      ,
+                                ValueAdjusted           ,
+                                ValueAdjustedTax       ,
+                                UnitAdjusted
                               )
                         SELECT *
 FROM 
      JSON_TABLE(
-     '[{"date":"2018-06-04T00:00:00","products":[{"saleSummaryID":1,"date":"2018-06-04T00:00:00","productId":"d06bd7ed-6fe1-4a36-9050-d49d36966b71","partNumber":"000001","title":"Product One","avgCostEx":4.5455,"avgCostTax":0.4546,"unit":"Each","totalUnits":1.000,"totalValueEx":18.1800,"totalValueTax":1.8200}]}]'
+     l_data
      , '$[*]' COLUMNS (
-      "sales_date" varchar2(30) PATH '$.date',
-              NESTED PATH '$.products[*]' COLUMNS (
-                           
-                           salesummaryid   number      PATH '$.saleSummaryID',
-                                          sale_date       varchar2(30)        PATH '$.date',
-                                          productId       varchar2(300)    PATH '$.productId',
-                                          partNumber      varchar2(300)    PATH '$.partNumber',
-                                          title           varchar2(300)    PATH '$.title',
-                                          avgCostEx       number      PATH '$.avgCostEx',
-                                          avgCostTax      number      PATH '$.avgCostTax',
-                                          unit            varchar(300)     PATH '$.unit',
-                                          totalUnits      number      PATH '$.totalUnits',
-                                          totalValueEx    number      PATH '$.totalValueEx',
-                                          totalValueTax   number      PATH '$.totalValueTax'
-                           
+      "Date" varchar2(30) PATH '$.Date',
+      ProductId   varchar2(30) PATH '$.ProductId',
+                                PartNumber      varchar2(30) PATH '$.PartNumber' ,
+                                Title     varchar2(30) PATH '$.Title'  ,
+                                Unit      varchar2(30) PATH '$.Unit',
+                                ValueAdjusted       number PATH '$.ValueAdjusted'    ,
+                                ValueAdjustedTax    number PATH '$.ValueAdjustedTax'   ,
+                                UnitAdjusted  number PATH '$.UnitAdjusted'
 )
 
 )) JT;
