@@ -24,6 +24,14 @@ is
 
 begin
 
+  select TOKEN_TYPE,
+         ACCESS_TOKEN
+  into l_token_type,
+       l_access_token
+  from XXPBSA_OAUTH
+  where 1 = 1
+        AND SYSDATE between START_DATE and END_DATE;
+
   l_token_type    := p_token_type;
   l_access_token  := p_access_token;
   --l_basic_base64 := replace(utl_raw.cast_to_varchar2(utl_encode.base64_encode(utl_raw.cast_to_raw(l_site_name||'\'||l_username||':'||l_password))),chr(13)||chr(10),'');

@@ -1,0 +1,8 @@
+/purchase-orders
+/supplier-returns
+/rejected-lines
+/suppliers
+/stores
+/products
+/purchase-requests
+/supplier-return

@@ -55,7 +55,7 @@ INSERT INTO GL_INTERFACE (
                           'Y'                         , --  i.STATUS                                                          
                           2021                        , --  SELECT * FROM GL_SETS_OF_BOOKS      (Trading Companies SOB) 
                           'Manual'                    , --  SELECT * FROM GL_JE_SOURCES WHERE JE_SOURCE_NAME LIKE 'Manual'         
-                          'Addition'                , --  SELECT USER_JE_CATEGORY_NAME FROM GL_JE_CATEGORIES WHERE USER_JE_CATEGORY_NAME LIKE 'SSE%'       
+                          'Adjustment'                , --  SELECT USER_JE_CATEGORY_NAME FROM GL_JE_CATEGORIES WHERE USER_JE_CATEGORY_NAME LIKE 'SSE%'       
                           SYSDATE                     , --  i.ACCOUNTING_DATE     
                           'LKR'                       , --  i.CURRENCY_CODE  
                           sysdate                     , --  DATE_CREATED   
@@ -91,3 +91,4 @@ begin
 XXPBSA_JE_INTERFACE;
 end;
 /
+SELECT * FROM GL_JE_CATEGORIES;

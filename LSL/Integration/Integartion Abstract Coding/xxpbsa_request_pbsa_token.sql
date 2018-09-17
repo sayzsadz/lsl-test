@@ -54,6 +54,22 @@ BEGIN
         from dual;
         
         p_expires_in := l_expires_in;
+        
+        insert into XXPBSA_OAUTH (
+                                  TOKEN_TYPE,
+                                  ACCESS_TOKEN,
+                                  EXPIRES_IN_SEC,
+                                  START_DATE,
+                                  END_DATE
+                                 ) 
+                         VALUES (
+                                  l_token_type,
+                                  l_access_token,
+                                  l_expires_in,
+                                  SYSDATE,
+                                  SYSDATE + l_expires_in
+                                );
+        commit;
 --                                               
 --        l_amount := 32000;
 --        l_offset := 1;

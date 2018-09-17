@@ -80,9 +80,8 @@ New Notes:
 
 15-16 Sep Weekend
 .ws templates/
-.table updates after sending data
-.REST API call package (token, and data from outlets:old PBSA or from ho if new PBSA)
+.REST API call package (token, and data from outlets:old PBSA or from ho\ if new PBSA)
 .db links to Interface\API staging tables (JE, PR\Rejected Lines)
-.db links from EBS base tables (PO, Reverse GRN, Supplier)
-.db links from EBS base tables (stores, products)
+.db links from EBS base tables (PO, Reverse GRN, Supplier) and table updates after sending data
+.db links from EBS base tables (stores, products) and table updates after sending data
 .Master data upload Supplier\Item\Assign to categories
