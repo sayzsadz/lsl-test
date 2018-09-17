@@ -1,6 +1,6 @@
       SELECT *
       FROM xx_req_po_stg
-      WHERE batch_id           =123
+      WHERE batch_id           =1004
       AND interface_source_code='TEST'
       AND authorization_status ='APPROVED'
       AND NVL(error_flag,'N')  = 'N';
@@ -122,7 +122,7 @@ BEGIN
   req_po_load_pkg.MAIN(
      errbuf
     ,retcode
-    ,1003
+    ,1004
     ,'TEST'
     );
     
@@ -133,7 +133,7 @@ END;
 BEGIN
   req_po_load_pkg.SUBMIT_REQUEST
     (
-      123
+      1004
     ,'TEST'
     );
 END;

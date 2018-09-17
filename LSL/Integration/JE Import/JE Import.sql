@@ -1,7 +1,7 @@
 CREATE OR REPLACE PROCEDURE XXPBSA_JE_INTERFACE IS
 BEGIN
 /*
-SELECT * FROM GL_INTERFACE
+
 MANDATORY FIELDS 
 
             STATUS 
@@ -75,11 +75,11 @@ INSERT INTO GL_INTERFACE (
                          '00000'                         , --  SELECT * FROM GL_CODE_COMBINATIONS_KFV WHERE SEGMENT7 = 01   
                          '000'                     , --  SELECT * FROM GL_CODE_COMBINATIONS_KFV WHERE SEGMENT8 = 981100  
                          '000'                         , --  SELECT * FROM GL_CODE_COMBINATIONS_KFV WHERE SEGMENT9 = 00   
-                          2300                        , --  i.ENTERED_DR                           
-                          2300                        , --  i.ENTERED_CR                           
-                          2300                        , --  i.ACCOUNTED_DR                         
-                          2300                        , --  i.ACCOUNTED_CR                         
-                          'Dec-17'                    , --  i.PERIOD_NAME     (PERIOD SHOULD BE OPEN )                         
+                          12                        , --  i.ENTERED_DR                           
+                          12                        , --  i.ENTERED_CR                           
+                          12                        , --  i.ACCOUNTED_DR                         
+                          12                        , --  i.ACCOUNTED_CR                         
+                          'Jan-17'                    , --  i.PERIOD_NAME     (PERIOD SHOULD BE OPEN )                         
                           SYSDATE                     , --  i.REFERENCE1                        
                           'INSERTED BY CUSTOM GL INT' , --  i.REFERENCE2                          
                           'INSERT'                    , --  i.REFERENCE4     ( REFERENCE4   it takes in JE NAME  ) 
@@ -87,8 +87,8 @@ INSERT INTO GL_INTERFACE (
                          );
 END;
 /
+
 begin
 XXPBSA_JE_INTERFACE;
 end;
 /
-SELECT * FROM GL_JE_CATEGORIES;

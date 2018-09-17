@@ -71,7 +71,8 @@ EXCEPTION
       DBMS_OUTPUT.PUT_LINE('Error while submitting the GL Import Program.');
       DBMS_OUTPUT.PUT_LINE('Error : '||SQLCODE||'-'||SUBSTR(SQLERRM,1,200));
 END;
-
+/
 begin
 XXPBSA_REQ_JE_IMPORT;
 end;
+/
