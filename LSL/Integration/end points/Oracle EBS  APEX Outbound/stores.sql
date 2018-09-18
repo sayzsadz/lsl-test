@@ -1,17 +1,17 @@
-CREATE OR REPLACE PROCEDURE check_supplier (p_data  IN  BLOB, p_msg OUT varchar2)
+CREATE OR REPLACE PROCEDURE check_store (p_data  IN  varchar2, p_msg OUT varchar2)
 AS
   lv_StoreId    number;
   v_msg         varchar2(100);
 BEGIN
     BEGIN
         SELECT STOREID
-        INTO lv_StoreId
+        --INTO lv_StoreId
         FROM STORE
         WHERE STOREID in (
         SELECT StoreId
         FROM 
              JSON_TABLE(
-        p_data
+       '{}'
              , '$[*]' COLUMNS (
               StoreId NUMBER PATH '$.StoreId'
         
@@ -36,7 +36,7 @@ END;
 
   
 BEGIN
-  ords.define_template(p_module_name => 'lslmodule1.v1',
+  ords.define_template(p_module_name => 'lslmodule7.v1',
                        p_pattern     => 'store/',
                        p_comments    => 'check store');
 
@@ -45,7 +45,7 @@ END;
 /
 begin
   ORDS.define_handler(
-    p_module_name    => 'lslmodule1.v1',
+    p_module_name    => 'lslmodule7.v1',
     p_pattern        => 'store/',
     p_method         => 'POST',
     p_source_type    => ORDS.source_type_plsql,
@@ -54,7 +54,7 @@ begin
                             l_response  VARCHAR2(32767);                      
                            BEGIN                             
                              -- Build response.
-                             check_supplier(p_data => UTL_RAW.cast_to_varchar2(:body), p_msg => v_msg);
+                             check_store(UTL_RAW.cast_to_varchar2(:body), v_msg);
                              l_response := v_msg;
  
                              -- Output response text.

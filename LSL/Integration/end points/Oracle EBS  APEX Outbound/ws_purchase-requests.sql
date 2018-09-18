@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE create_purchase_request (p_data IN BLOB, p_msg OUT varchar2)
+CREATE OR REPLACE PROCEDURE create_purchase_request (p_data IN varchar2, p_msg OUT varchar2)
 AS
 l_msg         varchar2(1000);
 BEGIN
@@ -69,8 +69,8 @@ END;
 
 BEGIN
        
-  ords.define_module(p_module_name    => 'lslmodule3.v1',
-                     p_base_path      => 'lslmodule3/v1/',
+  ords.define_module(p_module_name    => 'lslmodule9.v1',
+                     p_base_path      => 'lslmodule9/v1/',
                      p_items_per_page => 5,
                      p_status         => 'PUBLISHED',
                      p_comments       => 'purchase request Module');             
@@ -79,16 +79,16 @@ END;
 /  
 
 BEGIN
-  ords.define_template(p_module_name => 'lslmodule3.v1',
+  ords.define_template(p_module_name => 'lslmodule9.v1',
                        p_pattern     => 'purchase-request/',
                        p_comments    => 'purchase request template');
 
   COMMIT;
 END;
-
+/
 begin
   ORDS.define_handler(
-    p_module_name    => 'lslmodule3.v1',
+    p_module_name    => 'lslmodule9.v1',
     p_pattern        => 'purchase-request/',
     p_method         => 'POST',
     p_source_type    => ORDS.source_type_plsql,
@@ -97,7 +97,7 @@ begin
                             l_response  VARCHAR2(32767);                      
                            BEGIN                             
                              -- Build response.
-                             create_supplier_return(p_data => UTL_RAW.cast_to_varchar2(:body), p_msg => v_msg);
+                             create_purchase_request(p_data => UTL_RAW.cast_to_varchar2(:body), p_msg => v_msg);
                              l_response := v_msg;
  
                              -- Output response text.
@@ -108,7 +108,7 @@ begin
 
   COMMIT;
 END;
-
+/
 
 --https://13.67.34.43:8443/ords/api/lslmodule3/v1/purchase-request/
 
