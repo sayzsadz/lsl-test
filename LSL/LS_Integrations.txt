@@ -92,3 +92,6 @@ New Notes:
 .JE categories with control accounts for sales\payments\bank-deposits\tills
 .sending PBSA PO number and Oracle EBS PO number mapping
 .(AR receipt based on credits to outside parties)
+
+18-Sep
+.supplier return from cost\quantity\lines etc.

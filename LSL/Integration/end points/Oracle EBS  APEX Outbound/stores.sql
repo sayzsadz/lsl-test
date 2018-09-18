@@ -5,13 +5,13 @@ AS
 BEGIN
     BEGIN
         SELECT STOREID
-        --INTO lv_StoreId
+        INTO lv_StoreId
         FROM STORE
-        WHERE STOREID in (
+        WHERE STOREID = (
         SELECT StoreId
         FROM 
              JSON_TABLE(
-       '{}'
+          p_data
              , '$[*]' COLUMNS (
               StoreId NUMBER PATH '$.StoreId'
         
@@ -37,7 +37,7 @@ END;
   
 BEGIN
   ords.define_template(p_module_name => 'lslmodule7.v1',
-                       p_pattern     => 'store/',
+                       p_pattern     => 'stores/',
                        p_comments    => 'check store');
 
   COMMIT;
@@ -46,7 +46,7 @@ END;
 begin
   ORDS.define_handler(
     p_module_name    => 'lslmodule7.v1',
-    p_pattern        => 'store/',
+    p_pattern        => 'stores/',
     p_method         => 'POST',
     p_source_type    => ORDS.source_type_plsql,
     p_source         => q'[DECLARE                            

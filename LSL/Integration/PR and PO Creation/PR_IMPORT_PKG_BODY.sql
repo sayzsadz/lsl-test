@@ -48,8 +48,8 @@ IS
   IS
     CURSOR c_requistion_rec
     IS
-      SELECT *
-      FROM xx_req_po_stg
+      SELECT distinct stg.*
+      FROM xx_req_po_stg stg
       WHERE batch_id           =pn_batch_id
       AND interface_source_code=pv_int_source_code
       AND authorization_status ='APPROVED'

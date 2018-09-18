@@ -1,28 +1,44 @@
-CREATE OR REPLACE function check_product (p_data  IN  BLOB, p_msg OUT varchar) return varchar2
+CREATE OR REPLACE PROCEDURE check_product (p_data  IN  varchar2, p_msg OUT varchar2)
 AS
         lv_PRODUCTID number;
-        v_msg        varchar2(20);
+        v_msg        varchar2(50);
 BEGIN
     BEGIN
-        SELECT PRODUCTID
+        SELECT count(PRODUCTID) cnt
         INTO lv_PRODUCTID
         FROM PRODUCT
-        WHERE PRODUCTID in (
+        WHERE PRODUCTID = (
         SELECT PRODUCTID
         FROM 
              JSON_TABLE(
-        p_data
+                ''
              , '$[*]' COLUMNS (
-              ProductId NUMBER PATH '$.ProductId'
+              ProductId VARCHAR2(50) PATH '$.ProductId'
         
         ))
         );
-            select 'successful operation'
-            into v_msg
-            from dual;
-            
-            p_msg := v_msg;
-            
+        
+        IF lv_PRODUCTID > 0
+          THEN
+            BEGIN
+              select 'successful operation'
+              into v_msg
+              from dual;
+              
+              p_msg := v_msg;
+              
+            END;
+        ELSE
+            BEGIN
+              select 'unsuccessful operation'
+              into v_msg
+              from dual;
+              
+              p_msg := v_msg;
+              
+            END;
+        END IF;
+        
         EXCEPTION
           WHEN OTHERS THEN
             select 'unsuccessful operation'
@@ -35,10 +51,17 @@ BEGIN
 END;     
 /
 
-  
 BEGIN
-  ords.define_template(p_module_name => 'lslmodule2.v1',
-                       p_pattern     => 'product/',
+  ords.define_template(p_module_name => 'lslmodule5.v1',
+                       p_pattern     => 'products/',
+                       p_comments    => 'check product');
+
+  COMMIT;
+END;
+/ 
+BEGIN
+  ords.define_template(p_module_name => 'lslmodule5.v1',
+                       p_pattern     => 'products/',
                        p_comments    => 'check product');
 
   COMMIT;
@@ -46,8 +69,8 @@ END;
 /
 begin
   ORDS.define_handler(
-    p_module_name    => 'lslmodule2.v1',
-    p_pattern        => 'product/',
+    p_module_name    => 'lslmodule5.v1',
+    p_pattern        => 'products/',
     p_method         => 'POST',
     p_source_type    => ORDS.source_type_plsql,
     p_source         => q'[DECLARE                            
@@ -55,7 +78,7 @@ begin
                             l_response  VARCHAR2(32767);                      
                            BEGIN                             
                              -- Build response.
-                             check_product(p_data => UTL_RAW.cast_to_varchar2(:body), p_msg => v_msg);
+         --                    check_product(UTL_RAW.cast_to_varchar2(:body), v_msg);
                              l_response := v_msg;
  
                              -- Output response text.
