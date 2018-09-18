@@ -11,8 +11,8 @@ AS
       pol.iTEM_ID po_item,
       poh.ORG_ID,
       to_number(rcv.ATTRIBUTE1) rcv_qty,
-      pol.QUANTITY              *.625 po_qty,
-      (to_number(rcv.ATTRIBUTE1)-pol.QUANTITY*.625) qty_diff,
+      pol.QUANTITY,
+      pol.QUANTITY qty_diff,
       item.PRIMARY_UOM_CODE,
       rcv.TRANSACTION_DATE,
       rcv.SUBINVENTORY,
@@ -34,13 +34,13 @@ AS
     AND rsh.SHIPMENT_HEADER_ID  =rcv.SHIPMENT_HEADER_ID
     AND rsl.SHIPMENT_LINE_ID    =rcv.SHIPMENT_LINE_ID
     AND rcv.TRANSACTION_TYPE    ='DELIVER'
-    AND rsh.RECEIPT_NUM         = v_rec_no
+    AND rsh.RECEIPT_NUM         = 100003
     AND poh.PO_HEADER_ID        =pol.PO_HEADER_ID
     AND poh.ORG_ID              =pol.ORG_ID
     AND poh.PO_HEADER_ID        =rcv.PO_HEADER_ID
     AND pol.PO_LINE_ID          =rcv.PO_LINE_ID
     AND item.inventory_item_id  =rsl.ITEM_ID
-    AND item.organization_id    = v_org_id
+    AND item.organization_id    = 102
     AND rcv.ORGANIZATION_ID    IN
       (SELECT ORGANIZATION_ID
       FROM mtl_system_items_b
@@ -133,7 +133,7 @@ BEGIN
       BEGIN
         -- DBMS_OUTPUT.put_line ('Before Inserted MTL_TRANSACTIONS_INTERFACE');
         INSERT
-        INTO apps.mtl_transactions_interface
+        INTO mtl_transactions_interface
           (
             source_code,
             source_line_id,
