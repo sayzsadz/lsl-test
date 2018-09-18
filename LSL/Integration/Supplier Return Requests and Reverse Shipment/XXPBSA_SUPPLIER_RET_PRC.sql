@@ -1,3 +1,18 @@
+declare
+    p_errbuf  VARCHAR2(100);
+    p_retcode VARCHAR2(1000);
+    v_rec_no  VARCHAR2(500);
+    v_org_id  NUMBER;
+begin
+XXPBSA_SUPPLIER_RET_PRC(
+               p_errbuf,
+               p_retcode,
+               v_rec_no,
+               v_org_id
+      );
+end;
+/
+
 CREATE OR REPLACE PROCEDURE XXPBSA_SUPPLIER_RET_PRC(
     p_errbuf OUT VARCHAR2,
     p_retcode OUT VARCHAR2,
