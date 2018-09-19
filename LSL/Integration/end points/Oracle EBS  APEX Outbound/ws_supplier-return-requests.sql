@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE  create_supplier_return (p_data IN CLOB, p_msg OUT varchar2) 
+CREATE OR REPLACE PROCEDURE  create_supplier_return (p_data IN varchar2, p_msg OUT varchar2) 
 AS
 l_msg         varchar2(1000);
 --l_code        l_msg.v_code%type;         
@@ -14,8 +14,7 @@ INSERT INTO SUPPLIER_RET_REQUESTS_HEADER(SupplierReturnRequestId, StoreId, Stree
    SELECT SupplierReturnRequestId, StoreId, Street, City, State, PostCode, Country, ContactName, Phone, Email        
    FROM json_table(p_data format JSON , '$' COLUMNS 
    ( SupplierReturnRequestId VARCHAR2 PATH '$.SupplierReturnRequestId',
-     StoreId VARCHAR2 PATH
-     '$.StoreId', 
+     StoreId VARCHAR2 PATH '$.StoreId', 
      Street VARCHAR2 PATH '$.Address.Street', 
      City VARCHAR2 PATH '$.Address.City', 
      State VARCHAR2 PATH '$.Address.State', 
@@ -74,7 +73,7 @@ BEGIN
                      p_base_path      => 'lslmodule2/v1/',
                      p_items_per_page => 5,
                      p_status         => 'PUBLISHED',
-                     p_comments       => 'testmodule1 Module');             
+                     p_comments       => 'supplier return request module');             
   COMMIT;
 END;
 /
@@ -98,14 +97,14 @@ begin
                             l_response  VARCHAR2(32767);                      
                            BEGIN                             
                              -- Build response.
-                             create_supplier_return(p_data => UTL_RAW.cast_to_varchar2(:body), p_msg => v_msg);
+                             create_supplier_return(UTL_RAW.cast_to_varchar2(:body), v_msg);
                              l_response := v_msg;
  
                              -- Output response text.
                              HTP.p(l_response);
                              
                          END;]',
-    p_items_per_page => 0);
+    p_items_per_page => 1);
 
   COMMIT;
 END;
