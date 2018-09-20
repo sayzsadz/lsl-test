@@ -1,4 +1,4 @@
-create or replace procedure XXPBSA_EXECUTE_IMPORT_PRC(errbuf OUT NOCOPY VARCHAR2, retcode OUT NOCOPY VARCHAR2)
+create or replace procedure XXPBSA_EXECUTE_IMPORT_PRC
 as
     l_token_type    varchar2(50);
     l_access_token  varchar2(2000);
@@ -55,7 +55,9 @@ begin
     from dual;
     
     begin
-    execute immediate 'begin ' || cur_rec.PROCNAME || '('|| l_response ||')' || '; end;';
+    --execute immediate 'begin ' || 'create_sales_summary' || '('|| '{}' ||'); end;';
+    
+    --create_sales_summary(l_response);
     
     update XXPBSA_ENDPOINTS
     set STATUS = 'P', PARAMETER1 = l_response

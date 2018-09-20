@@ -2,7 +2,7 @@ BEGIN
   ords.define_handler(p_module_name    => 'lslmodule3.v1',
                       p_pattern        => 'supplier/',
                       p_method         => 'POST',
-                      p_source_type    => ords.source_type_collection_feed,
+                      p_source_type    => ords.source_type_plsql,
                       p_source         => ' SELECT sup.*,
                                             CURSOR (select  *
                                             from ADDRESS ad

@@ -77,7 +77,7 @@ BEGIN
             ACCESS_TOKEN = l_access_token,
             EXPIRES_IN_SEC = l_expires_in,
             START_DATE = SYSDATE,
-            END_DATE = SYSDATE + l_expires_in
+            END_DATE = SYSDATE + (((l_expires_in)/3600)/24)
         where rownum = 1;
         
         commit;

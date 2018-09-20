@@ -1,4 +1,4 @@
-  create or replace PROCEDURE XXPBSA_REQ_JE_IMPORT
+  create or replace PROCEDURE XXPBSA_REQ_JE_IMPORT (p_source_name varchar2)
   IS
  
    l_conc_id          NUMBER;
@@ -9,9 +9,11 @@
    l_user_id          NUMBER := 0;
    l_resp_id          NUMBER := 20475;
    l_resp_app_id      NUMBER := 101;
+   l_source_name      varchar2(100);
  
 BEGIN
- 
+   l_source_name := p_source_name;
+  
    fnd_global.apps_initialize
    (
       user_id       => l_user_id       --User Id
@@ -39,7 +41,7 @@ BEGIN
    )
    VALUES
    (
-      'Manual'
+      l_source_name
       ,l_int_run_id
       ,'S'
       ,l_sob_id
@@ -71,8 +73,4 @@ EXCEPTION
       DBMS_OUTPUT.PUT_LINE('Error while submitting the GL Import Program.');
       DBMS_OUTPUT.PUT_LINE('Error : '||SQLCODE||'-'||SUBSTR(SQLERRM,1,200));
 END;
-/
-begin
-XXPBSA_REQ_JE_IMPORT;
-end;
 /

@@ -95,3 +95,6 @@ New Notes:
 
 18-Sep
 .supplier return from cost\quantity\lines etc.
+
+19-Sep
+.Supplier Agreement Table for error msg on Integration Program

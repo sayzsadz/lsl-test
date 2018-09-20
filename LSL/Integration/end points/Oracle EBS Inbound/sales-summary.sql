@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE create_sales_summary (p_data  IN  CLOB)
+CREATE OR REPLACE PROCEDURE create_sales_summary (p_data  IN  varchar2)
 AS
 
   l_data           varchar2(20000);
@@ -11,7 +11,7 @@ BEGIN
     --l_data := '[{"date":"2018-06-04T00:00:00","products":[{"saleSummaryID":1,"date":"2018-06-04T00:00:00","productId":"d06bd7ed-6fe1-4a36-9050-d49d36966b71","partNumber":"000001","title":"Product One","avgCostEx":4.5455,"avgCostTax":0.4546,"unit":"Each","totalUnits":1.000,"totalValueEx":18.1800,"totalValueTax":1.8200}]}]';
 
    INSERT INTO salessummary (
-                                  sales_date      ,
+                                  SALES_DATE      ,
                                   salesummaryid   
                                  )
                         SELECT *
@@ -19,7 +19,7 @@ BEGIN
                              JSON_TABLE(
                              l_data
                              , '$[*]' COLUMNS (
-                              "sales_date" varchar2(30) PATH '$.date',
+                              sales_date varchar2(30) PATH '$.date',
                                       NESTED PATH '$.products[*]' COLUMNS (
                                                                           salesummaryid   number      PATH '$.saleSummaryID'
                                                                           )
@@ -49,7 +49,7 @@ BEGIN
               "sales_date" varchar2(30) PATH '$.date',
                       NESTED PATH '$.products[*]' COLUMNS (
                                    
-                                   salesummaryid   number      PATH '$.saleSummaryID',
+                                                  salesummaryid   number      PATH '$.saleSummaryID',
                                                   sale_date       varchar2(30)        PATH '$.date',
                                                   productId       varchar2(300)    PATH '$.productId',
                                                   partNumber      varchar2(300)    PATH '$.partNumber',

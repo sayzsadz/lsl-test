@@ -1,7 +1,7 @@
 create or replace function xxpbsa_request_pbsapos_data (
                                                           p_url           in varchar2
-                                                        , p_token_type    in varchar2
-                                                        , p_access_token  in varchar2
+                                                        --, p_token_type    in varchar2
+                                                        --, p_access_token  in varchar2
                                                         , p_date_from     in varchar2
                                                         , p_date_to       in varchar2
                                                         )
@@ -17,6 +17,8 @@ is
   l_token_type   varchar2(30);
   l_access_token varchar2(2000);
   l_url          varchar2(1000);
+  l_https_host   varchar2(50);
+  l_wallet_path  varchar2(50);
   -- l_site_name    varchar2(50) := 'http://104.197.10.182/ap1/api/v1/sales/summary';
   -- l_username     varchar2(50) := 'ck_o3vuhza8bgmvu5lxronckr2favaxeiolh3izb';
   -- l_password     varchar2(50) := 'cs_6bhldx7owbxrcmuo5ajcb7rql9mb0hglqrp97';
@@ -25,15 +27,19 @@ is
 begin
 
   select TOKEN_TYPE,
-         ACCESS_TOKEN
+         ACCESS_TOKEN,
+         HTTPS_HOST,
+         WALLET_PATH
   into l_token_type,
-       l_access_token
+       l_access_token,
+       l_https_host,
+       l_wallet_path
   from XXPBSA_OAUTH
   where 1 = 1
         AND SYSDATE between START_DATE and END_DATE;
 
-  l_token_type    := p_token_type;
-  l_access_token  := p_access_token;
+  --l_token_type    := p_token_type;
+  --l_access_token  := p_access_token;
   --l_basic_base64 := replace(utl_raw.cast_to_varchar2(utl_encode.base64_encode(utl_raw.cast_to_raw(l_site_name||'\'||l_username||':'||l_password))),chr(13)||chr(10),'');
   --apex_web_service.g_request_headers(1).name    := 'User-Agent';
   --apex_web_service.g_request_headers(1).value   := 'Mozilla';
@@ -55,16 +61,19 @@ begin
   l_url := p_url;
   
   -- Invoke the PBSA web service to retrieve data
-  select apex_web_service.make_rest_request(  p_url         => l_url,
-                                              p_http_method => 'POST',
-                                              p_body        => l_body,
-                                              p_wallet_path => 'file:/home/oracle/wallet2',
-                                              p_wallet_pwd  => null,
-                                              p_https_host  => 'support.pbsa.com.au' 
-                                              )
-  into l_clob
-  from dual;
-                                              
+  
+        select APEX_WEB_SERVICE.make_rest_request (    p_url         => l_url,
+                                                       p_http_method => 'POST',
+                                                       p_body        => l_body,
+                                                       -- p_parm_name   => apex_util.string_to_table('appid:format'),
+                                                       -- p_parm_value  => apex_util.string_to_table(apex_application.g_x01||':'||apex_application.g_x02)
+                                                       p_wallet_path => l_wallet_path,
+                                                       p_wallet_pwd  => null,
+                                                       p_https_host  => l_https_host
+                                                     )
+        into l_clob
+        from dual;
+                             
                                                 
   DBMS_OUTPUT.put_line(l_clob);
   

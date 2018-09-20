@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE create_payments_summary_returns (p_data  IN  CLOB)
+CREATE OR REPLACE PROCEDURE create_pay_sum_returns (p_data  IN  CLOB)
 AS
 
   l_data           varchar2(20000);
@@ -10,8 +10,8 @@ BEGIN
     l_data := p_data;
     --l_data := '[{"date":"2018-06-04T00:00:00","products":[{"saleSummaryID":1,"date":"2018-06-04T00:00:00","productId":"d06bd7ed-6fe1-4a36-9050-d49d36966b71","partNumber":"000001","title":"Product One","avgCostEx":4.5455,"avgCostTax":0.4546,"unit":"Each","totalUnits":1.000,"totalValueEx":18.1800,"totalValueTax":1.8200}]}]';
 
-   INSERT INTO paymentssummary (
-                                      "Date",
+   INSERT INTO paymentsummaryreturn (
+                                      PAYMENTDATE,
                                       PaymentTypesID,
                                       TransactionId
                                       )
@@ -20,16 +20,16 @@ BEGIN
                              JSON_TABLE(
                              l_data
                              , '$[*]' COLUMNS (
-                              "Date" varchar2(30) PATH '$.Date',
+                              PAYMENTDATE varchar2(30) PATH '$.Date',
                                       NESTED PATH '$.CreditCardTransactions[*]' COLUMNS (
-                                                   TransactionId   number      PATH '$.TransactionId',                           
+                                                   PaymentTypesID   number      PATH '$.TransactionId',                           
                                                    TransactionId   number      PATH '$.TransactionId'
                         )
                         
                         )) JT;
   
-  INSERT INTO paymentssummarytype (
-                                  PaymentTypeID,
+  INSERT INTO paymenttypesummaryreturn (
+                                  PAYMENTTYPESID,
                                   PaymentType,
                                   TotalValue
                                  )
@@ -40,7 +40,7 @@ BEGIN
                              JSON_TABLE(
                              l_data
                              , '$[*]' COLUMNS (
-                             "Date" varchar2(30) PATH '$.Date',
+                             "Date" varchar2(30) PATH '$.Date'
                              ,NESTED PATH  '$.PaymentTypes[*]' COLUMNS (
                                                                         PaymentType   number      PATH '$.PaymentType',
                                                                         TotalValue   number       PATH '$.TotalValue'
@@ -49,7 +49,7 @@ BEGIN
                                                                                   TransactionId   number      PATH '$.TransactionId'
                                                                                 )
 
-                            ) JT;
+                            )) JT;
 
   INSERT INTO CreditCardTransaction (
                                       TransactionId,
@@ -58,12 +58,16 @@ BEGIN
                                       Amount,
                                       ReferenceNumber
                                     )
-                        SELECT *
+                        SELECT TransactionId
+                              ,CreditCardType
+                              ,TransactionDate
+                              ,Amount
+                              ,ReferenceNumber
                         FROM 
                              JSON_TABLE(
                              l_data
                              , '$[*]' COLUMNS (
-                              TransactionId varchar2(30) PATH '$.TransactionId',
+                              TransactionId1 varchar2(30) PATH '$.TransactionId',
                                       NESTED PATH '$.CreditCardTransactions[*]' COLUMNS (
                                                                               TransactionId   number      PATH '$.TransactionId',
                                                                               CreditCardType   varchar2(20)      PATH '$.CreditCardType',

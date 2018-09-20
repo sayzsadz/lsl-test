@@ -1,3 +1,4 @@
+
 declare
     p_errbuf  VARCHAR2(100);
     p_retcode VARCHAR2(1000);
@@ -49,7 +50,7 @@ AS
     AND rsh.SHIPMENT_HEADER_ID  =rcv.SHIPMENT_HEADER_ID
     AND rsl.SHIPMENT_LINE_ID    =rcv.SHIPMENT_LINE_ID
     AND rcv.TRANSACTION_TYPE    ='DELIVER'
-    AND rsh.RECEIPT_NUM         = 100003
+    AND rsh.RECEIPT_NUM         = 100004
     AND poh.PO_HEADER_ID        =pol.PO_HEADER_ID
     AND poh.ORG_ID              =pol.ORG_ID
     AND poh.PO_HEADER_ID        =rcv.PO_HEADER_ID
