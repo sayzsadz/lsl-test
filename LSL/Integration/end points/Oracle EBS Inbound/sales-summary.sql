@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE create_sales_summary (p_data  IN  varchar2)
+CREATE OR REPLACE PROCEDURE create_sales_summary (p_data  IN  CLOB)
 AS
 
   l_data           varchar2(20000);
