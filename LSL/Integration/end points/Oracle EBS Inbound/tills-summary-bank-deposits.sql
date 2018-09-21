@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE create_bank_deposits (p_data  IN  CLOB)
+CREATE OR REPLACE PROCEDURE create_tills_bank_deposits (p_data  IN  CLOB)
 AS
 
   l_data           varchar2(20000);
@@ -11,15 +11,15 @@ BEGIN
     --l_data := '[{"date":"2018-06-04T00:00:00","products":[{"saleSummaryID":1,"date":"2018-06-04T00:00:00","productId":"d06bd7ed-6fe1-4a36-9050-d49d36966b71","partNumber":"000001","title":"Product One","avgCostEx":4.5455,"avgCostTax":0.4546,"unit":"Each","totalUnits":1.000,"totalValueEx":18.1800,"totalValueTax":1.8200}]}]';
 
    INSERT INTO BankDepositSummary (
-                                "Date"      ,
-                                ReceiptNumber
+                                BANKDEPOSITSDATE      ,
+                                RECEIPTNUMBER
                               )
                         SELECT *
 FROM 
      JSON_TABLE(
      l_data
      , '$[*]' COLUMNS (
-      "Date" varchar2(30) PATH '$.Date',
+      BANKDEPOSITSDATE varchar2(30) PATH '$.Date',
               NESTED PATH '$.BankDeposits[*]' COLUMNS (
                            ReceiptNumber   number      PATH '$.ReceiptNumber'
               )
@@ -37,7 +37,7 @@ FROM
      JSON_TABLE(
      l_data
      , '$[*]' COLUMNS (
-      ReceiptNumber varchar2(30) PATH '$.ReceiptNumber',
+      RECEIPTNUMBER varchar2(30) PATH '$.ReceiptNumber',
       CashAmount  number PATH '$.CashAmount'
 )) JT;      
             COMMIT;

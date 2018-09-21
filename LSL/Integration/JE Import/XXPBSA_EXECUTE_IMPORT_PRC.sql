@@ -18,7 +18,7 @@ as
              ENDPOINT_URL,
              PROTOCOL,
              PROCNAME,
-             TO_CHAR(SYSTIMESTAMP - INTERVAL '1' DAY, 'yyyy-mm-dd"T"HH24:MI:SS.SSTZH:TZM') START_DATE,
+             TO_CHAR(SYSTIMESTAMP - INTERVAL '2' DAY, 'yyyy-mm-dd"T"HH24:MI:SS.SSTZH:TZM') START_DATE,
              TO_CHAR(systimestamp, 'yyyy-mm-dd"T"HH24:MI:SS.SSTZH:TZM') END_DATE
       from XXPBSA_ENDPOINTS
       --where PROCNAME in ( 'create_sales_summary', 'create_returns_summary', 'create_pay_sum_takings' , 'create_pay_sum_returns');
@@ -65,29 +65,38 @@ begin
 
     
     if cur_rec.PROCNAME = 'create_sales_summary'
-      then create_sales_summary(l_response);
-      dbms_output.put_line('create_sales_summary procedure');
---    elsif cur_rec.PROCNAME = 'create_returns_summary'
---      then create_returns_summary(l_response);
---      dbms_output.put_line('create_returns_summary procedure');
---    elsif cur_rec.PROCNAME = 'create_pay_sum_takings'
---      then create_pay_sum_takings(l_response);
---      dbms_output.put_line('create_pay_sum_takings procedure');
---    elsif cur_rec.PROCNAME = 'create_pay_sum_returns'
---      then create_pay_sum_returns(l_response);
---      dbms_output.put_line('create_pay_sum_returns procedure');
---    elsif cur_rec.PROCNAME = 'create_pay_sum_credit'
---      then create_pay_sum_credit(l_response);
---    elsif cur_rec.PROCNAME = 'create_sup_returns_summary'
---      then create_sup_returns_summary(l_response);
---    elsif cur_rec.PROCNAME = 'create_stock_inter_trans'
---      then create_stock_inter_trans(l_response);
---    elsif cur_rec.PROCNAME = 'create_stock_movement'
---      then create_stock_movement(l_response);
---    elsif cur_rec.PROCNAME = 'create_deliveries_summary'
---      then create_deliveries_summary(l_response);
---    elsif cur_rec.PROCNAME = 'create_tills_reconciliations'
---      then create_tills_reconciliations(l_response);
+      then create_sales_summary(l_response);            
+      dbms_output.put_line('create_sales_summary procedure 1.');
+    elsif cur_rec.PROCNAME = 'create_returns_summary'
+      then create_returns_summary(l_response);
+      dbms_output.put_line('create_returns_summary procedure 2.');
+    elsif cur_rec.PROCNAME = 'create_pay_sum_takings'
+      then create_pay_sum_takings(l_response);
+      dbms_output.put_line('create_pay_sum_takings procedure 3.');
+    elsif cur_rec.PROCNAME = 'create_pay_sum_returns'
+      then create_pay_sum_returns(l_response);
+      dbms_output.put_line('create_pay_sum_returns procedure 4');
+    elsif cur_rec.PROCNAME = 'create_pay_sum_credit'
+      then create_pay_sum_credit(l_response);
+      dbms_output.put_line('create_pay_sum_credit procedure 5.');
+    elsif cur_rec.PROCNAME = 'create_sup_returns_summary'
+      then create_sup_returns_summary(l_response);
+      dbms_output.put_line('create_sup_returns_summary procedure 6');      
+    elsif cur_rec.PROCNAME = 'create_stock_inter_trans'
+      then create_stock_inter_trans(l_response);
+      dbms_output.put_line('create_stock_inter_trans procedure 7');      
+    elsif cur_rec.PROCNAME = 'create_stock_movement'
+      then create_stock_movement(l_response);
+      dbms_output.put_line('create_stock_movement procedure 8.');      
+    elsif cur_rec.PROCNAME = 'create_deliveries_summary'
+      then create_deliveries_summary(l_response);
+      dbms_output.put_line('create_deliveries_summary procedure 9.');      
+    elsif cur_rec.PROCNAME = 'create_tills_bank_deposits'
+      then create_tills_bank_deposits(l_response);
+      dbms_output.put_line('create_tills_bank_deposits procedure 10.');      
+    elsif cur_rec.PROCNAME = 'create_tills_reconciliations'
+      then create_tills_reconciliations(l_response);
+      dbms_output.put_line('create_tills_reconciliations procedure 11.');
     else
       dbms_output.put_line('no procedure');
     end if;

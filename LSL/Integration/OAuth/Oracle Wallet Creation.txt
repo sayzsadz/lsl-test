@@ -13,6 +13,6 @@ orapki wallet add -wallet /home/oracle/wallet -trusted_cert -cert /home/oracle/w
 
 
 
-orapki wallet create -wallet /home/oracle/wallet2 -pwd Pa$$w0rd -auto_login
+orapki wallet create -wallet /home/oraapex/wallet -pwd Pa$$w0rd -auto_login
 
-orapki wallet add -wallet /home/oracle/wallet2 -trusted_cert -cert /home/oracle/wallet2/PSBA.cer -pwd Pa$$w0rd
+orapki wallet add -wallet /home/oraapex/wallet -trusted_cert -cert /home/oraapex/wallet/PSBA.cer -pwd Pa$$w0rd

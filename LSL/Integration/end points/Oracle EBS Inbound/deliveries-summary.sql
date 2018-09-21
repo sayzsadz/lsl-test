@@ -14,7 +14,7 @@ BEGIN
                                 DeliveryId      ,
                                 PurchaseOrderID   ,
                                 ExternalReferenceNumber       ,
-                                "Date"       ,
+                                DELIVERYSUMMARYDATE       ,
                                 Freight      ,
                                 FreightTax           ,
                                 SupplierId
@@ -27,7 +27,7 @@ FROM
       DeliveryId number PATH '$.DeliveryId',
       PurchaseOrderID number PATH '$.PurchaseOrderID',
       ExternalReferenceNumber varchar2(30) PATH '$.ExternalReferenceNumber',
-      "Date" varchar2(30) PATH '$.Date',
+      DELIVERYSUMMARYDATE varchar2(30) PATH '$.Date',
       Freight number PATH '$.Freight',
       FreightTax number PATH '$.FreightTax',
       SupplierId number PATH '$.SupplierId'

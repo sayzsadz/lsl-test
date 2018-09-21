@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE create_customer_creadit_diff (p_data  IN  CLOB)
+CREATE OR REPLACE PROCEDURE create_pay_sum_credit (p_data  IN  CLOB)
 AS
 
   l_data           varchar2(20000);
@@ -11,16 +11,20 @@ BEGIN
     --l_data := '[{"date":"2018-06-04T00:00:00","products":[{"saleSummaryID":1,"date":"2018-06-04T00:00:00","productId":"d06bd7ed-6fe1-4a36-9050-d49d36966b71","partNumber":"000001","title":"Product One","avgCostEx":4.5455,"avgCostTax":0.4546,"unit":"Each","totalUnits":1.000,"totalValueEx":18.1800,"totalValueTax":1.8200}]}]';
 
    INSERT INTO CustomerCreditDifference (
-                                          "Date",
-                                          Difference
+                                          CREDITDATE,
+                                          Difference,
+                                          TRANSACTIONID,
+                                          PAYMENTTYPEID
                                           )
                         SELECT *
                         FROM 
                              JSON_TABLE(
                              l_data
                              , '$[*]' COLUMNS (
-                              "Date" varchar2(30) PATH '$.Date',
-                              Difference number  PATH '$.Difference'
+                              CREDITDATE varchar2(30) PATH '$.Date',
+                              Difference number  PATH '$.Difference',
+                              TRANSACTIONID VARCHAR2(100) PATH '$.TRANSACTIONID',
+                              PAYMENTTYPEID VARCHAR2(100) PATH '$.PAYMENTTYPEID' 
                             )
                         
                         ) JT;

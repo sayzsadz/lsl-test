@@ -1,0 +1,15 @@
+1. I have create a delivery for $1000 - create_deliveries_summary
+2. I have created a supplier-return for $5 - create_sup_returns_summary - 301200
+3. I have created a sale for $300 - create_sales_summary
+4. I have created a cash payment for the sale for $300 - create_pay_sum_takings
+5. I have created a Return for $50 - create_returns_summary
+6. I have created a master card negative payment for the return of -$50 - create_pay_sum_credit
+7. I have created a till Reconciliation that has a $80 difference - create_tills_reconciliations
+8. I have created a Bank deposit of $50 - create_tills_bank_deposits
+
+Product Category - 11401
+Accounting Segment - Ampara - 11000
+
+Control Accounts
+-----------------
+Control\Clearing Account Sales- 219030

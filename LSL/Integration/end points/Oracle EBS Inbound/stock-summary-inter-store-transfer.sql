@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE create_stock_inter_transfer (p_data  IN  CLOB)
+CREATE OR REPLACE PROCEDURE create_stock_inter_trans (p_data  IN  CLOB)
 AS
 
   l_data           varchar2(20000);
@@ -12,7 +12,7 @@ BEGIN
 
    INSERT INTO InterStoreStockTransferSummary (
                                 InterStoreStockTransferID      ,
-                                "Date"   ,
+                                INTERSTORESTOCKTRANSFERDATE   ,
                                 ReceivingStoreId
                               )
                         SELECT *
@@ -21,14 +21,14 @@ FROM
      l_data
      , '$[*]' COLUMNS (
      InterStoreStockTransferID number PATH '$.InterStoreStockTransferID',
-     "Date" varchar2(30) PATH '$.Date',
+     INTERSTORESTOCKTRANSFERDATE varchar2(30) PATH '$.Date',
      ReceivingStoreId number PATH '$.ReceivingStoreId'
 )) JT;
 
 
-               INSERT INTO InterStoreStockTransferSummaryLine (
+               INSERT INTO INTERSTORESTOCKTRANSUMMARYLINE (
                                 InterStoreStockTransferID      ,
-                                InterStoreStockTransferDetailId   ,
+                                INTERSTORESTOCKTRANDETAILID   ,
                                 ProductId       ,
                                 Quantity       ,
                                 Unit      ,

@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE create_supplier_return_summary (p_data  IN  CLOB)
+CREATE OR REPLACE PROCEDURE create_sup_returns_summary (p_data  IN  CLOB)
 AS
 
   l_data           varchar2(20000);
@@ -13,7 +13,7 @@ BEGIN
    INSERT INTO supplierreturn (
                                 SupplierReturnId      ,
                                 SupplierId   ,
-                                "Date"       ,
+                                SUPPLIERRETURNDATE       ,
                                 Freight      ,
                                 FreightTax           ,
                                 Total,
@@ -26,7 +26,7 @@ FROM
      , '$[*]' COLUMNS (
       SupplierReturnId number PATH '$.SupplierReturnId',
       SupplierId number PATH '$.SupplierId',
-      "Date" varchar2(30) PATH '$.Date',
+      SUPPLIERRETURNDATE varchar2(30) PATH '$.Date',
       Freight number PATH '$.Freight',
       FreightTax number PATH '$.FreightTax',
       Total number PATH '$.Total',
