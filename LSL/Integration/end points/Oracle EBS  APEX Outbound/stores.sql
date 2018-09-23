@@ -4,15 +4,23 @@ AS
   v_msg         varchar2(100);
 BEGIN
     BEGIN
-        SELECT STOREID
+        SELECT "StoreId"
         INTO lv_StoreId
-        FROM STORE
-        WHERE STOREID = (
+        FROM (select distinct NVL(gcc.attribute10, gcc.segment2) AS "StoreId"
+              ,DECODE(gcc.segment2,NULL,'',apps.gl_flexfields_pkg.get_description_sql( gcc.chart_of_accounts_id,2,gcc.segment2)) AS "CompanyName"
+              ,'true' AS "Active"
+        from gl_code_combinations gcc) STR
+        WHERE "StoreId" = (
         SELECT StoreId
         FROM 
              JSON_TABLE(
-          p_data
-             , '$[*]' COLUMNS (
+                        p_data
+--          '{
+--  "StoreId": 11000,
+--  "CompanyName": "Kohuwala",
+--  "Active": true
+--        }'
+             , '$' COLUMNS (
               StoreId NUMBER PATH '$.StoreId'
         
         ))
@@ -66,3 +74,8 @@ begin
   COMMIT;
 END;
 /
+
+select distinct NVL(gcc.attribute10, gcc.segment2) AS "StoreId"
+      ,DECODE(gcc.segment2,NULL,'',apps.gl_flexfields_pkg.get_description_sql( gcc.chart_of_accounts_id,2,gcc.segment2)) AS "CompanyName"
+      ,'true' AS "Active"
+from gl_code_combinations gcc; 
