@@ -35,14 +35,14 @@ Sales
 
 Note:
 1. data flush policy from APEX server
-2. grab all the data dependencies (PO created with all\few outlet PR lines, JE entry based)
-3. R&TD inputs from Sathosa\softwatch\Oracle Tech Team\PBSA (eg. data security)
+2. grab all the data dependencies (PO created with all\few outlet PR lines, JE entry based)\
+3. R&TD inputs from Sathosa\softwatch\Oracle Tech Team\PBSA (eg. data security)\
 4. whitelist IP but communication protocol
-5. mapping to POS product and inventory
+5. mapping to POS product and inventory\
 (6. back-dated sales invoke explicitly daily)
-7. data views: to PBSA
+7. data views: to PBSA\
 		stores, products, purchase-requests (developed incorrect), supplier-return-requests (developed 					incorrect), Return Note supplier-returns and on return event, PR rejected-lines and on reject event, 				Supplier data new or modification and on create/update event
-8. interfaces\api: inventory categories, items\products, suppliers
+8. interfaces\api: inventory categories, items\products, suppliers\
 9. block diagram to MD.070
 10. Dashboard to intermediate server - Oracle JET
 
@@ -64,8 +64,8 @@ New Notes:
 .Exception Report email
 .APEX Dashboard
 .Item\Category Import\, UoM???, template for categories? *run item import.
-.Create views
-.Refresh reports in sqldeveloper
+.Create views\
+.Refresh reports in sqldeveloper X
 .IP addresses list (outlets IP, HO IP after api work)
 
 /purchase-orders->send to ho
@@ -81,10 +81,10 @@ New Notes:
 15-16 Sep Weekend
 .ws templates/
 .REST API call package (token\, and data from outlets:old PBSA or from ho\ if new PBSA)
-.db links to Interface\API staging tables (JE..., PR\)
-.db links from EBS base tables (PO,Rejected Lines, Reverse GRN, Supplier) and table updates after sending data
-.db links from EBS base tables (stores, products) and table updates after sending data
-.Master data upload Supplier\Item\Assign to categories
+.db links to Interface\API staging tables (JE...\, PR\)
+.db links from EBS base tables (PO,Rejected Lines, Reverse GRN, Supplier) and table updates after sending data\
+.db links from EBS base tables (stores, products) and table updates after sending data\
+.Master data upload Supplier\Item\Assign to categories\
 
 17 Sep
 .DFF to CoF Store ID\Location\Store ID x
@@ -94,16 +94,35 @@ New Notes:
 .(AR receipt based on credits to outside parties)
 
 18-Sep
-.supplier return from cost\quantity\lines etc.
+.supplier return from cost\quantity\lines etc.\
 
 19-Sep
 .Supplier Agreement Table for error msg on Integration Program
 
 21-Sep
-.Date with time in next patch. PBSA informed.
+.Date with time in next patch. PBSA informed.\
 
 22-Sep
-.supplier/product GUID update
-.item category/CoA Segment validation for location\product\product category for JE
-.Exception Report Outlet wise\# records wise (running import program 2 times restriction using a PK, EBS staging update apex)
-.Master Data upload
+.supplier/product GUID update\
+.item category/CoA Segment validation for location\product\product category for JE\
+.Exception Report Outlet wise\# records wise (running import program 2 times restriction using a PK, EBS staging update apex need to control from PBS s/w)
+.Master Data upload ~Item upload OIN succeed and assign interface test
+
+24-Sep
+TO-DOs
+supplier v1 template to products(1st)\PO\SUP Ret\
+JE update status flag
+
+.Ask from PBSA S/W Team
+:body of the supplier update endpoint like in rejected lines
+confirm the po_reference
+MrpIncTax\TaxCode in supplier return\PO
+
+25-Sep
+.data from outlets:old PBSA - IP addresses list (outlets IP, HO IP after api work).
+.after debit memo created in AP Supplier return approved.
+.EBS Stores, first 5 item category? UoMs inital upload of GUIDs.
+.Exception Report email.
+.APEX Dashboard.
+.data flush policy from APEX server (related to Oracle costing\tax etc.).
+.R&TD inputs from Sathosa\softwatch\Oracle Tech Team\PBSA (eg. data security) - whitelist IP but communication protocol.
