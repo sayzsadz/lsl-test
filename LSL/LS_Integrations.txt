@@ -108,16 +108,6 @@ New Notes:
 .Exception Report Outlet wise\# records wise (running import program 2 times restriction using a PK, EBS staging update apex need to control from PBS s/w)
 .Master Data upload ~Item upload OIN succeed and assign interface test
 
-24-Sep
-TO-DOs
-supplier v1 template to products(1st)\PO\SUP Ret\
-JE update status flag
-
-.Ask from PBSA S/W Team
-:body of the supplier update endpoint like in rejected lines
-confirm the po_reference
-MrpIncTax\TaxCode in supplier return\PO
-
 25-Sep
 .data from outlets:old PBSA - IP addresses list (outlets IP, HO IP after api work).
 .after debit memo created in AP Supplier return approved.
@@ -126,3 +116,15 @@ MrpIncTax\TaxCode in supplier return\PO
 .APEX Dashboard.
 .data flush policy from APEX server (related to Oracle costing\tax etc.).
 .R&TD inputs from Sathosa\softwatch\Oracle Tech Team\PBSA (eg. data security) - whitelist IP but communication protocol.
+
+24-Sep
+TO-DOs
+.supplier v1 template to products(1st)\PO\SUP Ret\supplier return? after debit memo - need to confirm
+.JE update status flag
+.Exception Report Outlet wise\# records wise (running import program 2 times restriction using a PK, EBS staging update apex need to control from PBS s/w)
+.Master Data upload ~Item upload OIN succeed and assign interface test
+
+Ask from PBSA S/W Team
+.:body(POST empty or else) of the supplier update endpoint like in rejected lines\supplier return\PO
+.confirm the po_reference
+.MrpIncTax\TaxCode in supplier return\PO

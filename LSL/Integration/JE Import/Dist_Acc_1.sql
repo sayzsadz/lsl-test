@@ -172,9 +172,10 @@ WHERE mic.category_set_id = mcs.category_set_id
       AND msi.organization_id = mic.organization_id    
       AND msi.inventory_item_id = mic.inventory_item_id   
       AND UPPER(DECODE(gcc.segment6,NULL,'',apps.gl_flexfields_pkg.get_description_sql( gcc.chart_of_accounts_id,6,gcc.segment6))) like UPPER('%'||mc.segment1||'%')
-      AND UPPER(DECODE(gcc.segment4,NULL,'',apps.gl_flexfields_pkg.get_description_sql( gcc.chart_of_accounts_id,4,gcc.segment4))) like UPPER('%'||mc.segment6||'%')) gl
+      AND UPPER(DECODE(gcc.segment4,NULL,'',apps.gl_flexfields_pkg.get_description_sql( gcc.chart_of_accounts_id,4,gcc.segment4))) like UPPER('%'||mc.segment6||'%')
+      ) gl
   WHERE ss.SALESUMMARYID = ssp.SALESUMMARYID
-        AND gl.item_segment1 = ssp.partnumber
+        AND gl.item_segment1(+) = ssp.partnumber
   )
   group by SALESUMMARYID,
   LEDGER_ID,
