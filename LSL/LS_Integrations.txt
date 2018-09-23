@@ -87,9 +87,9 @@ New Notes:
 .Master data upload Supplier\Item\Assign to categories
 
 17 Sep
-.DFF to CoF Store ID\Location\Store ID
+.DFF to CoF Store ID\Location\Store ID x
 .after debit memo created in AP Supplier return approved
-.JE categories with control accounts for sales\payments\bank-deposits\tills
+.JE categories with control accounts for sales\payments\bank-deposits\tills \
 .sending PBSA PO number and Oracle EBS PO number mapping
 .(AR receipt based on credits to outside parties)
 
@@ -101,3 +101,9 @@ New Notes:
 
 21-Sep
 .Date with time in next patch. PBSA informed.
+
+22-Sep
+.supplier/product GUID update
+.item category/CoA Segment validation for location\product\product category for JE
+.Exception Report Outlet wise\# records wise (running import program 2 times restriction using a PK, EBS staging update apex)
+.Master Data upload
