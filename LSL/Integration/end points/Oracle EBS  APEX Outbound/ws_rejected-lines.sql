@@ -73,7 +73,7 @@ BEGIN
                      p_base_path      => 'lslmodule3/v1/',
                      p_items_per_page => 5,
                      p_status         => 'PUBLISHED',
-                     p_comments       => 'rejected line odule');             
+                     p_comments       => 'rejected line module');             
   COMMIT;
 END;
 /  

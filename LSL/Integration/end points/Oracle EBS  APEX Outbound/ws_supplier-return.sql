@@ -37,13 +37,14 @@ BEGIN
                                             pl.PerUnitCostTax AS "PerUnitCostTax",
                                             pl.LineTotalCost AS "LineTotalCost",
                                             pl.LineTotalCostTax AS "LineTotalCostTax",
-                                            pl.MrpIncTax AS "MrpIncTax",
-                                            pl.TaxCode AS "TaxCode",
+                                            NULL AS "MrpIncTax",--pl.MrpIncTax AS "MrpIncTax",
+                                            NULL AS "TaxCode",--pl.TaxCode AS "TaxCode",
                                             pl.Status AS "Status"
-                                            FROM   SUPPLIER_RETURN_LINE pl
+                                            FROM   SUPPLIER_RET_REQUESTS_LINES pl
                                             WHERE  ph.PurchaseOrderId = pl.PurchaseOrderId
                                             ORDER BY pl.PurchaseRequestLineId) AS "purchaseorders"
-                                            FROM   SUPPLIER_RETURN_HEADER ph
+                                            FROM   SUPPLIER_RET_REQUESTS_HEADER ph
+                                            WHERE  ph.PurchaseOrderId = :PurchaseOrderId--parameter from executing prc
                                             ORDER BY trunc(ph.CreationDate) , ph.PurchaseOrderId',
                       p_items_per_page => 0,
                       p_comments       => 'supplier return');
