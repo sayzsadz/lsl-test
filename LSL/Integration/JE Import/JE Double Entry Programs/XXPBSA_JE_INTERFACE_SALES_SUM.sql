@@ -6,6 +6,39 @@ IS
 
 cursor cur
 is
+select LEDGER_ID,
+  STATUS,
+  SET_OF_BOOKS_ID,
+  USER_JE_SOURCE_NAME,
+  USER_JE_CATEGORY_NAME,
+  ACCOUNTING_DATE,
+  CURRENCY_CODE,
+  DATE_CREATED,
+  CREATED_BY,
+  ACTUAL_FLAG,
+  USER_CURRENCY_CONVERSION_TYPE,
+  CURRENCY_CONVERSION_DATE,
+  CURRENCY_CONVERSION_RATE,
+  SEGMENT1,
+  SEGMENT2,
+  SEGMENT3,
+  SEGMENT4,
+  SEGMENT5,
+  SEGMENT6,
+  SEGMENT7,
+  SEGMENT8,
+  SEGMENT9,
+SUM(ENTERED_DR) ENTERED_DR,
+  SUM(ENTERED_CR) ENTERED_CR,
+  SUM(ACCOUNTED_DR) ACCOUNTED_DR,
+  SUM(ACCOUNTED_CR) ACCOUNTED_CR,
+    PERIOD_NAME,
+  REFERENCE1,
+  REFERENCE2,
+  REFERENCE4,
+  REFERENCE5
+from
+(
 SELECT LEDGER_ID,
   STATUS,
   SET_OF_BOOKS_ID,
@@ -42,10 +75,10 @@ SELECT LEDGER_ID,
                 ||'.'||segment6
                 ||'.'||segment7
                 ||'.'||segment8
-                ||'.'||segment9 = XXPBSA_GET_GL_ACCOUNT('Lanka Sathosa Ltd.Ampara.Unspecified.Biscuits.Unspecified.Sales - Grocery Products.Unspecified.Unspecified') THEN
-    ENTERED_CR
+                ||'.'||segment9 = XXPBSA_GET_GL_ACCOUNT('Lanka Sathosa Ltd.Head Office.Unspecified.Unspecified.Unspecified.Sales And Payment Control.Unspecified.Unspecified') THEN
+    ENTERED_DR
   ELSE 0
-  END) ENTERED_CR ,
+  END) ENTERED_DR ,
 (
   CASE 
   WHEN                 segment1
@@ -56,10 +89,10 @@ SELECT LEDGER_ID,
                 ||'.'||segment6
                 ||'.'||segment7
                 ||'.'||segment8
-                ||'.'||segment9 = XXPBSA_GET_GL_ACCOUNT('Lanka Sathosa Ltd.Ampara.Unspecified.Biscuits.Unspecified.Sales - Grocery Products.Unspecified.Unspecified') THEN
+                ||'.'||segment9 = XXPBSA_GET_GL_ACCOUNT('Lanka Sathosa Ltd.Head Office.Unspecified.Unspecified.Unspecified.Sales And Payment Control.Unspecified.Unspecified') THEN
     0
-  ELSE ENTERED_DR
-  END) ENTERED_DR,
+  ELSE ENTERED_CR
+  END) ENTERED_CR,
 (
   CASE 
   WHEN                 segment1
@@ -70,24 +103,24 @@ SELECT LEDGER_ID,
                 ||'.'||segment6
                 ||'.'||segment7
                 ||'.'||segment8
-                ||'.'||segment9 = XXPBSA_GET_GL_ACCOUNT('Lanka Sathosa Ltd.Ampara.Unspecified.Biscuits.Unspecified.Sales - Grocery Products.Unspecified.Unspecified') THEN
-    ACCOUNTED_CR
+                ||'.'||segment9 = XXPBSA_GET_GL_ACCOUNT('Lanka Sathosa Ltd.Head Office.Unspecified.Unspecified.Unspecified.Sales And Payment Control.Unspecified.Unspecified') THEN
+    ACCOUNTED_DR
   ELSE 0
-  END) ACCOUNTED_CR,
-(
-  CASE 
-  WHEN                 segment1
-                ||'.'||segment2
-                ||'.'||segment3
-                ||'.'||segment4
-                ||'.'||segment5
-                ||'.'||segment6
-                ||'.'||segment7
-                ||'.'||segment8
-                ||'.'||segment9 = XXPBSA_GET_GL_ACCOUNT('Lanka Sathosa Ltd.Ampara.Unspecified.Biscuits.Unspecified.Sales - Grocery Products.Unspecified.Unspecified') THEN
-    0
-  ELSE ACCOUNTED_DR
   END) ACCOUNTED_DR,
+(
+  CASE 
+  WHEN                 segment1
+                ||'.'||segment2
+                ||'.'||segment3
+                ||'.'||segment4
+                ||'.'||segment5
+                ||'.'||segment6
+                ||'.'||segment7
+                ||'.'||segment8
+                ||'.'||segment9 = XXPBSA_GET_GL_ACCOUNT('Lanka Sathosa Ltd.Head Office.Unspecified.Unspecified.Unspecified.Sales And Payment Control.Unspecified.Unspecified') THEN
+    0
+  ELSE ACCOUNTED_CR
+  END) ACCOUNTED_CR,
   PERIOD_NAME,
   REFERENCE1,
   REFERENCE2,
@@ -179,10 +212,13 @@ WHERE mic.category_set_id = mcs.category_set_id
       AND mic.category_id       = mc.category_id     
       AND msi.organization_id = mic.organization_id    
       AND msi.inventory_item_id = mic.inventory_item_id   
-      AND UPPER(DECODE(gcc.segment6,NULL,'',apps.gl_flexfields_pkg.get_description_sql( gcc.chart_of_accounts_id,6,gcc.segment6))) like UPPER('%'||mc.segment1||'%')
-      AND UPPER(DECODE(gcc.segment4,NULL,'',apps.gl_flexfields_pkg.get_description_sql( gcc.chart_of_accounts_id,4,gcc.segment4))) like UPPER('%'||mc.segment6||'%')) gl
+      AND REPLACE(UPPER(DECODE(gcc.segment6,NULL,'',apps.gl_flexfields_pkg.get_description_sql( gcc.chart_of_accounts_id,6,gcc.segment6))), 'SALES - LIQUOR', 'SALES - LIQUOR ' || q'[&]' || ' TOBACCO') like UPPER('%'||mc.segment1||'%')
+      --AND UPPER(DECODE(gcc.segment4,NULL,'',apps.gl_flexfields_pkg.get_description_sql( gcc.chart_of_accounts_id,4,gcc.segment4))) like UPPER('%'||mc.segment6||'%')
+      AND gcc.end_date_active is null
+      ) gl
   WHERE ss.SALESUMMARYID = ssp.SALESUMMARYID
-        AND gl.item_segment1 = ssp.partnumber
+        AND gl.item_segment1(+) = ssp.partnumber
+        AND ss.status_flag is null
   )
   group by SALESUMMARYID,
   LEDGER_ID,
@@ -263,9 +299,9 @@ FROM
     '' CURRENCY_CONVERSION_DATE,                        --  i.CURRENCY_CONVERSION_DATE
     '' CURRENCY_CONVERSION_RATE,                        --  i.CURRENCY_CONVERSION_RATE
     '11' SEGMENT1,                                      --  SELECT * FROM GL_CODE_COMBINATIONS_KFV WHERE SEGMENT1 = 02
-    '11000' SEGMENT2 ,                                  --  SELECT * FROM GL_CODE_COMBINATIONS_KFV WHERE SEGMENT2 = 01
+    '09100' SEGMENT2 ,                                  --  SELECT * FROM GL_CODE_COMBINATIONS_KFV WHERE SEGMENT2 = 01
     '00' SEGMENT3,                                      --  SELECT * FROM GL_CODE_COMBINATIONS_KFV WHERE SEGMENT3 = 01
-    '11401' SEGMENT4 ,                                  --  SELECT * FROM GL_CODE_COMBINATIONS_KFV WHERE SEGMENT4 = 05
+    '00000' SEGMENT4 ,                                  --  SELECT * FROM GL_CODE_COMBINATIONS_KFV WHERE SEGMENT4 = 05
     '000' SEGMENT5,                                     --  SELECT * FROM GL_CODE_COMBINATIONS_KFV WHERE SEGMENT5 = 00
     '219030' SEGMENT6,                                  --  SELECT * FROM GL_CODE_COMBINATIONS_KFV WHERE SEGMENT6 = 00
     '00000' SEGMENT7,                                   --  SELECT * FROM GL_CODE_COMBINATIONS_KFV WHERE SEGMENT7 = 01
@@ -283,6 +319,7 @@ FROM
   FROM SALESSUMMARY@DATABASE_LINK_EBS_APEX.LANKASATHOSA.ORG ss ,
     SALESSUMMARYPRODUCT@DATABASE_LINK_EBS_APEX.LANKASATHOSA.ORG ssp
   WHERE ss.SALESUMMARYID = ssp.SALESUMMARYID
+        and ss.status_flag is null
   )
 GROUP BY SALESUMMARYID,
   LEDGER_ID,
@@ -312,7 +349,35 @@ GROUP BY SALESUMMARYID,
   REFERENCE2,
   REFERENCE4,
   REFERENCE5)) glq
-WHERE 1 = 1;
+WHERE 1 = 1
+)
+group by LEDGER_ID,
+  STATUS,
+  SET_OF_BOOKS_ID,
+  USER_JE_SOURCE_NAME,
+  USER_JE_CATEGORY_NAME,
+  ACCOUNTING_DATE,
+  CURRENCY_CODE,
+  DATE_CREATED,
+  CREATED_BY,
+  ACTUAL_FLAG,
+  USER_CURRENCY_CONVERSION_TYPE,
+  CURRENCY_CONVERSION_DATE,
+  CURRENCY_CONVERSION_RATE,
+  SEGMENT1,
+  SEGMENT2,
+  SEGMENT3,
+  SEGMENT4,
+  SEGMENT5,
+  SEGMENT6,
+  SEGMENT7,
+  SEGMENT8,
+  SEGMENT9,
+  PERIOD_NAME,
+  REFERENCE1,
+  REFERENCE2,
+  REFERENCE4,
+  REFERENCE5;
 
 BEGIN
 
@@ -393,6 +458,16 @@ INSERT INTO GL_INTERFACE (
                           cur_rec.REFERENCE4                    ,   
                           cur_rec.REFERENCE5                   
                          );
+                         
+                         update SALESSUMMARY@DATABASE_LINK_EBS_APEX.LANKASATHOSA.ORG
+                         set status_flag = 'P'
+                         where SALESUMMARYID in
+                         ( select distinct ss.SALESUMMARYID 
+                           FROM SALESSUMMARY@DATABASE_LINK_EBS_APEX.LANKASATHOSA.ORG ss ,
+                                SALESSUMMARYPRODUCT@DATABASE_LINK_EBS_APEX.LANKASATHOSA.ORG ssp
+                           WHERE ss.SALESUMMARYID = ssp.SALESUMMARYID
+                                 and ssp.PARTNUMBER = cur_rec.REFERENCE5)
+                                and status_flag is null;
  end loop;
  XXPBSA_REQ_JE_IMPORT('Manual');
 END;

@@ -3,7 +3,7 @@ BEGIN
   ords.enable_schema(p_enabled             => TRUE,
                      p_schema              => 'APEX',
                      p_url_mapping_type    => 'BASE_PATH',
-                     p_url_mapping_pattern => 'api',
+                     p_url_mapping_pattern => 'apex',
                      p_auto_rest_auth      => FALSE);
   COMMIT;
 END;

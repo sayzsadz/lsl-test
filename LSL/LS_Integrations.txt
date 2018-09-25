@@ -110,19 +110,20 @@ New Notes:
 
 25-Sep
 .data from outlets:old PBSA - IP addresses list (outlets IP, HO IP after api work).
-.after debit memo created in AP Supplier return approved.
+.after debit memo created in AP Supplier return approved.\\
 .EBS Stores, first 5 item category? UoMs inital upload of GUIDs.
 .Exception Report email.
 .APEX Dashboard.
 .data flush policy from APEX server (related to Oracle costing\tax etc.).
 .R&TD inputs from Sathosa\softwatch\Oracle Tech Team\PBSA (eg. data security) - whitelist IP but communication protocol.
+.return waste(% of value of return stock)\non waste
 
 24-Sep
 TO-DOs
-.supplier v1 template to products(1st)\PO\SUP Ret\supplier return? after debit memo - need to confirm
-.JE update status flag
+.supplier v1 template to products(1st)\PO\SUP Ret\supplier return? after debit memo - need to confirm \\
+.JE update status flag\
 .Exception Report Outlet wise\# records wise (running import program 2 times restriction using a PK, EBS staging update apex need to control from PBS s/w)
-.Master Data upload ~Item upload OIN succeed and assign interface test
+.Master Data upload ~Item upload OIN succeed and assign interface test /both INV ORGs
 
 Ask from PBSA S/W Team
 .:body(POST empty or else) of the supplier update endpoint like in rejected lines\supplier return\PO

@@ -10,6 +10,20 @@
    l_resp_id          NUMBER := 20475;
    l_resp_app_id      NUMBER := 101;
    l_source_name      varchar2(100);
+   lv_phase      VARCHAR2(10);
+
+    lv_status     VARCHAR2(10);
+    lv_dev_status VARCHAR2(10);
+    lv_message    VARCHAR2(100);
+    ln_interval   NUMBER;
+    lv_dev_phase  VARCHAR2(10);
+    rphase        VARCHAR2(10);
+    rstatus       VARCHAR2(10);
+    dphase        VARCHAR2(10);
+    dstatus       VARCHAR2(10);
+    MESSAGE       VARCHAR2(100);
+    callv_status  BOOLEAN ;
+    wait_status   BOOLEAN ;
  
 BEGIN
    l_source_name := p_source_name;
@@ -66,7 +80,19 @@ BEGIN
    COMMIT;
  
    DBMS_OUTPUT.PUT_LINE('GL Import Submitted. Request Id : '||l_conc_id);
- 
+  BEGIN
+   wait_status:=fnd_concurrent.wait_for_request (l_conc_id, 60 , 0, lv_phase , lv_status , lv_dev_phase, lv_dev_status, lv_message);
+    -- callv_status :=fnd_concurrent.get_request_status(ln_request_id, '', '',
+    --          rphase,rstatus,dphase,dstatus, message);
+    fnd_file.put_line(fnd_file.log,'dphase = '||lv_dev_phase||'and '||'dstatus ='||lv_dev_status) ;
+    IF UPPER(lv_dev_phase)='COMPLETE' AND UPPER(lv_dev_status)= 'NORMAL' THEN
+      dbms_output.put_line ('JE Import program completed successfully');
+      fnd_file.put_line(fnd_file.log,'JE Import program completed successfully');
+    END IF;
+  EXCEPTION
+  WHEN OTHERS THEN
+    fnd_file.put_line(fnd_file.log,'Error occure in procedure submit_request'||SQLERRM);
+  END;  
 EXCEPTION
    WHEN OTHERS THEN
  
