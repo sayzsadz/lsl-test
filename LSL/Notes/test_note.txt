@@ -1,0 +1,20 @@
+sales-cr
+control-dr
+
+cash-dr
+debtors-dr
+sales control-cr tot
+---
+sales COGS-cost-dr
+tax
+---
+
+eta - very first 1
+json 200 405-item master in oracle
+
+product code
+supplier
+gap of data from a customized scripts for guids
+GUIDs outlet IPs back later
+
+1000002

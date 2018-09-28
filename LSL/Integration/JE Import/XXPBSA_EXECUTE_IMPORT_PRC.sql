@@ -18,11 +18,11 @@ as
              ENDPOINT_URL,
              PROTOCOL,
              PROCNAME,
-             TO_CHAR(SYSTIMESTAMP - INTERVAL '2' DAY, 'yyyy-mm-dd"T"HH24:MI:SS.SSTZH:TZM') START_DATE,
+             TO_CHAR(SYSTIMESTAMP - INTERVAL '1' DAY, 'yyyy-mm-dd"T"HH24:MI:SS.SSTZH:TZM') START_DATE,
              TO_CHAR(systimestamp, 'yyyy-mm-dd"T"HH24:MI:SS.SSTZH:TZM') END_DATE
       from XXPBSA_ENDPOINTS
       --where PROCNAME in ( 'create_sales_summary', 'create_returns_summary', 'create_pay_sum_takings' , 'create_pay_sum_returns');
-      where PROCNAME in ( 'create_sales_summary');
+      where PROCNAME in ( 'create_sales_summary', 'create_returns_summary');
     
 begin
     xxpbsa_request_pbsa_token;

@@ -1,0 +1,15 @@
+.Timestamp from PBSA is defaukt and it is 00:00:00
+.PR Lines can not be created from PBSA Head Office test instance and so that Oracle can not complete the interated test on PR Lines and Supplier Return Requests
+.tax(eg. VAT)\cost calculation after GRN\PO for the MRP value of the product
+.Product wise sales\payments summary or Product Category wise
+.Initial upload of GUIDs for products and suppliers
+.Head Office endpoints for supplier, is it supposed to be 2-way? And handle the queue of updated data towards PBSA
+.Regression test plan with Outlet IP list
+
+.return waste(% of value of return stock)\non waste
+.stock count
+.delivery location changeof the PR\PO\GRN levels
+
+.Test Summary for MD070 Ref.
+.Data Conversion Doc
+.Tech manual
