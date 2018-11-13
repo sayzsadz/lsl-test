@@ -14,5 +14,9 @@ orapki wallet add -wallet /home/oracle/wallet -trusted_cert -cert /home/oracle/w
 
 
 orapki wallet create -wallet /home/oraapex/wallet -pwd Pa$$w0rd -auto_login
+orapki wallet create -wallet /home/oraapex/wallet1 -pwd Pa$$w0rd -auto_login
+orapki wallet create -wallet /home/oraapex/wallet2 -pwd Pa$$w0rd -auto_login
 
 orapki wallet add -wallet /home/oraapex/wallet -trusted_cert -cert /home/oraapex/wallet/PSBA.cer -pwd Pa$$w0rd
+orapki wallet add -wallet /home/oraapex/wallet1 -trusted_cert -cert /home/oraapex/wallet1/LSL.cer -pwd Pa$$w0rd
+orapki wallet add -wallet /home/oraapex/wallet2 -trusted_cert -cert /home/oraapex/wallet2/LSL1.cer -pwd Pa$$w0rd
