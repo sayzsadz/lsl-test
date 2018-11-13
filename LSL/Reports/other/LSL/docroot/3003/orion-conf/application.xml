@@ -1,0 +1,68 @@
+<?xml version="1.0" standalone='yes'?>
+<!DOCTYPE orion-application PUBLIC "-//Evermind//DTD J2EE Application runtime 1.2//EN" "http://xmlns.oracle.com/ias/dtds/orion-application.dtd">
+
+<!-- The global application config that is the parent of all the other
+	applications in this server. -->
+
+<orion-application autocreate-tables="true"
+	   default-data-source="jdbc/OracleDS">
+
+	<web-module id="defaultWebApp" path="../.." />
+	<!--web-module id="dms0" path="../../home/applications/dms0.war" /-->
+	<!--web-module id="dms" path="../../home/applications/dms.war" /-->
+
+  <connectors path="./oc4j-connectors.xml"/>
+
+	<persistence path="../persistence" />
+	
+        <!-- Path to the libraries that are installed on this server.
+	These will accesible for the servlets, EJBs etc -->
+	<library path="../../home/lib" />
+	<library path="../../../sqlj/lib" />
+        <!-- OJSP library -->
+	<library path="../../../jsp/lib" />
+	<library path="../../../jsp/dependencies/opreapi-rt.jar" />
+	<library path="../../../lib/xsu12.jar" />
+
+<!-- Uncomment the following element to use JAZN-XML as UserManager
+	<jazn provider="XML" location="./jazn-data.xml" />
+-->
+
+	<principals path="./principals.xml" />
+
+	<!--log>
+		<file path="../log/global-application.log" />
+	</log-->
+        <commit-coordinator>
+        <commit-class
+               class="com.evermind.server.OracleTwoPhaseCommitDriver" />
+        <property name="datasource"
+                  value="jdbc/OracleDS"/>
+<!-- Username and password are the optional properties
+         replace with your commit_co-ordinator_super_user
+	       <property name="username"
+	                         value="system" />
+	       <property name="password"
+	                         value="manager" />
+-->
+      </commit-coordinator>
+
+
+	<data-sources path="data-sources.xml" />
+	<namespace-access>
+		<read-access>
+			<namespace-resource root="">
+				<security-role-mapping>
+					<group name="administrators" />
+				</security-role-mapping>
+			</namespace-resource>
+		</read-access>
+		<write-access>
+			<namespace-resource root="">
+				<security-role-mapping>
+					<group name="administrators" />
+				</security-role-mapping>
+			</namespace-resource>
+		</write-access>
+	</namespace-access>
+</orion-application>

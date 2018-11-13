@@ -1,0 +1,112 @@
+create or replace function XXPBSA_PO_PAYLOAD (p_po_num varchar2)
+return varchar2
+as
+  l_cursor SYS_REFCURSOR;
+  l_msg    varchar2(20000);
+  l_msg1   varchar2(20000);
+  l_msg2   varchar2(20000);
+  l_msg3   varchar2(20000);
+  l_msg4   varchar2(20000);
+  j        apex_json.t_values;
+  l_po_num varchar2(20);
+  v_cursor varchar2(20000);
+BEGIN
+
+    l_po_num := p_po_num;
+
+
+
+  OPEN l_cursor FOR
+       SELECT distinct pha_outer.SEGMENT1 AS "PurchaseOrderId",
+            pl_outer.SupplierId AS "SupplierId",
+            CURSOR(SELECT distinct pl.PurchaseRequestLineId AS "PurchaseRequestLineId",
+            PRLA.NEED_BY_DATE AS "DateRequired",
+            pl.ProductId AS "ProductId",--
+            pl.Quantity AS "Quantity",--
+            pl.Unit AS "Unit",
+            pl.PerUnitCost AS "PerUnitCost",                         
+            pl.PerUnitCostTax AS "PerUnitCostTax",
+            pl.LineTotalCost AS "LineTotalCost",
+            pl.LineTotalCostTax AS "LineTotalCostTax",
+            pl.PERUNITPRICE+pl.PERUNITPRICETAX AS "MrpIncTax",--pl.MrpIncTax AS "MrpIncTax",
+            'GST' AS "TaxCode",--pl.TaxCode AS "TaxCode",
+            INITCAP(pha.AUTHORIZATION_STATUS) AS "Status"
+            FROM   PURCHASE_REQUESTS_LINES pl
+                  ,PURCHASE_REQUESTS_HEADER ph
+                  ,PO_HEADERS_ALL@DATABASE_LINK_APEX_EBS pha
+                  ,PO_LINES_ALL@DATABASE_LINK_APEX_EBS pla
+                  ,PO_DISTRIBUTIONS_ALL@DATABASE_LINK_APEX_EBS PDA
+                  ,PO_REQ_DISTRIBUTIONS_ALL@DATABASE_LINK_APEX_EBS PRDA
+                  ,PO_REQUISITION_LINES_ALL@DATABASE_LINK_APEX_EBS PRLA
+                  ,PO_REQUISITION_HEADERS_ALL@DATABASE_LINK_APEX_EBS PRHA
+            WHERE  ph.PurchaseRequestId = pl.PurchaseRequestId
+                   and ph_outer.PurchaseRequestId = ph.PurchaseRequestId
+                   and PRHA.INTERFACE_SOURCE_CODE = NVL(pl.PurchaseOrderId, ph.PurchaseRequestId)
+                   AND PDA.REQ_DISTRIBUTION_ID = PRDA.DISTRIBUTION_ID
+                   AND PRDA.REQUISITION_LINE_ID = PRLA.REQUISITION_LINE_ID
+                   AND PRLA.REQUISITION_HEADER_ID = PRHA.REQUISITION_HEADER_ID
+                   AND pda.po_line_id = pla.po_line_id
+                   AND PDA.REQ_DISTRIBUTION_ID = PRDA.DISTRIBUTION_ID
+                   AND pha.po_header_id = pla.po_header_id
+                   order by pl.PurchaseRequestLineId desc) AS "Lines"
+            FROM   PURCHASE_REQUESTS_LINES pl_outer
+                  ,PURCHASE_REQUESTS_HEADER ph_outer
+                  ,PO_HEADERS_ALL@DATABASE_LINK_APEX_EBS pha_outer
+                  ,PO_LINES_ALL@DATABASE_LINK_APEX_EBS pla_outer
+                  ,PO_DISTRIBUTIONS_ALL@DATABASE_LINK_APEX_EBS PDA_outer
+                  ,PO_REQ_DISTRIBUTIONS_ALL@DATABASE_LINK_APEX_EBS PRDA_outer
+                  ,PO_REQUISITION_LINES_ALL@DATABASE_LINK_APEX_EBS PRLA_outer
+                  ,PO_REQUISITION_HEADERS_ALL@DATABASE_LINK_APEX_EBS PRHA_outer
+            WHERE  1 = 1
+                   AND ph_outer.PurchaseRequestId = pl_outer.PurchaseRequestId
+                   and NVL(PRHA_outer.INTERFACE_SOURCE_CODE, 0) = NVL(pl_outer.PurchaseOrderId, ph_outer.PurchaseRequestId)
+                   AND PDA_outer.REQ_DISTRIBUTION_ID = PRDA_outer.DISTRIBUTION_ID
+                   AND PRDA_outer.REQUISITION_LINE_ID = PRLA_outer.REQUISITION_LINE_ID
+                   AND PRLA_outer.REQUISITION_HEADER_ID = PRHA_outer.REQUISITION_HEADER_ID
+                   AND pda_outer.po_line_id = pla_outer.po_line_id
+                   AND PDA_outer.REQ_DISTRIBUTION_ID = PRDA_outer.DISTRIBUTION_ID
+                   AND pha_outer.po_header_id = pla_outer.po_header_id
+                   AND pha_outer.SEGMENT1 = l_po_num
+                   AND pha_outer.attribute13 is null
+             order by pha_outer.last_update_date desc;
+
+
+    APEX_JSON.initialize_clob_output;
+
+    APEX_JSON.open_object;
+    apex_json.parse(j, l_cursor);
+    APEX_JSON.write(l_cursor);
+    APEX_JSON.close_object;
+
+    l_msg := APEX_JSON.get_clob_output;
+
+    APEX_JSON.initialize_clob_output;
+    
+    APEX_JSON.open_object;
+    apex_json.parse(j, l_msg);
+    apex_json.write(j,'po');
+    APEX_JSON.close_object;
+
+    l_msg := APEX_JSON.get_clob_output;
+    
+    APEX_JSON.free_output;
+
+    select substr(l_msg, 1,instr(l_msg, ']', 1, length(l_msg) - length(replace(l_msg, ']', '')))+1)
+    into l_msg1
+    from dual;
+    
+    select substr(l_msg1, 1,instr(l_msg1, '}', 1, length(l_msg1) - length(replace(l_msg1, '}', '')))+1)
+    into l_msg2
+    from dual;
+    
+    select regexp_replace(l_msg2,q'[\[]','',1,1) 
+    into l_msg3
+    from dual;
+
+    select regexp_replace(l_msg3,'{','',1,1) 
+    into l_msg4
+    from dual;
+    
+  return l_msg4;
+
+END;

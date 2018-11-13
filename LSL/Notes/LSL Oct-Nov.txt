@@ -1,0 +1,22 @@
+2. Inter-Stock Transfer Variation JE (SrcCr- RecDr-) and Price Adjustment\Product Movement JE/
+8.VAT NBT distributions api change ETA/
+9.PO Approvals/PO Responsibility Matrix /
+10. Delivery Note Format***/
+12. Sales TAX components for Sales/
+18. PBSA and Sathosa Item Master diff/Promotional item identification (diff item code or something)/ 
+17. Item Upload precedence flag or template/
+30-oct-2018
+.Quatation+CWE/IT Asset -> Finance FA/
+.Engineering  & Operations Procurement to PO Dept. (Spec from FA Finance to Procurement do purchasing quality check\GRN to FA Procurement)???
+.ITEM LEVEL Asset Category for Invoice/
+.Oracle Documentation with workflows/
+.Buyer prompt changed Logged "User"/
+.Tax in invoice level/
+.neeed by date based PO cancellation/
+.asset supplier except to PBSA POS (supplier\item creation by Finance)+Asset Item creation for Finance/
+.Outlet level services from PBSA POS/
+31-oct-2018
+.hold notification to management based on a scheduled time / Month-end process proposed-timeout/
+.Asset location and Purchasing Locations/
+.Asset creation and Payment delay but asset is used. No issue will occur/
+.Tax hitting accounts of Asset Invoice/

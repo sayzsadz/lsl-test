@@ -129,3 +129,8 @@ Ask from PBSA S/W Team
 .:body(POST empty or else) of the supplier update endpoint like in rejected lines\supplier return\PO
 .confirm the po_reference
 .MrpIncTax\TaxCode in supplier return\PO
+
+28-SEP-18
+.Naming convention to JE batch\entry
+.Printer Setup
+.w/o PO reject - debit memo and misc transfer (1.Interstock - w/wo PO 2.To vender - w/wo PO )

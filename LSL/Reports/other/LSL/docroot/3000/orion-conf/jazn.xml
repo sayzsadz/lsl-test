@@ -1,0 +1,8 @@
+<jazn provider="XML" location="./jazn-data.xml">
+        <!-- remove the following to enable auto credentials obfuscation -->
+	<property name="xml.credentials.auto.obfuscate" value="OFF" />
+</jazn>
+
+<!-- Replace the above element with this element to use JAZN-LDAP instead
+<jazn provider="LDAP" location="ldap://myoid.us.oracle.com:389" />
+-->

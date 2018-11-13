@@ -2,7 +2,7 @@ DECLARE
     l_vendor_contact_rec ap_vendor_pub_pkg.r_vendor_contact_rec_type;
     l_return_status VARCHAR2(10);
     l_msg_count NUMBER;
-    l_msg_data VARCHAR2(1000);
+    l_msg_data VARCHAR2(20000);
     l_vendor_contact_id NUMBER;
     l_per_party_id NUMBER;
     l_rel_party_id NUMBER;
@@ -12,7 +12,7 @@ DECLARE
     
   cursor sup_cur is
   select  VENDOR_NAME
-  from xxpbsa_sup_stg;
+  from AP_SUPPLIERS;
   
   cursor sup_con_cur(p_vendor_name varchar2) is
   select  VENDOR_NAME
@@ -20,7 +20,8 @@ DECLARE
          ,PHONE
          ,FAX
   from xxpbsa_sup_con_stg
-  where VENDOR_NAME = p_vendor_name;
+  where VENDOR_NAME = p_vendor_name
+        and status is null;
   
 BEGIN
 
@@ -40,8 +41,8 @@ FOR c in sup_cur
     --
 
     l_vendor_contact_rec.org_id := 81;  
-    l_vendor_contact_rec.person_first_name := c1.first_name;  
-    l_vendor_contact_rec.person_last_name := c1.first_name;  
+    l_vendor_contact_rec.person_first_name := NVL(c1.first_name, c.vendor_name);  
+    l_vendor_contact_rec.person_last_name := NVL(c1.first_name, c.vendor_name);  
 
 
     pos_vendor_pub_pkg.create_vendor_contact(
@@ -57,6 +58,12 @@ FOR c in sup_cur
         x_party_site_id => l_party_site_id);
 
     COMMIT;
+    
+    update xxpbsa_sup_con_stg
+    set status = 'P', ERROR_CODE = l_msg_data||l_party_site_id||l_vendor_contact_id
+    where vendor_name = c1.vendor_name;
+   
+   COMMIT;
 
     dbms_output.put_line('return_status: '||l_return_status);
     dbms_output.put_line('msg_data: '||l_msg_data);

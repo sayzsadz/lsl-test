@@ -1,0 +1,24 @@
+EBS Payments (IBY) Funds Disbursement Analyzer Log File
+***************************************************************
+31-OCT-18 13:08:13-begin populate parameters hash table
+31-OCT-18 13:08:13-end populate parameters hash table
+
+Parameter Values before validation:
+---------------------------
+1. Operating Unit: 81
+2. PPR Name: Test 012
+3. Invoice ID: 11012
+4. Check ID: 
+5. From Date: 02-AUG-18
+6. Upgraded Data: N
+7. Maximum Rows to Display: 50
+8. Debug Mode: Y
+---------------------------
+31-OCT-18 13:08:13-begin parameter validation: p_org_id
+31-OCT-18 13:08:13-end parameter validation: p_org_id
+31-OCT-18 13:08:13-begin parameter validation: p_ppr_name
+31-OCT-18 13:08:13-end parameter validation: p_ppr_name
+31-OCT-18 13:08:13-begin parameter validation: p_invoice_id
+Invalid parameters provided. Process cannot continue.
+Error in validate_parameters at step: 7
+Error in main at step 15: User-Defined Exception

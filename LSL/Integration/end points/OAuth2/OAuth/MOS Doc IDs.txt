@@ -1,0 +1,24 @@
+12c 		:reverting to HTTP - Doc ID 1675966.1
+12c below 	:Doc ID 727118.1
+
+Hi Team
+
+We came across the following error.
+
+ORA-29106: Cannot import PKCS #12 wallet.
+ORA-24247: network access denied by access control list (ACL)
+
+The steps we followed are below listed.
+1. Created a Oracle Wallet using 'orapki wallet create' command
+2. added the trusted the certificate using the same command 'orapki wallet add'
+3. created a access control list and added required host
+4. made request to required REST service from the following function adn parameter respectively
+function: APEX_WEB_SERVICE.make_rest_request
+parameters: p_url, p_http_method, p_body, p_wallet_path, p_wallet_pwd
+
+Going forward I have read My Oracle Support Document Doc ID 1675966.1 and I mentioned it for your reference.
+
+Please be kind enough to attend to this incident and let us know the resolution.
+
+Thank you regards
+Sayuru

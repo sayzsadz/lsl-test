@@ -1,0 +1,18 @@
+orapki cert create /home/oracle/wallet -request /home/oracle/wallet -cert /home/oracle/wallet -validity 365
+
+orapki wallet create -wallet /home/oracle/wallet -pwd Pa$$w0rd -auto_login -validity 365
+
+orapki wallet create -wallet /home/oracle/wallet -pwd Pa$$w0rd -auto_login
+
+orapki wallet display -wallet /home/oracle/wallet
+
+orapki wallet add -wallet /home/oracle/wallet -trusted_cert -cert /home/oracle/wallet/PBSA.cer -pwd Pa$$w0rd
+
+
+
+
+
+
+orapki wallet create -wallet /home/oraapex/wallet -pwd Pa$$w0rd -auto_login
+
+orapki wallet add -wallet /home/oraapex/wallet -trusted_cert -cert /home/oraapex/wallet/PSBA.cer -pwd Pa$$w0rd

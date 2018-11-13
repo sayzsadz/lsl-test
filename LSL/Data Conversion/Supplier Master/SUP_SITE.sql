@@ -1,29 +1,35 @@
 DECLARE
         l_vendor_site_rec         ap_vendor_pub_pkg.r_vendor_site_rec_type;
         l_vendor_id               NUMBER;
-        l_msg                    VARCHAR2(200);
+        l_msg                    VARCHAR2(20000);
         x_return_status          VARCHAR2(10);
         x_msg_count              NUMBER;
-        x_msg_data               VARCHAR2(1000);
+        x_msg_data               VARCHAR2(20000);
         x_vendor_site_id         NUMBER;
         x_party_site_id          NUMBER;
         x_location_id            NUMBER;
         ln_api_version           NUMBER;
-        lv_init_msg_list         VARCHAR2(200);
+        lv_init_msg_list         VARCHAR2(20000);
         lv_commit                VARCHAR2(200);
         ln_validation_level      NUMBER;
         
   cursor sup_cur is
   select  VENDOR_NAME
-  from xxpbsa_sup_stg;
+  from AP_SUPPLIERS;
   
   cursor sup_site_cur(p_vendor_name varchar2) is
   select COUNTRY
         ,ADDRESS_LINE1
         ,ADDRESS_LINE2
         ,ADDRESS_LINE3
+        ,vendor_name
+        ,PAYMENT_METHOD_CODE
+        ,'Y' PAY_SITE_FLAG
+        ,'Y' PURCHASING_SITE_FLAG
   from xxpbsa_sup_site_stg
-  where vendor_name = p_vendor_name;
+  where 1 = 1
+        and vendor_name = p_vendor_name
+        and status is null;
 
 BEGIN
 
@@ -67,15 +73,18 @@ LOOP
   l_vendor_site_rec.last_updated_by               := 0;
   l_vendor_site_rec.vendor_id                     := l_vendor_id;
   l_vendor_site_rec.org_id                        := 81;
-  l_vendor_site_rec.vendor_site_code              := 'SupplierSite-'||l_vendor_id;
-
+  l_vendor_site_rec.vendor_site_code              := substr(c.vendor_name, 1,10);
+  l_vendor_site_rec.VENDOR_SITE_CODE_ALT          := (c.vendor_name);
   l_vendor_site_rec.address_style                 := 'POSTAL_ADDR_DEF';
   l_vendor_site_rec.country                       := c1.country;
   l_vendor_site_rec.address_line1                 := c1.address_line1;
-  l_vendor_site_rec.address_line2                 := '345fgh';
-  l_vendor_site_rec.address_line3                 := '134';
-  l_vendor_site_rec.address_line4                 := 'Colombo';
-  l_vendor_site_rec.city                          := 'Colombo 8';
+  l_vendor_site_rec.address_line2                 := c1.address_line2;
+  l_vendor_site_rec.address_line3                 := NVL(c1.address_line3, '.');
+  l_vendor_site_rec.address_line4                 := null;
+  l_vendor_site_rec.city                          := NVL(c1.address_line3, '.');
+  l_vendor_site_rec.PAY_SITE_FLAG                 := c1.PAY_SITE_FLAG;
+  l_vendor_site_rec.PURCHASING_SITE_FLAG          := c1.PURCHASING_SITE_FLAG;
+  l_vendor_site_rec.ext_payee_rec.default_pmt_method           := c1.PAYMENT_METHOD_CODE;
   
   ap_vendor_pub_pkg.create_vendor_site(p_api_version      => ln_api_version,
                                        p_init_msg_list    => lv_init_msg_list,
@@ -96,6 +105,11 @@ LOOP
   DBMS_OUTPUT.put_line('X_PARTY_SITE_ID = ' || x_party_site_id);
   DBMS_OUTPUT.put_line('X_LOCATION_ID = ' || x_location_id);
 
+   update xxpbsa_sup_site_stg
+   set status = 'P', ERROR_CODE = x_msg_data||x_vendor_site_id||x_location_id
+   where vendor_name = c1.vendor_name;
+   
+   COMMIT;
 
         IF (x_return_status <> fnd_api.g_ret_sts_success) THEN
             FOR i IN 1 .. fnd_msg_pub.count_msg LOOP

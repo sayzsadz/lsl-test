@@ -7,7 +7,7 @@ DECLARE
    l_vendor_rec       ap_vendor_pub_pkg.r_vendor_rec_type;
    l_return_status    VARCHAR2(10);
    l_msg_count        NUMBER;
-   l_msg_data         VARCHAR2(1000);
+   l_msg_data         VARCHAR2(20000);
    l_vendor_id        NUMBER;
    l_party_id         NUMBER;
 
@@ -15,9 +15,10 @@ cursor sup_cur is
   select  SEGMENT1 
          ,VENDOR_NAME
          ,PAY_GROUP_LOOKUP_CODE
-         ,TERMS_NAME
+         ,PAY_TYPE TERMS_NAME
          ,AUTO_TAX_CALC_FLAG
-  from xxpbsa_sup_stg;
+  from xxpbsa_sup_stg
+  where STATUS is null;
 
 
 BEGIN
@@ -30,10 +31,11 @@ BEGIN
    -- Required
    -- --------------
    
-   l_vendor_rec.segment1                := 'SUP_NO124';
-   l_vendor_rec.vendor_name             := 'Test124';
+   l_vendor_rec.segment1                := c1.segment1;
+   l_vendor_rec.vendor_name             := c1.vendor_name;
    l_vendor_rec.PAY_GROUP_LOOKUP_CODE   := c1.PAY_GROUP_LOOKUP_CODE;
    l_vendor_rec.TERMS_NAME              := c1.TERMS_NAME;
+   l_vendor_rec.AUTO_TAX_CALC_FLAG      := NVL(c1.AUTO_TAX_CALC_FLAG,'N');
  
    -- -------------
    -- Optional

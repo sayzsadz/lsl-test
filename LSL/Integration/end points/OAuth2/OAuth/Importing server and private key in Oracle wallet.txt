@@ -1,0 +1,17 @@
+Importing server and private key in Oracle wallet
+
+Reason:Cannot import PKCS #12 wallet.
+
+a/ convert this p12 to jks
+keytool -v -importkeystore -srckeystore yourcert.p12 -srcstoretype PKCS12 -destkeystore yournewkeystore.jks -deststoretype JKS
+
+keytool -import -alias Root -keystore yournewkeystore.jks -trustcacerts -file root.cer
+keytool -import -alias Intermediate -keystore yournewkeystore.jks -trustcacerts -file intermediate.cer
+
+b/ create an empty wallet
+mw_home\oracle_common\bin\orapki wallet create -wallet ./ -pwd "mypassword"
+
+c/ convert the jks to a wallet:
+mw_home\oracle_common\bin\orapki wallet jks_to_pkcs12 -wallet ./ -pwd "mypassword" -keystore ./yournewkeystore.jks -jkspwd "mypassword"
+
+URL: https://blogs.oracle.com/cealteam/importing-server-and-private-key-in-oracle-wallet

@@ -1,0 +1,172 @@
+<?xml version="1.0" standalone='yes'?>
+<!DOCTYPE jazn-data PUBLIC "JAZN-XML Data" "http://xmlns.oracle.com/ias/dtds/jazn-data.dtd">
+<jazn-data>
+
+<!-- JAZN Realm Data -->
+<jazn-realm>
+	<realm>
+		<name>jazn.com</name>
+		<users>
+			<user>
+				<name>admin</name>
+				<display-name>Realm Administrator</display-name>
+				<description>Administrator for this realm.</description>
+				<credentials>!welcome</credentials>
+			</user>
+			<user>
+				<name>anonymous</name>
+				<description>The default guest/anonymous user</description>
+			</user>
+			<user>
+				<name>SCOTT</name>
+				<display-name>SCOTT</display-name>
+				<credentials>!TIGER</credentials>
+			</user>
+			<user>
+				<name>user</name>
+				<description>The default user</description>
+				<credentials>!456</credentials>
+			</user>
+		</users>
+		<roles>
+			<role>
+				<name>guests</name>
+				<members>
+					<member>
+						<type>user</type>
+						<name>admin</name>
+					</member>
+					<member>
+						<type>user</type>
+						<name>user</name>
+					</member>
+					<member>
+						<type>user</type>
+						<name>anonymous</name>
+					</member>
+				</members>
+			</role>
+			<role>
+				<name>administrators</name>
+				<display-name>Realm Admin Role</display-name>
+				<description>Administrative role for this realm.</description>
+				<members>
+					<member>
+						<type>user</type>
+						<name>admin</name>
+					</member>
+				</members>
+			</role>
+			<role>
+				<name>users</name>
+				<members>
+					<member>
+						<type>user</type>
+						<name>admin</name>
+					</member>
+					<member>
+						<type>user</type>
+						<name>user</name>
+					</member>
+				</members>
+			</role>
+		</roles>
+	</realm>
+</jazn-realm>
+
+<!-- JAZN Policy Data -->
+<jazn-policy>
+	<grant>
+		<grantee>
+			<principals>
+				<principal>
+					<realm-name>jazn.com</realm-name>
+					<type>role</type>
+					<class>oracle.security.jazn.spi.xml.XMLRealmRole</class>
+					<name>jazn.com/administrators</name>
+				</principal>
+			</principals>
+		</grantee>
+		<permissions>
+			<permission>
+				<class>oracle.security.jazn.realm.RealmPermission</class>
+				<name>jazn.com</name>
+				<actions>droprealm</actions>
+			</permission>
+			<permission>
+				<class>oracle.security.jazn.realm.RealmPermission</class>
+				<name>jazn.com</name>
+				<actions>createrealm</actions>
+			</permission>
+			<permission>
+				<class>oracle.security.jazn.policy.AdminPermission</class>
+				<name>oracle.security.jazn.realm.RealmPermission$jazn.com$droprole</name>
+			</permission>
+			<permission>
+				<class>oracle.security.jazn.realm.RealmPermission</class>
+				<name>jazn.com</name>
+				<actions>modifyrealmmetadata</actions>
+			</permission>
+			<permission>
+				<class>oracle.security.jazn.policy.AdminPermission</class>
+				<name>oracle.security.jazn.policy.RoleAdminPermission$jazn.com/*$</name>
+			</permission>
+			<permission>
+				<class>oracle.security.jazn.policy.AdminPermission</class>
+				<name>oracle.security.jazn.realm.RealmPermission$jazn.com$createrealm</name>
+			</permission>
+			<permission>
+				<class>oracle.security.jazn.policy.AdminPermission</class>
+				<name>oracle.security.jazn.realm.RealmPermission$jazn.com$droprealm</name>
+			</permission>
+			<permission>
+				<class>com.evermind.server.rmi.RMIPermission</class>
+				<name>login</name>
+			</permission>
+			<permission>
+				<class>oracle.security.jazn.policy.RoleAdminPermission</class>
+				<name>jazn.com/*</name>
+			</permission>
+			<permission>
+				<class>oracle.security.jazn.policy.AdminPermission</class>
+				<name>oracle.security.jazn.realm.RealmPermission$jazn.com$modifyrealmmetadata</name>
+			</permission>
+			<permission>
+				<class>com.evermind.server.AdministrationPermission</class>
+				<name>administration</name>
+				<actions>administration</actions>
+			</permission>
+			<permission>
+				<class>oracle.security.jazn.policy.AdminPermission</class>
+				<name>oracle.security.jazn.realm.RealmPermission$jazn.com$createrole</name>
+			</permission>
+		</permissions>
+	</grant>
+	<grant>
+		<grantee>
+			<codesource>
+				<url>file:/private/rkng/.ade/view_storage/rkng_oc4j/j2ee/jazn/classes/test/-</url>
+			</codesource>
+		</grantee>
+		<permissions>
+			<permission>
+				<class>oracle.security.jazn.JAZNPermission</class>
+				<name>foo</name>
+			</permission>
+		</permissions>
+	</grant>
+</jazn-policy>
+
+<!-- Permission Class Data -->
+<jazn-permission-classes>
+</jazn-permission-classes>
+
+<!-- Principal Class Data -->
+<jazn-principal-classes>
+</jazn-principal-classes>
+
+<!-- Login Module Data -->
+<jazn-loginconfig>
+</jazn-loginconfig>
+
+</jazn-data>

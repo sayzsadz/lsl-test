@@ -1,0 +1,74 @@
+.change inv number after GRN  inv (duplicate pay on receipt autorun program or profile option update to ap inv number from PO-Supplier_INV_No)\
+.ap invoice number should be ExternalReferenceNumber of the GRN\
+.AR expenses 1%/ Manual Process from Finance\
+.cheque return\late payment on termsX
+.period closure based on manual docs from outlet. is Bank statement and AP\AR reconciliation not sufficient?X
+.payment will come as a customer in PBSA. X\customer codes required
+.AR lockbox auto apply receipt X
+.codes of debtors X
+.Supplier Return invoiced based on the last approved PO /
+.auto inv validate/approve/
+.payments based on the voucher number/
+.supplier invoice number will be available in the Payment Voucher and persists against the invoiceX
+.supplier can be changed when the time of approval\on wards so that PO is not fixed/
+.POS inv number will be the supplier invoice that he brings. need to enter the supplier brought inv number at the time of the Payment Voucher print then Oracle saves it for future reference. X
+.credit sales with the diff of all sales and credit payment (JEs)/
+.PO concern/
+.duplicate of PR lines when saving after initial tdone
+15. locations in POs\
+10. supplier types for batches\
+8. Station\drugs\genral\house hold except from segment4/
+5. PO charge account segment2 from mtl_items_kfv\logically required/
+6. avg cost x for POs and Supplier Return data fix schedule OR PO response from ho endpoint/
+2. Item creation add to /products endpoint (confirm the endpoint to PBSA)\
+11. CM swiftx... format (unreconciled to JE entries A)/ Excel can be used with Bank Codes analyzed previous records
+12. TB mapping/
+.backlog entering (starting from cutover) - PO\GRN\INV - KPMG Team will works with LSL/
+.November Closed Periods and Adjustments will be in th future periods/
+.Balance Sheet balances with Liabilities\AP inv debit/
+.Inventories balances from the Manual Entries/
+.AR recon. with misc automatically/
+.AP recon - AP Accrual A/C (GRNs not invoiced)/
+.Mock cutover/
+.Extenal Ref. update field is same/
+.TAX distributions/
+.bank account for deposits/
+XXPBSA_PO_APPROVAL_REQ-for scheduling/
+
+SAGT
+Receipt Apply/
+Customer remaining/
+Daily Rates/Xrigger/
+
+open next week
+0. Employee list of ERP users/
+1. JSON output for successful operation response as agreed
+2. head office\products\supplier apis testing 3/5****
+3. Inter-Stock Transfer Variation JE (SrcCr- RecDr-) and Price Adjustment\Product Movement JE
+4.Printer Service - SR 1/2/
+5. AP invoice track asset tick based on previous asset GRN
+6. Outlet mapping
+7. credit period based on supplier brought invoice date ++
+8.VAT NBT distributions api change ETA
+9.PO Approvals/PO Responsibility Matrix (Product Category wise approvals)
+10.AP Approvals amounts only/
+11.Sales with Credit Sales and Settlement
+28th October clone to SLT cloud finalize later with DBA/
+12. Delivery Note Format***
+13.Regression Testing readiness***
+14.item template for purchasing and purchase flag/
+15.auto create outlet
+16.schedule
+:deliveryimport+delivery-process/
+:supret-import+supret-process/
+items/
+supplier/
+rejected-lines???
+
+
+my
+0. Remittance Letter from HR asap EoD
+1. request admin rights to set Oracle Report Builder TEMP folder/
+2. Purchase\Purchasing Flag in item upload /
+4. supplier type method in supplier master - userwise invoice batch /
+5. VAT\NBT % from procurement / Distribution Set Created needs to upload the LSL PO data later/

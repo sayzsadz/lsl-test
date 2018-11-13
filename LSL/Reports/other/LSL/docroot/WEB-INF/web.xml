@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE web-app>
+<web-app>
+   <description>Empty web.xml file for Web Application</description>
+   <session-config>
+      <session-timeout>30</session-timeout>
+   </session-config>
+   <mime-mapping>
+      <extension>txt</extension>
+      <mime-type>text/plain</mime-type>
+   </mime-mapping>
+   <mime-mapping>
+      <extension>html</extension>
+      <mime-type>text/html</mime-type>
+   </mime-mapping>
+   <welcome-file-list>
+      <welcome-file>index.jsp</welcome-file>
+      <welcome-file>index.html</welcome-file>
+   </welcome-file-list>
+   <taglib>
+      <taglib-uri>reports_tld</taglib-uri>
+      <taglib-location>/WEB-INF/lib/reports_tld.jar</taglib-location>
+   </taglib>
+</web-app>

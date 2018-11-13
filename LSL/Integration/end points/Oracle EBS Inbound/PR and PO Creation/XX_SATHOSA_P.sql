@@ -1,0 +1,137 @@
+--EXEC XX_SATHOSA_P
+CREATE OR REPLACE PROCEDURE XX_SATHOSA_P
+(
+ERRBUF OUT VARCHAR2, 
+RETCODE OUT VARCHAR2
+)
+AS
+
+CURSOR CUR_HEADER IS
+SELECT RSH.SHIPMENT_HEADER_ID , TRUNC(CREATION_DATE) CREATION_DATE , RSH.PACKING_SLIP , RSH.VENDOR_ID , RSH.VENDOR_SITE_ID
+FROM RCV_SHIPMENT_HEADERS RSH
+WHERE TRUNC(RSH.CREATION_DATE) >= '12-MAR-2018'
+AND RSH.SHIPMENT_HEADER_ID IN
+(
+SELECT RSH.SHIPMENT_HEADER_ID 
+FROM RCV_SHIPMENT_LINES RSL 
+WHERE 1 = 1
+AND RSH.SHIPMENT_HEADER_ID = RSL.SHIPMENT_HEADER_ID
+AND TRUNC(RSH.CREATION_DATE) >= '12-MAR-2018'
+AND RSL.DESTINATION_TYPE_CODE IN ('RECEIVING','INVENTORY')
+AND RSL.PO_LINE_ID NOT IN
+(
+SELECT AIL.PO_LINE_ID
+FROM AP_INVOICE_LINES_ALL AIL WHERE AIL.CREATION_DATE >= '12-MAR-2018'
+AND AIL.MATCH_TYPE = 'ITEM_TO_PO'
+AND AIL.DISCARDED_FLAG = 'N'
+UNION
+SELECT AILI.PO_LINE_ID
+FROM AP_INVOICE_LINES_INTERFACE AILI
+WHERE AILI.INVOICE_LINE_ID IS NULL
+)
+);
+
+CURSOR CUR_DETAIL (P_SHIPMENT_HEADER_ID NUMBER) IS
+SELECT RSL.QUANTITY_RECEIVED , RSL.PO_LINE_ID , TRUNC(RSH.CREATION_DATE) CREATION_DATE , RSL.LINE_NUM ,
+RSL.PO_RELEASE_ID , RSL.PO_LINE_LOCATION_ID , RSL.SHIPMENT_HEADER_ID
+FROM RCV_SHIPMENT_HEADERS RSH,RCV_SHIPMENT_LINES RSL 
+WHERE 1 = 1
+AND RSH.SHIPMENT_HEADER_ID = RSL.SHIPMENT_HEADER_ID
+AND RSH.SHIPMENT_HEADER_ID = P_SHIPMENT_HEADER_ID
+AND TRUNC(RSH.CREATION_DATE) >= '12-MAR-2018'
+AND RSL.DESTINATION_TYPE_CODE IN ('RECEIVING','INVENTORY');
+
+C_AMT NUMBER;
+C_CURRENCY_CODE VARCHAR2(15);
+C_ORG_ID NUMBER;
+C_VENDOR_ID NUMBER;
+C_VENDOR_SITE_ID NUMBER;
+C_SEQ_NUM NUMBER;
+C_INV_AMT NUMBER;
+
+BEGIN
+
+FOR c1 in CUR_HEADER LOOP
+
+C_INV_AMT := 0;
+
+select ap_invoices_interface_s.nextval INTO C_SEQ_NUM from dual;
+
+FOR C2 in CUR_DETAIL (C1.SHIPMENT_HEADER_ID) LOOP
+SELECT (C2.QUANTITY_RECEIVED * UNIT_PRICE) AMT, CURRENCY_CODE  , PH.ORG_ID
+INTO C_AMT , C_CURRENCY_CODE , C_ORG_ID
+FROM PO_HEADERS_ALL PH ,  PO_LINES_ALL PL
+WHERE PH.PO_HEADER_ID = PL.PO_HEADER_ID 
+AND PL.PO_LINE_ID = C2.PO_LINE_ID ;--395230 ;
+
+C_INV_AMT := C_INV_AMT  + C_AMT ;
+
+insert into AP_INVOICE_LINES_INTERFACE (
+            invoice_id,
+            line_number,
+            line_type_lookup_code,
+            amount,
+--            dist_code_combination_id,
+            po_line_id,
+            PO_LINE_LOCATION_ID,
+            PO_RELEASE_ID,
+            ORG_ID,
+            match_option
+            )
+values     (
+            C_SEQ_NUM,
+            C2.LINE_NUM,
+            'ITEM',
+            C_AMT,
+--            6014,
+            C2.PO_LINE_ID, --395230
+            C2.PO_LINE_LOCATION_ID,
+            C2.PO_RELEASE_ID,
+            C_ORG_ID,
+            'P'
+);
+
+FND_FILE.PUT_LINE (FND_FILE.OUTPUT,'UPDATED');
+
+END LOOP;
+
+insert into AP_INVOICES_INTERFACE (
+            invoice_id,
+            invoice_num,
+            invoice_type_lookup_code,
+            vendor_id,
+            vendor_site_id,
+            invoice_amount,
+            INVOICE_CURRENCY_CODE,
+            invoice_date,
+            DESCRIPTION,
+--            PAY_GROUP_LOOKUP_CODE,
+            source,
+            org_id
+--            terms_id,
+--            calc_tax_during_import_flag,
+--            add_tax_to_inv_amt_flag
+                )
+values (
+            C_SEQ_NUM,
+            TO_CHAR(NVL(C1.PACKING_SLIP,C_SEQ_NUM)),
+            'STANDARD',
+            C1.VENDOR_ID, --'39178',
+            C1.VENDOR_SITE_ID, --'8021',
+            C_INV_AMT,
+            C_CURRENCY_CODE,
+            TRUNC(C1.CREATION_DATE),
+            'This Invoice is created for test purpose',
+--            'Standard',
+            'MANUAL INVOICE ENTRY',
+            C_ORG_ID
+--            10000,
+--            'Y',
+--            'Y'
+);
+
+end loop;
+
+COMMIT;
+
+END;
