@@ -1,0 +1,20 @@
+
+--related /etc/cups/cupsd.conf
+
+--adding the printer server
+/usr/sbin/lpadmin -p LaserJet(virtual printer server/EBS defined printer) -E -v socket://cupsserevr.cupsexample.com -m laserjet.ppd
+
+--adding the printer clients
+/usr/sbin/lpadmin -p LaserJet1,2,...(Windows Client PC based IP printers) -E -v socket://192.168.16.1...xxxx -m laserjet.ppd
+
+--body starts of /etc/cups/client.conf
+ServerName cupsserevr.cupsexample.com
+--body ends
+
+
+
+--get printers installed in CUPS
+lpinfo -m
+
+--get the default printer name from windows PC
+smbclient '\\LKKTS_L046\Users\sjayasinghe1\Downloads\' -c 'lcd /tmp; cd test_folder; get default_printer.txt' -U sjayasitbne1%1qaz67

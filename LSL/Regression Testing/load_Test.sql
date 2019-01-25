@@ -4,6 +4,11 @@ from xxpbsa_oauth
 where store_id !=0
 order by store_id;
   
+select replace(URL,'https://','')
+from xxpbsa_oauth
+where store_id !=0
+order by store_id;
+  
   update xxpbsa_oauth
   set wallet_path = wallet_path||store_id
   where access_token is null;

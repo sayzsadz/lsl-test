@@ -51,9 +51,9 @@ from      (select *
               AND mcs.category_set_id   = mcst.category_set_id
               AND mcst.LANGUAGE         = USERENV ('LANG')
               AND mic.category_id       = mc.category_id     
-              AND msi.organization_id = mic.organization_id    
+              AND msi.organization_id   = mic.organization_id    
               AND msi.inventory_item_id = mic.inventory_item_id
-              AND msi.organization_id = 101
+              AND msi.organization_id   = 101
         ) prod
 where 1 = 1
       and sal_summary.SALES_DATE = ret_summary.SALES_DATE
