@@ -1,4 +1,0 @@
-List of Standard BI Publisher Reports available within Oracle Fusion Applications (Doc ID 1458860.1)/
-asset location default/
-AS image attach (demo 1/2 and clear img directories before prod migration) and Cash to GL/
-Apex_Collection/
