@@ -52,6 +52,7 @@ BEGIN
   COMMIT;
 END;
 /
+
 begin
   ORDS.define_handler(
     p_module_name    => 'lslmodule7.v1',
@@ -63,8 +64,10 @@ begin
                             l_response  VARCHAR2(32767);                      
                            BEGIN                             
                              -- Build response.
-                             check_store(UTL_RAW.cast_to_varchar2(:body), v_msg);
-                             l_response := v_msg;
+                             
+                             l_response := UTL_RAW.cast_to_varchar2(:body);
+                             check_store(l_response, v_msg);
+                             HTP.p(v_msg);
  
                              -- Output response text.
                              HTP.p(l_response);
