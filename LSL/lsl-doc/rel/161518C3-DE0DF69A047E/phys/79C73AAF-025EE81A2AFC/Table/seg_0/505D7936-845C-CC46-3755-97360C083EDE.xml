@@ -1,0 +1,32 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="STORE" directorySegmentName="seg_0" id="505D7936-845C-CC46-3755-97360C083EDE">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:03 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<schemaObject>0AE16394-9849-78C1-8ED5-664CE07801D1</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>057A565F-47EA-65DA-8C05-368169DCB6FA</segment>
+<tableSpace>A190030E-D81C-5146-AEF5-2493D5755040</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="COMPANYNAME" id="30EA8492-5787-7BDD-9564-E155EF829C4F">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ACTIVE" id="B76E8CDF-39A9-643F-0969-A9723AED7395">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STOREID" id="E313C9DA-FBF7-4B31-9C6F-E1799BBC587C">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev12c>

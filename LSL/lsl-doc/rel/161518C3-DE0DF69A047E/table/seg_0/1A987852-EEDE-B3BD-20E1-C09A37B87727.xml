@@ -1,0 +1,163 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1A987852-EEDE-B3BD-20E1-C09A37B87727" schemaObject="0AE16394-9849-78C1-8ED5-664CE07801D1" name="XXPBSA_HO_OAUTH">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>APEX</sourceObjSchema>
+<sourceObjName>XXPBSA_HO_OAUTH</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:03 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="TOKEN_TYPE" id="7FB0E1F0-7A8A-EF7D-B93D-1E07727B0AA9">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXPBSA_HO_OAUTH</sourceObjSchema>
+<sourceObjName>TOKEN_TYPE</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACCESS_TOKEN" id="6CBD7665-3547-5983-65E3-9C8DBBD893AD">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXPBSA_HO_OAUTH</sourceObjSchema>
+<sourceObjName>ACCESS_TOKEN</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000 BYTE</dataTypeSize>
+<ownDataTypeParameters>2000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXPIRES_IN_SEC" id="609B1461-8BF1-EEA4-7269-18A51C0FA8F3">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXPBSA_HO_OAUTH</sourceObjSchema>
+<sourceObjName>EXPIRES_IN_SEC</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="START_DATE" id="53A97013-9691-F3C7-D98F-5110526EF32C">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXPBSA_HO_OAUTH</sourceObjSchema>
+<sourceObjName>START_DATE</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="END_DATE" id="04C1A223-AA06-8D3C-31FF-C2DB9E980B4C">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXPBSA_HO_OAUTH</sourceObjSchema>
+<sourceObjName>END_DATE</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CLIENT_ID" id="88253B41-30C5-962D-022C-FA25205606BB">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXPBSA_HO_OAUTH</sourceObjSchema>
+<sourceObjName>CLIENT_ID</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 BYTE</dataTypeSize>
+<ownDataTypeParameters>1000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CLIENT_SECRET" id="0DE70E6B-69F4-9918-01C1-2BAAD7DDDA8A">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXPBSA_HO_OAUTH</sourceObjSchema>
+<sourceObjName>CLIENT_SECRET</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000 BYTE</dataTypeSize>
+<ownDataTypeParameters>2000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="URL" id="45194B5C-BF14-E35A-26F4-0D5A1E47246E">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXPBSA_HO_OAUTH</sourceObjSchema>
+<sourceObjName>URL</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 BYTE</dataTypeSize>
+<ownDataTypeParameters>500 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HTTPS_HOST" id="E504675C-F38C-5EC1-6DA2-2862FBA32FC7">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXPBSA_HO_OAUTH</sourceObjSchema>
+<sourceObjName>HTTPS_HOST</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="WALLET_PATH" id="58BD2B6E-664B-4FAB-E611-CDA9BA394ADA">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXPBSA_HO_OAUTH</sourceObjSchema>
+<sourceObjName>WALLET_PATH</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

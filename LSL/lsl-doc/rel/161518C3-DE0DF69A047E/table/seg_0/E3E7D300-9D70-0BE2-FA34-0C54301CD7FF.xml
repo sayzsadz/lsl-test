@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E3E7D300-9D70-0BE2-FA34-0C54301CD7FF" schemaObject="0AE16394-9849-78C1-8ED5-664CE07801D1" name="TILLRECONCILIATIONSUMMARY">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>APEX</sourceObjSchema>
+<sourceObjName>TILLRECONCILIATIONSUMMARY</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:03 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PAYMENTTYPESDATE" id="94AC90B4-57E1-5A6C-6DC6-67950895548E">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>TILLRECONCILIATIONSUMMARY</sourceObjSchema>
+<sourceObjName>PAYMENTTYPESDATE</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PAYMENTTYPE" id="2C0F2D21-EFD0-5AE9-BB7B-2AC1A302AA2B">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>TILLRECONCILIATIONSUMMARY</sourceObjSchema>
+<sourceObjName>PAYMENTTYPE</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STATUS_FLAG" id="F41E5A02-96B2-534D-65EF-3A12C9B8DBFF">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>TILLRECONCILIATIONSUMMARY</sourceObjSchema>
+<sourceObjName>STATUS_FLAG</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PAYMENTTYPEID" id="4A2185F1-6285-B7BA-B967-50D89CF75076">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>TILLRECONCILIATIONSUMMARY</sourceObjSchema>
+<sourceObjName>PAYMENTTYPEID</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

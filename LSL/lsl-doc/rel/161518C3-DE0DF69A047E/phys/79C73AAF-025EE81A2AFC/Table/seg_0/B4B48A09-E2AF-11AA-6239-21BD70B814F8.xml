@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="ADDRESS" directorySegmentName="seg_0" id="B4B48A09-E2AF-11AA-6239-21BD70B814F8">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:00 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<schemaObject>0AE16394-9849-78C1-8ED5-664CE07801D1</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>057A565F-47EA-65DA-8C05-368169DCB6FA</segment>
+<tableSpace>A190030E-D81C-5146-AEF5-2493D5755040</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="EMAIL" id="1CD3F421-AFAC-49D3-933B-218D18F25D96">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:04 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STREET" id="289056BB-AB6A-4909-E759-66B620013EC7">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:04 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="COUNTRY" id="474802F9-3EFA-3D14-97D0-101678B475D6">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:04 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="POSTCODE" id="5DC3E6C7-E9F7-CEDC-7ECC-44BEE800EA4D">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:04 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SUPPLIERID" id="7F3772C4-A101-05CA-E311-8F451B3A0E1A">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:04 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CONTACTNAME" id="90908467-9C9D-7AEB-F684-612D5C8DE1E3">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:04 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PHONE" id="91BA35BF-B6B0-2882-A05E-C4089AED2568">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:04 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STATE" id="9996F188-116B-0ABD-F715-AF84B22617E8">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:04 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CITY" id="CF95E607-3119-02F4-50AA-E2B80CC907C1">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:04 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev12c>

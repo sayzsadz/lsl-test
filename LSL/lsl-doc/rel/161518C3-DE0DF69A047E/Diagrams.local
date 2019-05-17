@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="main_view" objectID="CBED677F-D176-AB8D-E68F-9C80B9EA0C60" name="Relational_1" visible="false"/>
+   <object objectType="sub_view" objectID="1C3073B0-537C-7BC2-8423-5550FE8B3D8A" name="APEX" visible="false"/>
+   <object objectType="sub_view" objectID="71D65F4D-4612-01D6-8B45-7AD3B2226BD6" name="XXLSL" visible="false"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

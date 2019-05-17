@@ -1,0 +1,222 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="3FB9006B-EB03-AECC-459D-965081330CD4" schemaObject="D6DA88DC-C7F1-D9EB-0E2E-55457C162C0A" name="XXLSL_PR_REQ_APPROVAL">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL</sourceObjSchema>
+<sourceObjName>XXLSL_PR_REQ_APPROVAL</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:47:58 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL>CREATE OR REPLACE VIEW XXLSL_PR_REQ_APPROVAL&lt;br/&gt;AS &lt;br/&gt;select &quot;PURCHASEREQUESTID&quot;,&quot;PURCHASEREQUESTLINEID&quot;,&quot;STOREID&quot;,&quot;VENDOR_NAME&quot;,&quot;ITEM_CODE&quot;,&quot;DESCRIPTION&quot;,&quot;QUANTITY&quot;,&quot;UNIT&quot;,&quot;PURCHASEORDERID&quot;,&quot;STATUS_FLAG&quot;&lt;br/&gt;from APEX.XXLSL_PR_REQ_APPROVAL</userDefinedSQL>
+<parsed>true</parsed>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="PURCHASEREQUESTID" id="6D7C3552-305A-41D5-2665-CD7412AAD969">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL_PR_REQ_APPROVAL</sourceObjSchema>
+<sourceObjName>PURCHASEREQUESTID</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:47:58 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>PURCHASEREQUESTID</alias>
+<dataType>VARCHAR2 (100 BYTE)</dataType>
+<headerAlias>PURCHASEREQUESTID</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>8C29DCC6-83A4-C067-F3B3-885076F568A0</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="PURCHASEREQUESTLINEID" id="953634C2-A8FC-B5DD-A740-8A48EBD4FD79">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL_PR_REQ_APPROVAL</sourceObjSchema>
+<sourceObjName>PURCHASEREQUESTLINEID</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:47:58 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>PURCHASEREQUESTLINEID</alias>
+<dataType>VARCHAR2 (100 BYTE)</dataType>
+<headerAlias>PURCHASEREQUESTLINEID</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>149C04DC-D474-01B2-6EB5-38BBCF1735BB</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="STOREID" id="7EAEDEA4-A726-6E55-2DEF-F270424DD4B0">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL_PR_REQ_APPROVAL</sourceObjSchema>
+<sourceObjName>STOREID</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:47:58 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>STOREID</alias>
+<dataType>VARCHAR2 (100 BYTE)</dataType>
+<headerAlias>STOREID</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>DB97682D-6D26-19C5-34C9-D4997A0394AC</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="VENDOR_NAME" id="807D8C03-57A5-0472-9675-749AE3ADAC53">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL_PR_REQ_APPROVAL</sourceObjSchema>
+<sourceObjName>VENDOR_NAME</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:47:58 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>VENDOR_NAME</alias>
+<dataType>VARCHAR2 (100 BYTE)</dataType>
+<headerAlias>VENDOR_NAME</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>8FC401E4-914B-D78F-5555-0F8743379403</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="ITEM_CODE" id="BE110032-E603-5A09-C149-5CB236E43E40">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL_PR_REQ_APPROVAL</sourceObjSchema>
+<sourceObjName>ITEM_CODE</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:47:58 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>ITEM_CODE</alias>
+<dataType>VARCHAR2 (100 BYTE)</dataType>
+<headerAlias>ITEM_CODE</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>FB3F7AC3-AEE7-B163-1158-A46ADCAA4861</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="DESCRIPTION" id="A2750EAF-1852-85F5-15E9-7AB24AAE0107">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL_PR_REQ_APPROVAL</sourceObjSchema>
+<sourceObjName>DESCRIPTION</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:47:58 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>DESCRIPTION</alias>
+<dataType>VARCHAR2 (5 BYTE)</dataType>
+<headerAlias>DESCRIPTION</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>475A781B-3B1D-9DF4-853C-5A7C2C58862B</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="QUANTITY" id="006CC1B9-05BE-F806-A3C3-9D9F6C036212">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL_PR_REQ_APPROVAL</sourceObjSchema>
+<sourceObjName>QUANTITY</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:47:58 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>QUANTITY</alias>
+<dataType>VARCHAR2 (100 BYTE)</dataType>
+<headerAlias>QUANTITY</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>63CF80C8-D0C0-1B80-34EC-E0B3EEB1D9F7</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="UNIT" id="9D386A0B-E49A-DA90-55E6-76D5C20046BF">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL_PR_REQ_APPROVAL</sourceObjSchema>
+<sourceObjName>UNIT</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:47:58 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>UNIT</alias>
+<dataType>VARCHAR2 (100 BYTE)</dataType>
+<headerAlias>UNIT</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>5BD58A48-F270-1147-317D-0C46C326CC63</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="PURCHASEORDERID" id="2AC234BE-AF85-FC7E-042E-15B02FF5369A">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL_PR_REQ_APPROVAL</sourceObjSchema>
+<sourceObjName>PURCHASEORDERID</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:47:58 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>PURCHASEORDERID</alias>
+<dataType>VARCHAR2 (100 BYTE)</dataType>
+<headerAlias>PURCHASEORDERID</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>76035D78-5FAE-92D6-0FA8-52C7692DC9A2</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="STATUS_FLAG" id="D59CAA6B-7888-176F-6743-3393B2D544B0">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL_PR_REQ_APPROVAL</sourceObjSchema>
+<sourceObjName>STATUS_FLAG</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:47:58 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>STATUS_FLAG</alias>
+<dataType>VARCHAR2 (100 BYTE)</dataType>
+<headerAlias>STATUS_FLAG</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>6F9E278E-3BAC-6A6D-B283-77D09B7A5DB3</referencedColumnViewID>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="8C29DCC6-83A4-C067-F3B3-885076F568A0">
+<columnName>PURCHASEREQUESTID</columnName>
+<schema>APEX</schema>
+<tableName>XXLSL_PR_REQ_APPROVAL</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="149C04DC-D474-01B2-6EB5-38BBCF1735BB">
+<columnName>PURCHASEREQUESTLINEID</columnName>
+<schema>APEX</schema>
+<tableName>XXLSL_PR_REQ_APPROVAL</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="DB97682D-6D26-19C5-34C9-D4997A0394AC">
+<columnName>STOREID</columnName>
+<schema>APEX</schema>
+<tableName>XXLSL_PR_REQ_APPROVAL</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="8FC401E4-914B-D78F-5555-0F8743379403">
+<columnName>VENDOR_NAME</columnName>
+<schema>APEX</schema>
+<tableName>XXLSL_PR_REQ_APPROVAL</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="FB3F7AC3-AEE7-B163-1158-A46ADCAA4861">
+<columnName>ITEM_CODE</columnName>
+<schema>APEX</schema>
+<tableName>XXLSL_PR_REQ_APPROVAL</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="475A781B-3B1D-9DF4-853C-5A7C2C58862B">
+<columnName>DESCRIPTION</columnName>
+<schema>APEX</schema>
+<tableName>XXLSL_PR_REQ_APPROVAL</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="63CF80C8-D0C0-1B80-34EC-E0B3EEB1D9F7">
+<columnName>QUANTITY</columnName>
+<schema>APEX</schema>
+<tableName>XXLSL_PR_REQ_APPROVAL</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="5BD58A48-F270-1147-317D-0C46C326CC63">
+<columnName>UNIT</columnName>
+<schema>APEX</schema>
+<tableName>XXLSL_PR_REQ_APPROVAL</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="76035D78-5FAE-92D6-0FA8-52C7692DC9A2">
+<columnName>PURCHASEORDERID</columnName>
+<schema>APEX</schema>
+<tableName>XXLSL_PR_REQ_APPROVAL</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="6F9E278E-3BAC-6A6D-B283-77D09B7A5DB3">
+<columnName>STATUS_FLAG</columnName>
+<schema>APEX</schema>
+<tableName>XXLSL_PR_REQ_APPROVAL</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="AC54C972-39F5-C0F7-23D3-E7AD85BBF7C4">
+<container>true</container>
+<schema>APEX</schema>
+<tableName>XXLSL_PR_REQ_APPROVAL</tableName>
+<view>true</view>
+</UsedObject>
+</usedObjects>
+</TableView>

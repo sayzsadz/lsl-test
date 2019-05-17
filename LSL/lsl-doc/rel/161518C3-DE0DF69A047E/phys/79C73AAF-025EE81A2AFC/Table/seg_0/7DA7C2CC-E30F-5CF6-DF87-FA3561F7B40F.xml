@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="RETURNSUMMARYPRODUCT" directorySegmentName="seg_0" id="7DA7C2CC-E30F-5CF6-DF87-FA3561F7B40F">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:02 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<schemaObject>0AE16394-9849-78C1-8ED5-664CE07801D1</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>057A565F-47EA-65DA-8C05-368169DCB6FA</segment>
+<tableSpace>A190030E-D81C-5146-AEF5-2493D5755040</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="SALESUMMARYID" id="0F368121-9752-8548-E5C6-C2F36396DEC4">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="AVGCOSTTAX" id="1BF0CD34-5E0D-113E-5C36-E077A2A920B3">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SALESUMMARYLINEID" id="22E269E6-CE9B-D63F-8CF8-4B0C7BF3156D">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TOTALVALUETAX" id="2ABE231D-D10B-F754-1376-85C7B986B0F3">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="AVGCOSTEX" id="2DA1C151-B2B7-BA9D-5EEE-09826C731556">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SALE_DATE" id="4B75E6FB-DF68-CF4C-81C1-CEE9FC9E5D70">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TOTALVALUEEX" id="5F889FA9-781E-647F-F31B-446AD76C898B">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TOTALUNITS" id="AF8AC384-9F1D-0EEE-AFA0-45832BCFA5D4">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="UNIT" id="C37737BD-23EA-D425-A524-64D1B255625B">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PARTNUMBER" id="CA9A8A4E-38A5-884F-62AB-F74010E4E651">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PRODUCTID" id="CD7C403E-5E3B-0D20-37CA-4719A19FD547">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SALES_DATE" id="E49B69EE-BF57-4A3C-D79B-F91DAD9A10AC">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TITLE" id="EE399DC8-9785-B78B-D676-E0A8D55081AA">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev12c>

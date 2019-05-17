@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SchemaObject class="oracle.dbtools.crest.model.design.relational.SchemaObject" name="APEX" directorySegmentName="seg_0" id="0AE16394-9849-78C1-8ED5-664CE07801D1">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:47:57 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</SchemaObject>

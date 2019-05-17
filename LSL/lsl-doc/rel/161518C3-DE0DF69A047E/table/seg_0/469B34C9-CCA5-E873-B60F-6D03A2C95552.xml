@@ -1,0 +1,222 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="469B34C9-CCA5-E873-B60F-6D03A2C95552" schemaObject="0AE16394-9849-78C1-8ED5-664CE07801D1" name="PURCHASE_REQUESTS_LINES">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>APEX</sourceObjSchema>
+<sourceObjName>PURCHASE_REQUESTS_LINES</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:02 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PURCHASEREQUESTLINEID" id="86EFFA58-25B8-0B62-5E75-0B7623E7B164">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>PURCHASE_REQUESTS_LINES</sourceObjSchema>
+<sourceObjName>PURCHASEREQUESTLINEID</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRODUCTID" id="38926697-8642-8D94-EF68-FF4C3CAC138D">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>PURCHASE_REQUESTS_LINES</sourceObjSchema>
+<sourceObjName>PRODUCTID</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="QUANTITY" id="15602D02-FBFB-2936-AF29-302C4902EB54">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>PURCHASE_REQUESTS_LINES</sourceObjSchema>
+<sourceObjName>QUANTITY</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UNIT" id="D09AC3B8-23F8-410E-A8C5-973EDD5430ED">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>PURCHASE_REQUESTS_LINES</sourceObjSchema>
+<sourceObjName>UNIT</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SUPPLIERID" id="B796C832-89C6-15E7-9095-40EAFF2D7B7E">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>PURCHASE_REQUESTS_LINES</sourceObjSchema>
+<sourceObjName>SUPPLIERID</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PERUNITCOST" id="4B7B3939-F16E-F0E1-2561-F24245E03941">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>PURCHASE_REQUESTS_LINES</sourceObjSchema>
+<sourceObjName>PERUNITCOST</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PERUNITCOSTTAX" id="0F373132-AF17-A66F-CBDD-4CB6F95A718C">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>PURCHASE_REQUESTS_LINES</sourceObjSchema>
+<sourceObjName>PERUNITCOSTTAX</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LINETOTALCOST" id="B6F67F9A-C923-E1C7-DE0C-E721791A1695">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>PURCHASE_REQUESTS_LINES</sourceObjSchema>
+<sourceObjName>LINETOTALCOST</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LINETOTALCOSTTAX" id="5E762F9D-C368-9B91-26F7-632389AD975B">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>PURCHASE_REQUESTS_LINES</sourceObjSchema>
+<sourceObjName>LINETOTALCOSTTAX</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PERUNITPRICE" id="34DE4FBD-D1FB-B4ED-B2DA-362D9AF20858">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>PURCHASE_REQUESTS_LINES</sourceObjSchema>
+<sourceObjName>PERUNITPRICE</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PERUNITPRICETAX" id="77A2BBB2-C85A-EE52-B533-2BF71B5C1611">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>PURCHASE_REQUESTS_LINES</sourceObjSchema>
+<sourceObjName>PERUNITPRICETAX</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PURCHASEORDERID" id="61D8FBE4-60A3-30EF-00AB-0959DF6148D3">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>PURCHASE_REQUESTS_LINES</sourceObjSchema>
+<sourceObjName>PURCHASEORDERID</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PURCHASEREQUESTID" id="249F56D7-17A3-D22F-DBF2-08AE606054A3">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>PURCHASE_REQUESTS_LINES</sourceObjSchema>
+<sourceObjName>PURCHASEREQUESTID</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STATUS_FLAG" id="4DB7EBA1-4F7F-1C9D-B0BA-81078C13D79D">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>PURCHASE_REQUESTS_LINES</sourceObjSchema>
+<sourceObjName>STATUS_FLAG</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 BYTE</dataTypeSize>
+<ownDataTypeParameters>5 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

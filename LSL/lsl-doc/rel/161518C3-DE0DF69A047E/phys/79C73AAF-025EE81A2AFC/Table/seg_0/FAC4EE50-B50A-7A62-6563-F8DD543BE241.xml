@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="SUPPLIERRETURNLINE" directorySegmentName="seg_0" id="FAC4EE50-B50A-7A62-6563-F8DD543BE241">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:03 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<schemaObject>0AE16394-9849-78C1-8ED5-664CE07801D1</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>057A565F-47EA-65DA-8C05-368169DCB6FA</segment>
+<tableSpace>A190030E-D81C-5146-AEF5-2493D5755040</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="SUPPLIERRETURNID" id="157CCE90-E296-EA26-3FF0-7062418A6E4C">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PERUNITCOST" id="1C13AF11-DEA8-C7ED-4042-783538D893FE">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PERUNITCOSTTAX" id="44399F18-5C1B-1D7C-B9A9-DF7214DF2A52">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LINETOTALCOST" id="44F2F739-816D-8219-76EB-37371FB1B5B6">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PARTNUMBER" id="563C8A60-8611-FF97-F772-EFBCF3F066FB">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SUPPLIERID" id="7A88D0FC-C687-2170-1459-05DEFA6CD7C0">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="UNIT" id="84836637-2C5A-1E2B-B7A7-B71A94951504">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="INVOICENUMBER" id="86785D99-A771-6732-210E-95F972900532">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DELIVERYID" id="939724FA-C889-FAB1-21C4-3154B0BC2F6E">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PRODUCTID" id="948048B3-4BD7-7A2F-AFC8-17E3529FA2A8">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TITLE" id="CA26D820-1400-5B1C-C4F7-FF80477BFC02">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SUPPLIERRETURNDETAILID" id="E7FC83EA-129A-36D1-5121-5F916C067BDE">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="QUANTITY" id="EEB7E5B2-51C7-3D37-8030-02AF20F183F5">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LINETOTALCOSTTAX" id="F4BC7215-AEED-6EFE-B42A-C72DB33BF187">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev12c>

@@ -1,0 +1,153 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EB47B288-D6D2-BA9C-8076-DCAAA585A812" schemaObject="D6DA88DC-C7F1-D9EB-0E2E-55457C162C0A" name="XXLSL_USER_ACCOUNT">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL</sourceObjSchema>
+<sourceObjName>XXLSL_USER_ACCOUNT</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:03 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="USER_NAME" id="842B5612-995A-C5DB-82E5-543584CB8CFA">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL_USER_ACCOUNT</sourceObjSchema>
+<sourceObjName>USER_NAME</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:07 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PASSWORD" id="E2C89250-8B0A-AAD6-658D-F48CF902B600">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL_USER_ACCOUNT</sourceObjSchema>
+<sourceObjName>PASSWORD</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:07 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USER_TYPE" id="99BA3364-26E8-2061-A16B-2072C83B9E8B">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL_USER_ACCOUNT</sourceObjSchema>
+<sourceObjName>USER_TYPE</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:07 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACTIVE" id="58D9CD60-55B8-75CD-3670-2724EAD9375C">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL_USER_ACCOUNT</sourceObjSchema>
+<sourceObjName>ACTIVE</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:07 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="739E10D6-8EFA-C2D6-9A9A-4B5F21157A9A">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL_USER_ACCOUNT</sourceObjSchema>
+<sourceObjName>EMAIL</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:07 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64 BYTE</dataTypeSize>
+<ownDataTypeParameters>64 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FULL_NAME" id="55B2C779-8FA0-EBE4-F4F7-BEFF1BC42E8A">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL_USER_ACCOUNT</sourceObjSchema>
+<sourceObjName>FULL_NAME</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:07 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64 BYTE</dataTypeSize>
+<ownDataTypeParameters>64 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2A5E6A7D-B5B2-D1EB-71B2-779B74911137" name="USER_ACCOUNT_PK">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL</sourceObjSchema>
+<sourceObjName>USER_ACCOUNT_PK</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:13 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="842B5612-995A-C5DB-82E5-543584CB8CFA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D9396521-7ED0-DD7A-5F3D-0717AA29BF8C" name="USER_ACCOUNT_UK">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL</sourceObjSchema>
+<sourceObjName>USER_ACCOUNT_UK</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:13 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="739E10D6-8EFA-C2D6-9A9A-4B5F21157A9A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2DB187F0-C3D0-434E-FAAF-BDF3EDC4B2E2" schemaObject="D6DA88DC-C7F1-D9EB-0E2E-55457C162C0A" name="USER_ACCOUNT_PK">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL</sourceObjSchema>
+<sourceObjName>USER_ACCOUNT_PK</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:10 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="842B5612-995A-C5DB-82E5-543584CB8CFA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B742B80F-68CB-E1E1-96FB-B186B46D6950" schemaObject="D6DA88DC-C7F1-D9EB-0E2E-55457C162C0A" name="USER_ACCOUNT_UK">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL</sourceObjSchema>
+<sourceObjName>USER_ACCOUNT_UK</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:10 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="739E10D6-8EFA-C2D6-9A9A-4B5F21157A9A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

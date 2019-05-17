@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="PAYMENTTYPESUMMARY" directorySegmentName="seg_0" id="D3A2FA85-7622-4D28-7851-7BB40299D54C">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:02 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<schemaObject>0AE16394-9849-78C1-8ED5-664CE07801D1</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>057A565F-47EA-65DA-8C05-368169DCB6FA</segment>
+<tableSpace>A190030E-D81C-5146-AEF5-2493D5755040</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="PAYMENTTYPEDATE" id="4494B935-D491-DA55-4C83-F1050F7B0460">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:05 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TOTALVALUE" id="536946FA-28CE-392F-BC2F-25D45E9F9D89">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:05 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CREDITCARDTRANSACTIONSID" id="566F61C8-77A6-22E5-9FAD-E0A69C9E68AD">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:05 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PAYMENTTYPE" id="894E35EC-FF9C-C8AA-227B-49F6AD50F27F">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:05 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STATUS_FLAG" id="D75660AC-C45D-D629-EC00-F6941619EADC">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:05 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PAYMENTTYPESID" id="F28E8AD6-4380-382F-7911-6951B4542D67">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:05 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev12c>

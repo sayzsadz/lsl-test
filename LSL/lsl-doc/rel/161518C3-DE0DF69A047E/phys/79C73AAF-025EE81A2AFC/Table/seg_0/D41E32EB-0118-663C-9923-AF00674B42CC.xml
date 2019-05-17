@@ -1,0 +1,42 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="CREDITCARDTRANSACTION" directorySegmentName="seg_0" id="D41E32EB-0118-663C-9923-AF00674B42CC">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:02 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<schemaObject>0AE16394-9849-78C1-8ED5-664CE07801D1</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>057A565F-47EA-65DA-8C05-368169DCB6FA</segment>
+<tableSpace>A190030E-D81C-5146-AEF5-2493D5755040</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="AMOUNT" id="3423D2F7-CF75-A3F3-51EF-33BD3886D5CC">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:05 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REFERENCENUMBER" id="4E62EC39-8651-7785-CB08-82EF936B55CE">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:05 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CREDITCARDTYPE" id="7D09E60F-80EA-CCD6-321B-E098457E4052">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:05 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TRANSACTIONID" id="8312D459-5669-12DD-214F-AC663E46B10A">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:05 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TRANSACTIONDATE" id="96F5A941-70D6-4D98-BCCF-FF62E831F22B">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:05 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev12c>

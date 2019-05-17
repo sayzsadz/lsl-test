@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SequenceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SequenceOraclev10g" name="XXPBSA_SUP_RET_HEADER_ID_SEQ" directorySegmentName="seg_0" id="1B63B465-F3E0-EB33-8B9E-764C9D6519BE">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>APEX</sourceObjSchema>
+<sourceObjName>XXPBSA_SUP_RET_HEADER_ID_SEQ</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:47:57 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<cache>20</cache>
+<incrementBy>1</incrementBy>
+<maxValue>9999999999999999999999999999</maxValue>
+<minValue>1</minValue>
+<user>FB5DE12D-4EA4-254B-AA97-4ED35945C6A7</user>
+</SequenceOraclev10g>

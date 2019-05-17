@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D919ACB6-92F6-4D99-526B-6E0511444034" schemaObject="D6DA88DC-C7F1-D9EB-0E2E-55457C162C0A" name="EBA_DEMO_LOAD_DEPT">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL</sourceObjSchema>
+<sourceObjName>EBA_DEMO_LOAD_DEPT</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:03 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DEPTNO" id="C65A21DC-AF49-4800-6AC0-B5081322DF93">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>EBA_DEMO_LOAD_DEPT</sourceObjSchema>
+<sourceObjName>DEPTNO</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:07 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,2,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DNAME" id="91B6B29E-197E-9F3F-BB68-92933DFF23BD">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>EBA_DEMO_LOAD_DEPT</sourceObjSchema>
+<sourceObjName>DNAME</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:07 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>14 BYTE</dataTypeSize>
+<ownDataTypeParameters>14 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOC" id="8DC1DAB4-053A-D826-C304-711A07A46605">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>EBA_DEMO_LOAD_DEPT</sourceObjSchema>
+<sourceObjName>LOC</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:07 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>13 BYTE</dataTypeSize>
+<ownDataTypeParameters>13 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="402897F8-1503-1249-1902-2611A19B698A" schemaObject="D6DA88DC-C7F1-D9EB-0E2E-55457C162C0A" name="EBA_DEMO_LOAD_DEPT_PK">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL</sourceObjSchema>
+<sourceObjName>SYS_C0050335</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:10 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C65A21DC-AF49-4800-6AC0-B5081322DF93"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

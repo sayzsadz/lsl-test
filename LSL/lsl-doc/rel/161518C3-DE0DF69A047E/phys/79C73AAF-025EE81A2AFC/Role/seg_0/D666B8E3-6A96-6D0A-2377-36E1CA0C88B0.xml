@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<RoleOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.RoleOraclev10g" name="XXLSL" directorySegmentName="seg_0" id="D666B8E3-6A96-6D0A-2377-36E1CA0C88B0">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjName>XXLSL</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:36 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<permissions>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions1" id="75B4B12D-9182-A17A-8C93-D171BFE84B44">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:36 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<privileges>DELETE, INSERT, SELECT, UPDATE, REFERENCES, READ, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK, MERGE VIEW</privileges>
+<view>AC54C972-39F5-C0F7-23D3-E7AD85BBF7C4</view>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions2" id="A0C86A33-24A5-912E-45B8-EBF77220CA5A">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:36 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<privileges>DELETE, INSERT, SELECT, UPDATE, REFERENCES, READ, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK, MERGE VIEW</privileges>
+<view>D50D78F5-168A-F8B8-C29F-F553CD515265</view>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions3" id="7BF88CB7-F854-005A-982A-36BA44855F8B">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:39 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, READ, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>0EA2833A-B179-8E49-7EEF-FA91884FFAB3</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions4" id="F2474FA9-49F9-4E78-147B-B8C7DFA07C75">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:39 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, READ, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>469B34C9-CCA5-E873-B60F-6D03A2C95552</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions5" id="78C720BF-700C-2E79-066D-B80612A00D55">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:40 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, READ, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>9DFC8E2C-6790-E574-FA3A-13CA784F2354</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions6" id="1F645A54-332A-2ADF-F25E-E32B0BAA76FC">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:40 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<privileges>ALTER, DELETE, INDEX, INSERT, SELECT, UPDATE, REFERENCES, READ, ON COMMIT REFRESH, QUERY REWRITE, DEBUG, FLASHBACK</privileges>
+<table>1D948A62-1075-1BAF-1903-6D2CC026541D</table>
+</Permission>
+</permissions>
+</RoleOraclev10g>

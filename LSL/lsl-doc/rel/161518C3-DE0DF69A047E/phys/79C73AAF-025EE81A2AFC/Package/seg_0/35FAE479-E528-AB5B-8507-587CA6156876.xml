@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<PackageOracle class="oracle.dbtools.crest.model.design.storage.oracle.PackageOracle" name="XXLSL_PKG_SECURITY" directorySegmentName="seg_0" id="35FAE479-E528-AB5B-8507-587CA6156876">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL</sourceObjSchema>
+<sourceObjName>XXLSL_PKG_SECURITY</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:31 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<owner>53B75496-F47E-A6C1-48C8-5FE69C85FAAB</owner>
+<source>CREATE OR REPLACE Package       XXLSL.XXLSL_PKG_SECURITY&lt;br/&gt;AS&lt;br/&gt;Function Authenticate_User(p_User_Name Varchar2, p_Password Varchar2) return boolean;&lt;br/&gt;Procedure Process_Login(p_User_Name Varchar2, p_Password Varchar2, p_App_Id Number);&lt;br/&gt;End XXLSL_Pkg_Security;</source>
+<body class="oracle.dbtools.crest.model.design.storage.oracle.PackageBodyOracle" name="XXLSL_PKG_SECURITY" id="35FAE479-E528-AB5B-8507-587CA6156876">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL</sourceObjSchema>
+<sourceObjName>XXLSL_PKG_SECURITY</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:31 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<owner>53B75496-F47E-A6C1-48C8-5FE69C85FAAB</owner>
+<source>CREATE OR REPLACE Package Body       XXLSL.XXLSL_PKG_SECURITY Is&lt;br/&gt;Function Authenticate_User(p_User_Name Varchar2,p_Password Varchar2) Return Boolean As&lt;br/&gt;v_Password XXLSL.XXLSL_USER_ACCOUNT.Password%Type;&lt;br/&gt;v_Active XXLSL.XXLSL_USER_ACCOUNT.Active%Type;&lt;br/&gt;v_Email XXLSL.XXLSL_USER_ACCOUNT.Email%Type;&lt;br/&gt;Begin&lt;br/&gt;&lt;br/&gt;If p_User_Name Is Null Or p_Password Is Null Then&lt;br/&gt;Apex_Util.Set_Session_State(&apos;LOGIN_MESSAGE&apos;&lt;br/&gt;,&apos;Please enter Username and password.&apos;);&lt;br/&gt;Return False;&lt;br/&gt;End If;&lt;br/&gt;&lt;br/&gt;Begin&lt;br/&gt;Select u.Active,u.Password,u.Email into v_Active&lt;br/&gt;,v_Password&lt;br/&gt;,v_Email&lt;br/&gt;From XXLSL_USER_ACCOUNT u&lt;br/&gt;Where  u.User_Name = p_User_Name;&lt;br/&gt;Exception&lt;br/&gt;When No_Data_Found Then&lt;br/&gt;Apex_Util.Set_Session_State(&apos;LOGIN_MESSAGE&apos;&lt;br/&gt;,&apos;User not found&apos;);&lt;br/&gt;Return False;&lt;br/&gt;End;&lt;br/&gt;If v_Password != p_Password Then&lt;br/&gt;Apex_Util.Set_Session_State(&apos;LOGIN_MESSAGE&apos;&lt;br/&gt;,&apos;Password incorrect&apos;);&lt;br/&gt;Return False;&lt;br/&gt;End If;&lt;br/&gt;If v_Active &lt;&gt; &apos;Y&apos; Then&lt;br/&gt;Apex_Util.Set_Session_State(&apos;LOGIN_MESSAGE&apos;&lt;br/&gt;,&apos;User locked, please contact admin&apos;);&lt;br/&gt;Return False;&lt;br/&gt;End If;&lt;br/&gt;Apex_Util.Set_Session_State(&apos;SESSION_USER_NAME&apos;&lt;br/&gt;,p_User_Name);&lt;br/&gt;Apex_Util.Set_Session_State(&apos;SESSION_EMAIL&apos;&lt;br/&gt;,v_Email);&lt;br/&gt;Return True;&lt;br/&gt;End;&lt;br/&gt;&lt;br/&gt;Procedure Process_Login(p_User_Name Varchar2&lt;br/&gt;,p_Password Varchar2&lt;br/&gt;,p_App_Id Number) As&lt;br/&gt;v_Result Boolean := False;&lt;br/&gt;Begin&lt;br/&gt;v_Result := Authenticate_User(p_User_Name&lt;br/&gt;,p_Password);&lt;br/&gt;If v_Result = True Then&lt;br/&gt;Wwv_Flow_Custom_Auth_Std.Post_Login(p_User_Name -- p_User_Name&lt;br/&gt;,p_Password -- p_Password&lt;br/&gt;,v(&apos;APP_SESSION&apos;) -- p_Session_Id&lt;br/&gt;,p_App_Id || &apos;:1&apos; -- p_Flow_page&lt;br/&gt;);&lt;br/&gt;Else&lt;br/&gt;Owa_Util.Redirect_Url(&apos;f?p=&amp;APP_ID.:101:&amp;SESSION.&apos;);&lt;br/&gt;End If;&lt;br/&gt;End;&lt;br/&gt;End XXLSL_Pkg_Security;</source>
+</body>
+</PackageOracle>

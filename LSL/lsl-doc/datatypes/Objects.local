@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.datatypes.DataTypesDesign>
+   <object objectType="StructuredType" objectID="47E390DE-0671-C4B1-8428-0F45CBEE18F8" name="SDO_GEOMETRY" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.datatypes.StructuredType" propertyParentId="D787C810-A792-E36B-867C-8E4F9A002618" propertySourceId="" propertyTargetId=""/>
+   <object objectType="StructuredType" objectID="63C336C5-6351-3060-BB11-2F91FDF2E53D" name="V_MSG" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.datatypes.StructuredType" propertyParentId="D787C810-A792-E36B-867C-8E4F9A002618" propertySourceId="" propertyTargetId=""/>
+   <object objectType="StructuredType" objectID="F72C39E0-D1CA-8821-2AD7-A1E95A37D3D1" name="XMLTYPE" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.datatypes.StructuredType" propertyParentId="D787C810-A792-E36B-867C-8E4F9A002618" propertySourceId="" propertyTargetId=""/>
+   <object objectType="CollectionType" objectID="6E9C12D2-5857-94A4-3C99-98D63DA84BC1" name="REC_MSG" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.datatypes.CollectionType" propertyParentId="D787C810-A792-E36B-867C-8E4F9A002618" propertySourceId="" propertyTargetId=""/>
+</oracle.dbtools.crest.model.design.datatypes.DataTypesDesign>

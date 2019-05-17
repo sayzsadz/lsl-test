@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="lsl-doc" id="D1076F4A-7388-692D-E4A0-CF72F76B8410" version="3.5">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:42:34 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>D1076F4A-7388-692D-E4A0-CF72F76B8410</designId>
+</OSDM_Design>

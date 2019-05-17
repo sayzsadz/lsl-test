@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0F95FA8F-DEFB-DD58-9430-A7CE11372FA8" containerWithKeyObject="84518FB4-2720-CA9D-9613-E8857ED72D2D" localFKIndex="BE3CE606-6F46-E676-771F-4FFF6B7D8D8F" name="SYS_C0050338">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL</sourceObjSchema>
+<sourceObjName>SYS_C0050338</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:16 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<referredTableLongName>XXLSL.EBA_DEMO_LOAD_EMP</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>84518FB4-2720-CA9D-9613-E8857ED72D2D</referredTableID>
+<keyObject>1D008D8A-1A8E-5081-E037-2CF1261400FE</keyObject>
+<referredKeyID>1D008D8A-1A8E-5081-E037-2CF1261400FE</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>INV_REFUND_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

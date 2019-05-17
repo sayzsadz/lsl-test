@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="PURCHASE_REQUESTS_HEADER" directorySegmentName="seg_0" id="0EA2833A-B179-8E49-7EEF-FA91884FFAB3">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:02 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<schemaObject>0AE16394-9849-78C1-8ED5-664CE07801D1</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>057A565F-47EA-65DA-8C05-368169DCB6FA</segment>
+<tableSpace>A190030E-D81C-5146-AEF5-2493D5755040</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="STATUS_FLAG" id="16C7F05A-EE63-CAD3-3135-B32B68CC9C98">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CITY" id="261C8DEC-98A1-5D18-B121-0F6A80D6493A">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PURCHASEREQUESTID" id="44C4F991-7DE2-4032-E0C2-2C86B46B8AC3">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EMAIL" id="4C423660-CD5F-165A-16B2-8DB35B1AF924">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PHONE" id="6BE81C13-92D7-E553-0C55-19A4DB48D9F3">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="COUNTRY" id="81D18D80-1FD7-6142-FC09-5D349D675094">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CONTACTNAME" id="8BA38F50-2B5E-0B40-71C4-30FA8EF8E6AA">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STATE" id="9BDFF184-6EAD-B466-7EE0-2D50B77FD860">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="POSTCODE" id="AE9E9D03-7306-6F5D-3278-EA876EC410BC">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATEREQUIRED" id="DE03A425-69D1-FD96-545B-5E9A7C5502FA">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STREET" id="F4F351EE-6440-0789-32F6-B6AE05C4A6F8">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STOREID" id="FEB3E0BD-E520-791B-5DEE-192AD684576B">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:06 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_PRID" id="E55C56C9-A5A5-F4C1-F387-B4FD5511E268">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:09 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<schemaObject>0AE16394-9849-78C1-8ED5-664CE07801D1</schemaObject>
+<segment>27D1EC2C-2AD3-DFD3-1C62-66D6F724E001</segment>
+<tableSpace>A190030E-D81C-5146-AEF5-2493D5755040</tableSpace>
+</IndexProxy>
+</indexProxies>
+<synonyms>
+<Synonym class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SynonymOraclev10g" name="PURCHASE_REQUESTS_HEADER" directorySegmentName="seg_0" id="5B7AC8D1-483B-EE5D-04EF-76F54E6A09C4">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>XXLSL</sourceObjSchema>
+<sourceObjName>PURCHASE_REQUESTS_HEADER</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:30 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<object>PURCHASE_REQUESTS_HEADER</object>
+<objectUser>FB5DE12D-4EA4-254B-AA97-4ED35945C6A7</objectUser>
+<user>53B75496-F47E-A6C1-48C8-5FE69C85FAAB</user>
+<referredObjectID>0EA2833A-B179-8E49-7EEF-FA91884FFAB3</referredObjectID>
+</Synonym>
+</synonyms>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_PRID" id="AD9F514F-AD30-3228-BF8E-67682259E934">
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:12 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<segment>27D1EC2C-2AD3-DFD3-1C62-66D6F724E001</segment>
+<tableSpace>A190030E-D81C-5146-AEF5-2493D5755040</tableSpace>
+<existingIndex>E55C56C9-A5A5-F4C1-F387-B4FD5511E268</existingIndex>
+<indexSegment>27D1EC2C-2AD3-DFD3-1C62-66D6F724E001</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

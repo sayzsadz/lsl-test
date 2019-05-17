@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8EE666F0-4D58-2431-EDAB-55A8FA416416" schemaObject="0AE16394-9849-78C1-8ED5-664CE07801D1" name="CUSTOMERRETURNSSUMMARYPRODUCT">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>APEX</sourceObjSchema>
+<sourceObjName>CUSTOMERRETURNSSUMMARYPRODUCT</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:02 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PAYMENTTYPE" id="79A43110-E716-FC08-12E2-B9946E152C2C">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>CUSTOMERRETURNSSUMMARYPRODUCT</sourceObjSchema>
+<sourceObjName>PAYMENTTYPE</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:05 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TOTALVALUE" id="1D688F0E-5716-B647-6D36-9A6AD40D9761">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>CUSTOMERRETURNSSUMMARYPRODUCT</sourceObjSchema>
+<sourceObjName>TOTALVALUE</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:05 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PAYMENTTYPESID" id="617EA828-9621-130E-3B73-BDB303CF1133">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>CUSTOMERRETURNSSUMMARYPRODUCT</sourceObjSchema>
+<sourceObjName>PAYMENTTYPESID</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:05 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CREDITCARDTRANSACTIONSID" id="94B7D021-95A1-AC96-D9C0-2D04B35ECE72">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>CUSTOMERRETURNSSUMMARYPRODUCT</sourceObjSchema>
+<sourceObjName>CREDITCARDTRANSACTIONSID</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:05 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BBE9DA4C-412F-0940-272E-27B8C8A55687" name="PK_CUSTH">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>APEX</sourceObjSchema>
+<sourceObjName>PK_CUSTH</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:11 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="617EA828-9621-130E-3B73-BDB303CF1133"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="378CE8C1-F724-7C18-216B-254A57D1EFA1" schemaObject="0AE16394-9849-78C1-8ED5-664CE07801D1" name="PK_CUSTH">
+<sourceConnName>LSL_Cloud_apex</sourceConnName>
+<sourceObjSchema>APEX</sourceObjSchema>
+<sourceObjName>PK_CUSTH</sourceObjName>
+<createdBy>sjayasinghe1</createdBy>
+<createdTime>2019-04-29 11:48:09 UTC</createdTime>
+<ownerDesignName>lsl-doc</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="617EA828-9621-130E-3B73-BDB303CF1133"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
