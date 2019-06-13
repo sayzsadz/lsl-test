@@ -1,0 +1,8 @@
+orapki wallet create -wallet /home/oraapex/wallet4 -pwd WalletPasswd123 -auto_login
+orapki wallet add -wallet /home/oraapex/wallet4 -trusted_cert -cert /home/oraapex/wallet4/LSL4.cer -pwd WalletPasswd123
+
+orapki wallet create -wallet /home/oraapex/wallet5 -pwd WalletPasswd123 -auto_login
+orapki wallet add -wallet /home/oraapex/wallet5 -trusted_cert -cert /home/oraapex/wallet5/LSL5.cer -pwd WalletPasswd123
+
+orapki wallet create -wallet /home/oraapex/wallet13 -pwd WalletPasswd123 -auto_login
+orapki wallet add -wallet /home/oraapex/wallet13 -trusted_cert -cert /home/oraapex/wallet13/LSL.cer -pwd WalletPasswd123

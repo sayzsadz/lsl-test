@@ -56,3 +56,41 @@ end;
 --2. Item assign to categories
 --XXPBSA_PROCESS_ITEMS
 --XXPBSA_AssignItmToCat
+begin
+for rec in (
+select ITEM_NUMBER, ITEM_CAT_SEG
+from XXPBSA_ITEM_CATEGORIES_STG
+)
+loop
+XXPBSA_ASSIGNITMTOCAT (p_segment1 => rec.ITEM_NUMBER, p_category_set_name => 'Inventory', p_category_name => rec.ITEM_CAT_SEG);
+end loop;
+end;
+/
+select msi.segment1, msi.inventory_item_id, cat.category_id
+from mtl_system_items_b msi
+    ,mtl_item_categories cat
+where msi.inventory_item_id = cat.inventory_item_id
+     and msi.organization_id = 101
+     and msi.inventory_item_id in (
+                                    select distinct inventory_item_id
+                                    from mtl_system_items_b
+                                    where organization_id = 101
+    );
+
+select *
+from mtl_item_categories;
+
+
+
+select distinct msi.segment1, msi.inventory_item_id
+from mtl_system_items_b msi
+where msi.inventory_item_id in (
+        select inventory_item_id
+        from (
+        select inventory_item_id
+        from mtl_item_categories
+        where inventory_item_id = 31427
+        group by inventory_item_id
+        having count(organization_id) = 1
+        )
+)
