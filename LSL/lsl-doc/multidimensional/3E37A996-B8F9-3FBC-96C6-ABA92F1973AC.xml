@@ -1,7 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<MultidimensionalDesign class="oracle.dbtools.crest.model.design.multidimensional.MultidimensionalDesign" name="Multidimensional_1" id="3E37A996-B8F9-3FBC-96C6-ABA92F1973AC" mainViewID="187C8976-93F9-6186-31CE-B1E5E20EAF46" boundModel="23E756F2-DF77-C806-C1D7-08B53C4F174D">
-<createdBy>sjayasinghe1</createdBy>
-<createdTime>2019-04-29 11:55:20 UTC</createdTime>
-<ownerDesignName>lsl-doc</ownerDesignName>
-<shouldBeOpen>false</shouldBeOpen>
-</MultidimensionalDesign>

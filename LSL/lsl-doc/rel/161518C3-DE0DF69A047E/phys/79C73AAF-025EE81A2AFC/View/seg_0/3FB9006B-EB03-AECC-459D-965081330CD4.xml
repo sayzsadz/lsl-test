@@ -1,7 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<TableViewProxyOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableViewProxyOraclev10g" name="XXLSL_PR_REQ_APPROVAL" directorySegmentName="seg_0" id="3FB9006B-EB03-AECC-459D-965081330CD4">
-<createdBy>sjayasinghe1</createdBy>
-<createdTime>2019-04-29 11:47:58 UTC</createdTime>
-<ownerDesignName>lsl-doc</ownerDesignName>
-<schemaObject>D6DA88DC-C7F1-D9EB-0E2E-55457C162C0A</schemaObject>
-</TableViewProxyOraclev10g>

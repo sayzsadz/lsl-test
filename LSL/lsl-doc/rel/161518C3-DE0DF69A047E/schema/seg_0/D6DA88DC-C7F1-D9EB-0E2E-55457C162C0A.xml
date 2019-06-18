@@ -1,6 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<SchemaObject class="oracle.dbtools.crest.model.design.relational.SchemaObject" name="XXLSL" directorySegmentName="seg_0" id="D6DA88DC-C7F1-D9EB-0E2E-55457C162C0A">
-<createdBy>sjayasinghe1</createdBy>
-<createdTime>2019-04-29 11:47:58 UTC</createdTime>
-<ownerDesignName>lsl-doc</ownerDesignName>
-</SchemaObject>

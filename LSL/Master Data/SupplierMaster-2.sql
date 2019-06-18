@@ -84,7 +84,10 @@ LOOP
   l_vendor_site_rec.city                          := NVL(c1.address_line3, '.');
   l_vendor_site_rec.PAY_SITE_FLAG                 := c1.PAY_SITE_FLAG;
   l_vendor_site_rec.PURCHASING_SITE_FLAG          := c1.PURCHASING_SITE_FLAG;
-  l_vendor_site_rec.ext_payee_rec.default_pmt_method           := c1.PAYMENT_METHOD_CODE;
+  l_vendor_site_rec.ext_payee_rec.default_pmt_method := c1.PAYMENT_METHOD_CODE;
+  l_vendor_site_rec.CREATE_DEBIT_MEMO_FLAG        := 'Y';
+  l_vendor_site_rec.PAY_ON_CODE                   := 'RECEIPT';
+  l_vendor_site_rec.PAY_ON_RECEIPT_SUMMARY_CODE   := 'RECEIPT';
   
   ap_vendor_pub_pkg.create_vendor_site(p_api_version      => ln_api_version,
                                        p_init_msg_list    => lv_init_msg_list,
