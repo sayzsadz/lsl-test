@@ -56,7 +56,7 @@ end;
 --2. Item assign to categories
 --XXPBSA_PROCESS_ITEMS
 --XXPBSA_AssignItmToCat
-
+/
 declare
     p_category_name     varchar2(500);
     l_seg1              varchar2(500);
@@ -68,9 +68,23 @@ declare
     l_old_category_id   number;
 begin
 for rec in (
-            select ITEM_NUMBER, ITEM_CAT_SEG
+            select distinct ITEM_NUMBER, ITEM_CAT_SEG
             from XXPBSA_ITEM_CATEGORIES_STG
-            --where ITEM_NUMBER like '000001'
+            where ITEM_NUMBER in (
+                SELECT distinct msi.segment1
+                FROM  mtl_item_categories mic,
+                      mtl_category_sets_tl mcst,
+                      mtl_category_sets_b mcs,
+                      mtl_categories_b_kfv mc,
+                      mtl_system_items_b msi
+                WHERE mic.category_set_id = mcs.category_set_id
+                      AND mcs.category_set_id   = mcst.category_set_id
+                      AND mic.category_id       = mc.category_id     
+                      AND msi.organization_id = mic.organization_id    
+                      AND msi.inventory_item_id = mic.inventory_item_id
+                group by UPPER(mc.segment4), msi.segment1
+                having count(msi.segment1) = 1 and count(mc.segment4) = 1
+            )
             --where rownum < 10
 )
 loop
@@ -174,7 +188,7 @@ begin
                   AND mic.category_id       = mc.category_id     
                   AND msi.organization_id = mic.organization_id    
                   AND msi.inventory_item_id = mic.inventory_item_id
-                  AND msi.organization_id = 101
+                  AND msi.organization_id = 102
                   AND msi.segment1 = rec.ITEM_NUMBER;
         
         INSERT INTO mtl_item_categories_interface
@@ -194,7 +208,7 @@ begin
          1   -- category_set_id  
         ,L_CATEGORY_ID         -- new category_id  
         ,SYSDATE    -- last_udate_date datatype DATETIME  
-        ,101         -- ORGANIZATION_CODE (should be master_orgaization_id if category set is controlled at master level)  
+        ,102         -- ORGANIZATION_CODE (should be master_orgaization_id if category set is controlled at master level)  
         ,1            -- always 1  
         ,L_ITEM_ID       -- Item name  Note: for performance consideration use inventory_item_id in place of item_number  
         ,l_old_category_id         -- old category_id  
@@ -212,3 +226,74 @@ end;
 end loop;
 end;
 /
+
+--check CoA product and Item Category
+select distinct mcb.segment4, fv.flex_value, mcb.segment1
+from gl_je_headers gh
+    ,gl_je_lines gl
+    ,gl_code_combinations gcc
+    ,fnd_flex_values fv
+    ,fnd_flex_values_tl ffv
+    ,mtl_categories_b mcb
+    ,mtl_item_categories mic
+    ,mtl_system_items_b msi
+where 1 = 1 
+      and gh.JE_HEADER_ID = gl.JE_HEADER_ID
+      and gh.je_header_id = 28734
+      and gcc.CODE_COMBINATION_ID = gl.CODE_COMBINATION_ID
+      and fv.flex_value = gcc.segment4
+      and ffv.flex_value_id = fv.flex_value_id
+      and fv.flex_value_set_id = 1017030
+      and mcb.segment4 = ffv.DESCRIPTION
+      and ffv.DESCRIPTION != 'Unspecified'
+      and mic.category_id = mcb.category_id
+      and msi.inventory_item_id = mic.inventory_item_id
+      --and mcb.segment1 = 'GROCERY'
+group by mcb.segment4, fv.flex_value, mcb.segment1;
+
+update mtl_item_categories m
+set CATEGORY_ID = (
+select CATEGORY_ID
+from mtl_item_categories
+where organization_id = 102
+and inventory_item_id = m.inventory_item_id
+and inventory_item_id in 
+(
+select distinct inventory_item_id
+from mtl_system_items_b
+where segment1 in (
+
+
+'801355',
+'101454',
+'12345678',
+'104469'
+
+)
+)
+)
+
+where m.inventory_item_id = (
+
+
+select inventory_item_id
+from mtl_item_categories
+where organization_id = 102
+and inventory_item_id = m.inventory_item_id
+and inventory_item_id in 
+(
+select distinct inventory_item_id
+from mtl_system_items_b
+where segment1 in (
+
+'801355',
+'101454',
+'12345678',
+'104469'
+
+
+
+)
+)
+)
+;
