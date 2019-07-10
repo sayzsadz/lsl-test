@@ -1,6 +1,21 @@
 exec mo_global.init('SQLAP');
 exec mo_global.set_policy_context('S',81);
 
+select *
+from ap_suppliers
+where vendor_name  = 'Lanka Sathosa - Uduwana';
+
+update ap_suppliers
+set attribute10 = (select SUPPLIERID from XXLSL_SUPPLIERS_TEMP where name = vendor_name)
+where vendor_name = (select name from XXLSL_SUPPLIERS_TEMP where name = vendor_name)
+      and vendor_name in (
+      'Lanka Sathosa - Hettipola',
+      'Lanka Sathosa - Katunayake 01',
+      'Lanka Sathosa - Uduwana'
+      );
+
+alter session set nls_language = 'AMERICAN';
+
 -- API to Create Supplier
 
 DECLARE
