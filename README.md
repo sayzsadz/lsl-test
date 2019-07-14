@@ -1,0 +1,2 @@
+# lsl-test
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1e2abadb2f804751ae1b8f7bc5ba4ea2)](https://app.codacy.com/app/sjayasinghe1/lsl-test?utm_source=github.com&utm_medium=referral&utm_content=sjayasinghe1/lsl-test&utm_campaign=Badge_Grade_Dashboard)
