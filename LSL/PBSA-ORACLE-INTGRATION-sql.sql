@@ -30,7 +30,7 @@
       
       select *
       from po_lines_all
-      where PO_HEADER_ID = 2247
+      where PO_HEADER_ID = 26194
       order by 1 desc;
       
       SELECT distinct pha_outer.SEGMENT1, PRLA_outer.attribute15
@@ -62,20 +62,20 @@
             
         update PO_HEADERS_ALL
         set attribute13 = 'Approval Sent'
-        where segment1 = '100638';
+        where segment1 = '100635';
         
         select *
         from PO_HEADERS_ALL
-        where segment1 = '100637';
+        where segment1 = '100638';
         
         select *
         from po_lines_all
-        where PO_HEADER_ID = 26193;
+        where PO_HEADER_ID = 26194;
 
         
         update PURCHASE_REQUESTS_LINES@DATABASE_LINK_EBS_APEX.LANKASATHOSA.LK
         set status_flag = 'A'
-        where PURCHASEREQUESTLINEID = 2243;
+        where PURCHASEREQUESTLINEID = 2246;
         
         exec XXPBSA_EXECUTE_DEL_IMPORT_PRC;
         
